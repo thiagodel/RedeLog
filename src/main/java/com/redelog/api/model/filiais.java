@@ -1,6 +1,5 @@
 package com.redelog.api.model;
 
-public class Motorista {
-
+public class filiais {
     
 }
