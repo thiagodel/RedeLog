@@ -1,4 +1,4 @@
-package com.redelog.api.model;
+package com.redelog.api.model.entities;
 
 public class Cliente {
 
