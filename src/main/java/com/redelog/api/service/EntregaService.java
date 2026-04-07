@@ -7,6 +7,9 @@ import com.redelog.api.repository.EntregadorRepository;
 
 import java.util.List;
 
+import org.springframework.stereotype.Service;
+
+@Service
 public class EntregaService {
 
     private final EntregaRepository entregaRepository;
@@ -20,6 +23,23 @@ public class EntregaService {
     public List<Entrega> listarTodos(){
         return entregaRepository.findAll();
     }
+    
+    public Entrega listarPorId(Long id) {
+    	return entregaRepository.findById(id)
+    			.orElseThrow(() -> new RuntimeException("Entrega não encontrada com ID: " + id));
+    }
+    
+    public void deletarPorId(Long id) {
+    	 Entrega entrega = entregaRepository.findById(id)
+    			.orElseThrow(() -> new RuntimeException("Entrega não encontrada com ID: " + id));
+    	 entregaRepository.delete(entrega);
+    }
+    
+    public Entrega salvar (Entrega entrega) {
+    	return entregaRepository.save(entrega);
+    }
+    
+    
 
 
 }
