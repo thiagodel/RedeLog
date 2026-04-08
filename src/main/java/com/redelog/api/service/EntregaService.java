@@ -39,7 +39,18 @@ public class EntregaService {
     	return entregaRepository.save(entrega);
     }
     
-    
+    public Entrega atualizar(Long id, Entrega payload) {
+        Entrega atual = entregaRepository.findById(id)
+                .orElseThrow(() -> new ResponseStatusException(NOT_FOUND, "Entrega não encontrada" ));
+
+        Entregador entregador = entregadorRepository.findById(id)
+                .orElseThrow(() -> new ResponseStatusException(NOT_FOUND, "Entregador não encontrado"));
+
+
+        atual.atribuirEntregador(payload.getEntregador());
+        return entregaRepository.save(atual);
+    }
+
 
 
 }
