@@ -112,5 +112,6 @@ public class Entrega {
     public void atribuirEntregador(Entregador entregador) {
         this.entregador = entregador;
     }
+
 }
 

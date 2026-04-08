@@ -8,6 +8,9 @@ import com.redelog.api.repository.EntregadorRepository;
 import java.util.List;
 
 import org.springframework.stereotype.Service;
+import org.springframework.web.server.ResponseStatusException;
+
+import static org.springframework.http.HttpStatus.NOT_FOUND;
 
 @Service
 public class EntregaService {

@@ -36,8 +36,8 @@ public class EntregaController {
     }
 
     @PutMapping("/{id}")
-    public Entrega atualizar(@PathVariable Integer id, @RequestBody Entrega entrega){
-        return entregaService.atualiza(id, entrega);
+    public Entrega atualizar(@PathVariable Long id, @RequestBody Entrega entrega){
+        return entregaService.atualizar(id, entrega);
     }
 
     // Deletar por ID
