@@ -3,9 +3,34 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Filiais</title>
 </head>
 <body>
+    <script>
+            const filiais = [
+                { nome: "Filial 1", endereco: "Endereço 1", telefone:"()00-0000-0000" },
+                { nome: "Filial 2", endereco: "Endereço 2", telefone:"()00-0000-0000" },
+                { nome: "Filial 3", endereco: "Endereço 3", telefone:"()00-0000-0000" }
+            ] 
+
+            const tabelaFiliais = document.getElementById("tabelaFiliais");
+            if (tabelaFiliais) {
+                filiais.forEach (filiais) => {
+                    const linha = document.creatElementById("tr"); 
+                    linha.innerHTML = `
+                        <td>${filiais.nome}</td>
+                        <td>${filiais.endereco}</td>
+                        <td>${filiais.telefone}</td>
+                    `;
+                    tabelaFiliais.appendChild(linha);
+                    
+
+            
+
+                   
+                }
+            }
+    </script>
     
 </body>
 </html>
