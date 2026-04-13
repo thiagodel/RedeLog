@@ -1,43 +1,45 @@
 package com.redelog.api.model.entities;
 
+import com.redelog.api.model.enums.StatusEntregador;
+
 public class Entregador {
 
-    private string nome;
-    private string telefone;
-    private string email;
-    private string placaVeiculo;
-    private boolean ativo;
-    public entregador(){}
+    private Long id;
+    private String nome;
+    private String telefone;
+    private String email;
+    private String placaVeiculo;
+    private StatusEntregador status;
+    public Entregador(){}
 
-    public id (String nome, string telefone, string email, string placaVeiculo) {
+    public Entregador (Long id, String nome, String telefone, String email, String placaVeiculo) {
+        this.id = id;
         this.nome = nome;
         this.telefone = telefone;
         this. email = email;
         this.placaVeiculo = placaVeiculo;
-        this.ativo = true;
+        this.status = status;
     } 
 
     public void desativar(){
-        this.ativo = false;
+       if (this.status == StatusEntregador.INATIVO){
+           throw new IllegalStateException("Entregador já está inativo!");
+       }
+        this.status = StatusEntregador.INATIVO;
     }
 
     public void ativar(){
-        this.ativo = true;
+        if (this.status == StatusEntregador.ATIVO){
+            throw new IllegalStateException("Entregador já está ativo!");
+
+        }
+        this.status = StatusEntregador.ATIVO;
     }
 
-    public void atualizarDados(string nome, string telefone, string email, string placaVeiculo){
-        this.nome = nome;
-        this.telefone = telefone;
-        this.email = email;
-        this.placaVeiculo = placaVeiculo;
-    
-    }
+    public void atualizarDados(){};
 
-    public void atualizarTelefone(String novoTelefone){
-        this.telefone = novoTelefone;
-         system.out.println("Telefone atualizado para: " + novoTelefone);
-        
-    }
+
+    public void atualizarTelefone(){};
 }
 
     
