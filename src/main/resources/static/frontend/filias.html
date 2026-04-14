@@ -3,34 +3,44 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="js/filias.js" defer></script>
     <title>Filiais</title>
 </head>
 <body>
+    <h1>Filiais</h1>
+
+    <table border="1">
+        <thead>
+            <tr>
+                <th>Cidade</th>
+                <th>Estado</th>
+                <th>Telefone</th>
+            </tr>
+        </thead>
+        <tbody id="tabelaFiliais"></tbody>
+    </table>
+
     <script>
-            const filiais = [
-                { nome: "Filial 1", endereco: "Endereço 1", telefone:"()00-0000-0000" },
-                { nome: "Filial 2", endereco: "Endereço 2", telefone:"()00-0000-0000" },
-                { nome: "Filial 3", endereco: "Endereço 3", telefone:"()00-0000-0000" }
-            ] 
+        const filiais = [
+            { cidade: "Uberaba", estado: "MG", telefone:"(34)00000-0000" },
+            { cidade: "Uberlândia", estado: "MG", telefone:"(34)00000-0001" },
+            { cidade: "Araxá", estado: "MG", telefone:"(34)00000-0002" }
+        ];
 
-            const tabelaFiliais = document.getElementById("tabelaFiliais");
-            if (tabelaFiliais) {
-                filiais.forEach (filiais) => {
-                    const linha = document.creatElementById("tr"); 
-                    linha.innerHTML = `
-                        <td>${filiais.nome}</td>
-                        <td>${filiais.endereco}</td>
-                        <td>${filiais.telefone}</td>
-                    `;
-                    tabelaFiliais.appendChild(linha);
-                    
+        const tabelaFiliais = document.getElementById("tabelaFiliais");
 
-            
+        if (tabelaFiliais) {
+            filiais.forEach(filial => {
+                const linha = document.createElement("tr");
 
-                   
-                }
-            }
+                linha.innerHTML = `
+                    <td>${filial.cidade}</td>
+                    <td>${filial.estado}</td>
+                    <td>${filial.telefone}</td>
+                `;
+
+                tabelaFiliais.appendChild(linha);
+            });
+        }
     </script>
-    
 </body>
-</html>
