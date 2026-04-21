@@ -18,7 +18,7 @@ public class Entregador {
         this.telefone = telefone;
         this. email = email;
         this.placaVeiculo = placaVeiculo;
-        this.status = status;
+        this.status = StatusEntregador.ATIVO;
     } 
 
     public void desativar(){
@@ -36,10 +36,48 @@ public class Entregador {
         this.status = StatusEntregador.ATIVO;
     }
 
-    public void atualizarDados(){};
+    public void atualizarDados(String nome, String telefone, String email, String placaVeiculo){
+        this.nome = nome;
+        this.telefone = telefone;
+        this.email = email;
+        this.placaVeiculo = placaVeiculo;
+    }
 
 
-    public void atualizarTelefone(){};
+    public void atualizarTelefone(String telefone){
+        if(telefone == null || telefone.isBlank()){
+            throw new IllegalArgumentException("Telefone inválido!");
+        }
+        this.telefone = telefone;
+    }
+    public boolean estaAtivo() {
+        return this.status == StatusEntregador.ATIVO;
+    }
+
+    public Long getId() {
+        return id;
+    }
+
+    public String getNome() {
+        return nome;
+    }
+
+    public String getTelefone() {
+        return telefone;
+    }
+
+    public String getEmail() {
+        return email;
+    }
+
+    public String getPlacaVeiculo() {
+        return placaVeiculo;
+    }
+
+    public StatusEntregador getStatus() {
+        return status;
+    }
+
 }
 
     
