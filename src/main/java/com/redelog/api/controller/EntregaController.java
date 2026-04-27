@@ -4,6 +4,7 @@ import com.redelog.api.model.entities.Entrega;
 import com.redelog.api.service.EntregaService;
 
 import org.springframework.http.ResponseEntity;
+import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
