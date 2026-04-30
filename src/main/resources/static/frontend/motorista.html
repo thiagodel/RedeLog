@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="motorista.css">
     <title>Motorista</title>
 </head>
 <body>
@@ -13,13 +14,39 @@
 
 </body>
         <script>
-        const motorista = {
-            nome: " ",
-            cpf: " ",
-            placaDoVeiculo:" ",
-            rotaDeEntrega:" "
-            
-        }
+            function atualizarMapa() {
+                const tbody = document.getElementById("map").getElementsByTagName("tbody")[0];
+                tbody.innerHTML = "";
+                
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
 
-    </script>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+
+
+            }
+        atualizarMapa();
+        </script>
+
+        <h2>Informações do Motorista</h2>
+        <input type="text" id=""    placeholder="Nome do Motorista">
+        <input type="text" id=""    placeholder="Modelo do Veículo">
+        <input type="text" id=""    placeholder="Placa do Veículo">
+        <button onclick="atualizarInformacoes()"  >Atualizar informações</button>
+        
+        
+        
+
 </html>
