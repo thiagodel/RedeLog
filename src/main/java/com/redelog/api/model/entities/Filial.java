@@ -10,14 +10,6 @@ public class Filial {
     public Filial() {
     }
 
-public Filial(long id, string nome, string endereco, string numeroFilial){
-    this.id = id;
-    this.nome = nome;
-    this.endereco = endereco;
-    this.numeroFilial = numeroFilial;
-
-   
-}
 }
 
     

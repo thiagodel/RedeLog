@@ -2,7 +2,7 @@ package com.redelog.api.model.entities;
 
 public class Cliente {
 
-    private int id;
+    private Long id;
     private String nome;
     private String telefone;
     private String endereco;
@@ -11,7 +11,7 @@ public class Cliente {
 
     public Cliente(){}
 
-    public int getId() {
+    public Long getId() {
         return id;
     }
 

@@ -3,6 +3,7 @@ package com.redelog.api.model.entities;
 import com.redelog.api.model.enums.StatusEntrega;
 import jakarta.persistence.*;
 import lombok.Getter;
+import lombok.Setter;
 
 import java.time.LocalDateTime;
 import java.util.ArrayList;
@@ -11,9 +12,10 @@ import java.util.List;
 @Entity
 @Table(name = "entrega")
 @Getter
+@Setter
 public class Entrega {
 
-    protected Entrega() {
+    public Entrega() {
     }
 
     @Id
