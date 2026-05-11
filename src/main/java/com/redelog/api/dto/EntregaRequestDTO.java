@@ -10,8 +10,6 @@ import lombok.Setter;
 @Setter
 public class EntregaRequestDTO {
 
-    @NotBlank
-    private String codigoRastreio;
 
     @NotNull
     private Long clienteId;

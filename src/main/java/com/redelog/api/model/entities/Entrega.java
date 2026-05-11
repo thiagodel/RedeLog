@@ -8,6 +8,7 @@ import lombok.Setter;
 import java.time.LocalDateTime;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.UUID;
 
 @Entity
 @Table(name = "entrega")
@@ -68,6 +69,16 @@ public class Entrega {
     }
 
     // 🔥 regras de negócio
+
+    public void gerarCodigoRastreio() {
+
+        String codigo = "RL-" + UUID.randomUUID()
+                .toString()
+                .substring(0, 8)
+                .toUpperCase();
+
+        this.codigoRastreio = codigo;
+    }
 
     public void despachar() {
         if (status != StatusEntrega.CRIADA) {

@@ -1,5 +1,7 @@
 package com.redelog.api.controller;
 
+import com.redelog.api.dto.EntregaRequestDTO;
+import com.redelog.api.dto.EntregaResponseDTO;
 import com.redelog.api.model.entities.Entrega;
 import com.redelog.api.service.EntregaService;
 
@@ -19,33 +21,35 @@ public class EntregaController {
 
     // Listar Todos
     @GetMapping
-    public List<Entrega> listar() {
-        return entregaService.listarTodos();
+    public ResponseEntity<List<EntregaResponseDTO>> listar() {
+        return ResponseEntity.ok(entregaService.listarTodos());
     }
     
     // Listar por ID
     @GetMapping("/{id}")
-    public ResponseEntity<Entrega> buscarPorId(@PathVariable Long id) {
+    public ResponseEntity<EntregaResponseDTO> buscarPorId(@PathVariable Long id) {
     	return ResponseEntity.ok(entregaService.listarPorId(id));
     }
 
     // Salvar
     @PostMapping
-    public ResponseEntity<Entrega> salvar (@RequestBody Entrega entrega) {
-    	Entrega novaEntrega = entregaService.salvar(entrega);
-    	return ResponseEntity.ok(novaEntrega);
+    public ResponseEntity<EntregaResponseDTO> salvar (@RequestBody EntregaRequestDTO dto) {
+    	EntregaResponseDTO novaEntrega = entregaService.salvar(dto);
+
+        return ResponseEntity.ok(novaEntrega);
     }
 
     @PutMapping("/{id}")
-    public Entrega atualizar(@PathVariable Long id, @RequestBody Entrega entrega){
-        return entregaService.atualizar(id, entrega);
+    public ResponseEntity<EntregaResponseDTO> atualizar(@PathVariable Long id, @RequestBody EntregaRequestDTO dto){
+        EntregaResponseDTO entregaAtualizada = entregaService.atualizar(id, dto);
+        return ResponseEntity.ok(entregaAtualizada);
     }
 
     // Deletar por ID
     @DeleteMapping("/{id}")
-    public ResponseEntity<String> deletar(@PathVariable Long id) {
+    public ResponseEntity<Void> deletar(@PathVariable Long id) {
         entregaService.deletarPorId(id);
-		return ResponseEntity.ok("Entrega deletada com sucesso");
+        return ResponseEntity.noContent().build();
     }
 
 }

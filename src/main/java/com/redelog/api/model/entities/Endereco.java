@@ -1,8 +1,12 @@
 package com.redelog.api.model.entities;
 
 import jakarta.persistence.Embeddable;
+import jakarta.persistence.Entity;
+import jakarta.persistence.Table;
 
+@Entity
 @Embeddable
+@Table(name = "endereço")
 public class Endereco {
 
         String rua;

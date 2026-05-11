@@ -13,7 +13,7 @@ public class EntregaMapper {
         dto.setCodigoRastreio(entrega.getCodigoRastreio());
         dto.setNomeCliente(entrega.getCliente().getNome());
         dto.setNomeEntregador(entrega.getEntregador().getNome());
-        dto.setFilialOrigem(entrega.getFilial().getNome());
+        dto.setFilialOrigem(entrega.getFilialOrigem().getNome());
         dto.setStatus(entrega.getStatus().name());
                 return dto;
     }
@@ -22,8 +22,7 @@ public class EntregaMapper {
 
         Entrega entrega = new Entrega();
 
-        entrega.setCodigoRastreio(dto.getCodigoRastreio());
-            return entrega;
+            return new Entrega();
     }
 
 }
