@@ -1,9 +1,22 @@
 package com.redelog.api.model.entities;
 
 import com.redelog.api.model.enums.StatusEntregador;
+import jakarta.persistence.Entity;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
+import jakarta.persistence.Id;
+import jakarta.persistence.Table;
+import lombok.Getter;
+import lombok.Setter;
 
+@Getter
+@Setter
+@Entity
+@Table(name = "entregador")
 public class Entregador {
 
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
     private String nome;
     private String telefone;
@@ -16,7 +29,7 @@ public class Entregador {
         this.id = id;
         this.nome = nome;
         this.telefone = telefone;
-        this. email = email;
+        this.email = email;
         this.placaVeiculo = placaVeiculo;
         this.status = StatusEntregador.ATIVO;
     } 
@@ -52,30 +65,6 @@ public class Entregador {
     }
     public boolean estaAtivo() {
         return this.status == StatusEntregador.ATIVO;
-    }
-
-    public Long getId() {
-        return id;
-    }
-
-    public String getNome() {
-        return nome;
-    }
-
-    public String getTelefone() {
-        return telefone;
-    }
-
-    public String getEmail() {
-        return email;
-    }
-
-    public String getPlacaVeiculo() {
-        return placaVeiculo;
-    }
-
-    public StatusEntregador getStatus() {
-        return status;
     }
 
 }

@@ -9,6 +9,8 @@ import com.redelog.api.repository.*;
 
 import java.util.List;
 
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;
 import org.springframework.web.server.ResponseStatusException;
 
@@ -21,22 +23,18 @@ public class EntregaService {
     private final EntregadorRepository entregadorRepository;
     private final ClienteRepository clienteRepository;
     private final FilialRepository filialRepository;
-    private final EnderecoRepository enderecoRepository;
 
-    public EntregaService(EntregaRepository entregaRepository, EntregadorRepository entregadorRepository, ClienteRepository clienteRepository, FilialRepository filialRepository, EnderecoRepository enderecoRepository) {
+    public EntregaService(EntregaRepository entregaRepository, EntregadorRepository entregadorRepository, ClienteRepository clienteRepository, FilialRepository filialRepository) {
         this.entregaRepository = entregaRepository;
         this.entregadorRepository = entregadorRepository;
         this.clienteRepository = clienteRepository;
         this.filialRepository = filialRepository;
-        this.enderecoRepository = enderecoRepository;
     }
 
-    public List<EntregaResponseDTO> listarTodos() {
+    public Page<EntregaResponseDTO> listarTodos(Pageable pageable) {
 
-        return entregaRepository.findAll()
-                .stream()
-                .map(EntregaMapper::toDTO)
-                .toList();
+        return entregaRepository.findAll(pageable)
+                .map(EntregaMapper::toDTO);
 
     }
 
@@ -66,17 +64,20 @@ public class EntregaService {
         Filial filial = filialRepository.findById(dto.getFilialOrigemId())
                 .orElseThrow(() -> new ResponseStatusException(NOT_FOUND, "Filial não encontrada"));
 
-        Endereco endereco = enderecoRepository.findById(dto.getEnderecoEntregaId())
-                .orElseThrow(() -> new ResponseStatusException(NOT_FOUND, "Endereço não encontrado"));
+        Endereco endereco = dto.getEnderecoEntrega();
 
-        Entrega entrega = EntregaMapper.toEntity(dto);
+        if (endereco == null) {
+            throw new ResponseStatusException(NOT_FOUND, "Endereço não informado");
+        }
 
-        entrega.gerarCodigoRastreio();
+        Entrega entrega = new Entrega();
         entrega.setCliente(cliente);
-        entrega.setEntregador(entregador);
-        entrega.setFilialOrigem(filial);
         entrega.setEnderecoEntrega(endereco);
+        entrega.setFilialOrigem(filial);
+        entrega.setEntregador(entregador);
         entrega.setStatus(StatusEntrega.CRIADA);
+        entrega.setDataCriacao(java.time.LocalDateTime.now());
+        entrega.gerarCodigoRastreio();
 
 
         Entrega salva = entregaRepository.save(entrega);
@@ -99,9 +100,10 @@ public class EntregaService {
         Filial filial = filialRepository.findById(dto.getFilialOrigemId())
                 .orElseThrow(() -> new ResponseStatusException(NOT_FOUND, "Filial não encontrada"));
 
-        Endereco endereco = enderecoRepository.findById(dto.getEnderecoEntregaId())
-                .orElseThrow(() -> new ResponseStatusException(NOT_FOUND, "Endereço não encontrado"));
-
+        Endereco endereco = dto.getEnderecoEntrega();
+        if (endereco == null) {
+            throw new ResponseStatusException(NOT_FOUND, "Endereço não informado");
+        }
 
         atual.setCliente(cliente);
         atual.setEntregador(entregador);

@@ -1,21 +1,17 @@
 package com.redelog.api.model.entities;
 
 import jakarta.persistence.Embeddable;
-import jakarta.persistence.Entity;
-import jakarta.persistence.Table;
 
-@Entity
 @Embeddable
-@Table(name = "endereço")
 public class Endereco {
 
-        String rua;
-        String numero;
-        String bairro;
-        String cidade;
-        String estado;
-        String cep;
-        String complemento;
+    String rua;
+    String numero;
+    String bairro;
+    String cidade;
+    String estado;
+    String cep;
+    String complemento;
 
     public String getRua() {
         return rua;
@@ -73,4 +69,3 @@ public class Endereco {
         this.complemento = complemento;
     }
 }
-

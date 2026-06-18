@@ -1,6 +1,7 @@
 package com.redelog.api.dto;
 
 
+import com.redelog.api.model.entities.Endereco;
 import lombok.Getter;
 import lombok.Setter;
 
@@ -15,7 +16,7 @@ public class EntregaResponseDTO {
     private String codigoRastreio;
 
     private String nomeCliente;
-    private String enderecoEntrega;
+    private Endereco enderecoEntrega;
     private String filialOrigem;
     private String nomeEntregador;
 

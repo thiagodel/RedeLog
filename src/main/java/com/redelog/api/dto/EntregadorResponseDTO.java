@@ -14,6 +14,6 @@ public class EntregadorResponseDTO {
     private String telefone;
     private String email;
     private String placaVeiculo;
-    private String status;
+    private StatusEntregador status;
 
 }

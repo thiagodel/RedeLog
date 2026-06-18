@@ -2,15 +2,17 @@ package com.redelog.api.controller;
 
 import com.redelog.api.dto.EntregaRequestDTO;
 import com.redelog.api.dto.EntregaResponseDTO;
-import com.redelog.api.model.entities.Entrega;
 import com.redelog.api.service.EntregaService;
 
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.Pageable;
 import org.springframework.http.ResponseEntity;
-import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
+@RestController
+@RequestMapping("/entregas")
 public class EntregaController {
 
     private final EntregaService entregaService;
@@ -21,8 +23,8 @@ public class EntregaController {
 
     // Listar Todos
     @GetMapping
-    public ResponseEntity<List<EntregaResponseDTO>> listar() {
-        return ResponseEntity.ok(entregaService.listarTodos());
+    public ResponseEntity<Page<EntregaResponseDTO>> listar(Pageable pageable) {
+        return ResponseEntity.ok(entregaService.listarTodos(pageable));
     }
     
     // Listar por ID

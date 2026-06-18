@@ -1,12 +1,17 @@
 package com.redelog.api.controller;
 
+import com.redelog.api.dto.EntregadorResponseDTO;
 import com.redelog.api.model.entities.Entregador;
 import com.redelog.api.service.EntregadorService;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.Pageable;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
+@RestController
+@RequestMapping("/entregadores")
 public class EntregadorController {
 
     private final EntregadorService entregadorService;
@@ -16,20 +21,16 @@ public class EntregadorController {
     }
 
     @GetMapping
-    public List<Entregador> listar(){
-        return entregadorService.listarTodos();
+    public ResponseEntity<Page<EntregadorResponseDTO>> listartodos(Pageable pageable){
+        return ResponseEntity.ok(entregadorService.listarTodos(pageable));
     }
 
-    @GetMapping("/{id}")
-    public ResponseEntity<Entregador> buscarPorId(@PathVariable Long id){
+    @GetMapping
+    public ResponseEntity<EntregadorResponseDTO> listarPorId(@PathVariable Long id){
         return ResponseEntity.ok(entregadorService.listarPorId(id));
     }
 
     @PostMapping
-    public ResponseEntity<Entregador> salvar(@RequestBody Entregador entregador){
-        Entregador novoEntregador = entregadorService.salvar(entregador);
-        return ResponseEntity.ok(novoEntregador);
-    }
-
+    public ResponseEntity<EntregadorResponseDTO> salvar(@RequestBody )
 
 }
