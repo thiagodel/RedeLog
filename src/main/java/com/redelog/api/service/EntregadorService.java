@@ -4,33 +4,26 @@ import com.redelog.api.dto.EntregadorRequestDTO;
 import com.redelog.api.dto.EntregadorResponseDTO;
 import com.redelog.api.mapper.EntregadorMapper;
 import com.redelog.api.model.entities.Entregador;
-import com.redelog.api.repository.ClienteRepository;
-import com.redelog.api.repository.EntregaRepository;
 import com.redelog.api.repository.EntregadorRepository;
-import com.redelog.api.repository.FilialRepository;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;
 import org.springframework.web.server.ResponseStatusException;
 
-import java.util.List;
 
+import static org.springframework.http.HttpStatus.CONFLICT;
 import static org.springframework.http.HttpStatus.NOT_FOUND;
 
 @Service
 public class EntregadorService {
 
     private final EntregadorRepository entregadorRepository;
-    private final EntregaRepository entregaRepository;
-    private final FilialRepository filialRepository;
-    private final ClienteRepository clienteRepository;
 
 
-    public EntregadorService(EntregadorRepository entregadorRepository, EntregaRepository entregaRepository, FilialRepository filialRepository, ClienteRepository clienteRepository){
+
+    public EntregadorService(EntregadorRepository entregadorRepository){
         this.entregadorRepository = entregadorRepository;
-        this.entregaRepository = entregaRepository;
-        this.filialRepository = filialRepository;
-        this.clienteRepository = clienteRepository;
+
     }
 
     public Page<EntregadorResponseDTO> listarTodos(Pageable pageable){
@@ -55,6 +48,35 @@ public class EntregadorService {
 
         return EntregadorMapper.toDto(salvo);
     }
+
+    public EntregadorResponseDTO atualizar(Long id, EntregadorRequestDTO dto) {
+
+        Entregador entregador = entregadorRepository.findById(id)
+                .orElseThrow(() -> new ResponseStatusException(
+                        NOT_FOUND, "Entregador não encontrado"));
+
+        if(!entregador.estaAtivo()){
+        throw new ResponseStatusException(CONFLICT, "Não é possível atualizar um entregador inativo");
+
+        }
+        entregador.atualizarDados(
+                dto.getNome(),
+                dto.getTelefone(),
+                dto.getEmail(),
+                dto.getPlacaVeiculo()
+        );
+
+        return EntregadorMapper.toDto(entregadorRepository.save(entregador));
+    }
+
+    public void deletarPorId(Long id){
+
+        Entregador entregador = entregadorRepository.findById(id)
+                .orElseThrow(() -> new ResponseStatusException(NOT_FOUND, "Entregador não encontrado com ID" + id));
+
+        entregadorRepository.delete(entregador);
+    }
+
 
 
 

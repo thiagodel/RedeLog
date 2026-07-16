@@ -14,7 +14,7 @@ import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;
 import org.springframework.web.server.ResponseStatusException;
 
-import static org.springframework.http.HttpStatus.NOT_FOUND;
+import static org.springframework.http.HttpStatus.*;
 
 @Service
 public class EntregaService {
@@ -61,13 +61,19 @@ public class EntregaService {
         Entregador entregador = entregadorRepository.findById(dto.getEntregadorId())
                 .orElseThrow(() -> new ResponseStatusException(NOT_FOUND, "Entregador não encontrado"));
 
+        if (!entregador.estaAtivo()) {
+            throw new ResponseStatusException(
+                    CONFLICT,
+                    "Não é possível atribuir uma entrega a um entregador inativo");
+        }
+
         Filial filial = filialRepository.findById(dto.getFilialOrigemId())
                 .orElseThrow(() -> new ResponseStatusException(NOT_FOUND, "Filial não encontrada"));
 
         Endereco endereco = dto.getEnderecoEntrega();
 
         if (endereco == null) {
-            throw new ResponseStatusException(NOT_FOUND, "Endereço não informado");
+            throw new ResponseStatusException(BAD_REQUEST, "Endereço não informado");
         }
 
         Entrega entrega = new Entrega();
@@ -97,13 +103,21 @@ public class EntregaService {
         Entregador entregador = entregadorRepository.findById(dto.getEntregadorId())
                 .orElseThrow(() -> new ResponseStatusException(NOT_FOUND, "Entregador não encontrado"));
 
+        if (!entregador.estaAtivo()) {
+            throw new ResponseStatusException(
+                    CONFLICT,
+                    "Não é possível atribuir uma entrega a um entregador inativo");
+        }
+
         Filial filial = filialRepository.findById(dto.getFilialOrigemId())
                 .orElseThrow(() -> new ResponseStatusException(NOT_FOUND, "Filial não encontrada"));
 
         Endereco endereco = dto.getEnderecoEntrega();
+
         if (endereco == null) {
-            throw new ResponseStatusException(NOT_FOUND, "Endereço não informado");
+            throw new ResponseStatusException(BAD_REQUEST, "Endereço não informado");
         }
+
 
         atual.setCliente(cliente);
         atual.setEntregador(entregador);

@@ -1,9 +1,9 @@
 package com.redelog.api.mapper;
 
-import com.redelog.api.dto.EntregaRequestDTO;
 import com.redelog.api.dto.EntregadorRequestDTO;
 import com.redelog.api.dto.EntregadorResponseDTO;
 import com.redelog.api.model.entities.Entregador;
+import com.redelog.api.model.enums.StatusEntregador;
 
 public class EntregadorMapper {
 
@@ -26,6 +26,7 @@ public class EntregadorMapper {
         entregador.setTelefone(dto.getTelefone());
         entregador.setEmail(dto.getEmail());
         entregador.setPlacaVeiculo(dto.getPlacaVeiculo());
+        entregador.setStatus(StatusEntregador.ATIVO);
 
         return entregador;
 

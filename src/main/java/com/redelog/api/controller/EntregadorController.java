@@ -1,8 +1,9 @@
 package com.redelog.api.controller;
 
+import com.redelog.api.dto.EntregadorRequestDTO;
 import com.redelog.api.dto.EntregadorResponseDTO;
-import com.redelog.api.model.entities.Entregador;
 import com.redelog.api.service.EntregadorService;
+import jakarta.validation.Valid;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 import org.springframework.http.ResponseEntity;
@@ -25,12 +26,29 @@ public class EntregadorController {
         return ResponseEntity.ok(entregadorService.listarTodos(pageable));
     }
 
-    @GetMapping
+    @GetMapping ("/{id}")
     public ResponseEntity<EntregadorResponseDTO> listarPorId(@PathVariable Long id){
         return ResponseEntity.ok(entregadorService.listarPorId(id));
     }
 
     @PostMapping
-    public ResponseEntity<EntregadorResponseDTO> salvar(@RequestBody )
+    public ResponseEntity<EntregadorResponseDTO> salvar(@Valid @RequestBody EntregadorRequestDTO dto){
+        EntregadorResponseDTO novoEntregador = entregadorService.salvar(dto);
+
+        return ResponseEntity.ok(novoEntregador);
+    }
+
+    @PutMapping ("/{id}")
+    public ResponseEntity<EntregadorResponseDTO> atualizar(@PathVariable Long id, @Valid @RequestBody EntregadorRequestDTO dto){
+        EntregadorResponseDTO entregadorAtualizado = entregadorService.atualizar(id, dto);
+
+        return ResponseEntity.ok(entregadorAtualizado);
+    }
+
+    @DeleteMapping ("/{id}")
+    public ResponseEntity<Void> deletar(@PathVariable Long id){
+        entregadorService.deletarPorId(id);
+        return ResponseEntity.noContent().build();
+    }
 
 }

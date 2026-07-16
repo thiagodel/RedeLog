@@ -1,11 +1,7 @@
 package com.redelog.api.model.entities;
 
 import com.redelog.api.model.enums.StatusEntregador;
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Id;
-import jakarta.persistence.Table;
+import jakarta.persistence.*;
 import lombok.Getter;
 import lombok.Setter;
 
@@ -22,6 +18,7 @@ public class Entregador {
     private String telefone;
     private String email;
     private String placaVeiculo;
+    @Enumerated(EnumType.STRING)
     private StatusEntregador status;
     public Entregador(){}
 
