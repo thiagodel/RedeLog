@@ -16,7 +16,7 @@ public class EntregaResponseDTO {
     private String codigoRastreio;
 
     private String nomeCliente;
-    private Endereco enderecoEntrega;
+    private EnderecoResponseDTO enderecoEntrega;
     private String filialOrigem;
     private String nomeEntregador;
 

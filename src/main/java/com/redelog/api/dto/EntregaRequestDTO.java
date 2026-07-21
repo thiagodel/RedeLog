@@ -15,7 +15,7 @@ public class EntregaRequestDTO {
     private Long clienteId;
 
     @NotNull
-    private Endereco enderecoEntrega;
+    private EnderecoRequestDTO enderecoEntrega;
 
     @NotNull
     private Long filialOrigemId;
