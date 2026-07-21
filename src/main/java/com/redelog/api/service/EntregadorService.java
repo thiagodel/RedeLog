@@ -77,6 +77,26 @@ public class EntregadorService {
         entregadorRepository.delete(entregador);
     }
 
+    public EntregadorResponseDTO ativar(Long id) {
+        Entregador entregador = entregadorRepository.findById(id)
+                .orElseThrow(() -> new ResponseStatusException(
+                        NOT_FOUND, "Entregador não encontrado"));
+
+        entregador.ativar();
+
+        return EntregadorMapper.toDto(entregadorRepository.save(entregador));
+    }
+
+    public EntregadorResponseDTO desativar(Long id) {
+        Entregador entregador = entregadorRepository.findById(id)
+                .orElseThrow(() -> new ResponseStatusException(
+                        NOT_FOUND, "Entregador não encontrado"));
+
+        entregador.desativar();
+
+        return EntregadorMapper.toDto(entregadorRepository.save(entregador));
+    }
+
 
 
 

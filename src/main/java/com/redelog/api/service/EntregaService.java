@@ -130,4 +130,47 @@ public class EntregaService {
 
 
     }
+
+    private Entrega buscarEntrega(Long id) {
+        return entregaRepository.findById(id)
+                .orElseThrow(() -> new ResponseStatusException(
+                        NOT_FOUND, "Entrega não encontrada"));
+    }
+
+    public EntregaResponseDTO despachar(Long id){
+        Entrega entrega = buscarEntrega(id);
+        entrega.despachar();
+
+        Entrega entregaAtualizada = entregaRepository.save(entrega);
+
+        return EntregaMapper.toDTO(entregaAtualizada);
+    }
+
+    public EntregaResponseDTO sairParaEntrega(Long id){
+        Entrega entrega = buscarEntrega(id);
+        entrega.sairParaEntrega();
+
+        Entrega entregaAtualizada = entregaRepository.save(entrega);
+
+        return EntregaMapper.toDTO(entregaAtualizada);
+    }
+
+    public EntregaResponseDTO finalizarEntrega(Long id){
+        Entrega entrega = buscarEntrega(id);
+        entrega.finalizarEntrega();
+
+        Entrega entregaAtualizada = entregaRepository.save(entrega);
+
+        return EntregaMapper.toDTO(entregaAtualizada);
+    }
+
+    public EntregaResponseDTO registrarFalha(Long id, String motivo){
+        Entrega entrega = buscarEntrega(id);
+        entrega.registrarFalha(motivo);
+
+        Entrega entregaAtualizada = entregaRepository.save(entrega);
+
+        return EntregaMapper.toDTO(entregaAtualizada);
+
+    }
 }

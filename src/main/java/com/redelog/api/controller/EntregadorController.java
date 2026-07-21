@@ -51,4 +51,14 @@ public class EntregadorController {
         return ResponseEntity.noContent().build();
     }
 
+    @PatchMapping("/{id}/ativar")
+    public ResponseEntity<EntregadorResponseDTO> ativar(@PathVariable Long id){
+        return ResponseEntity.ok(entregadorService.ativar(id));
+    }
+
+    @PatchMapping("/{id}/desativar")
+    public ResponseEntity<EntregadorResponseDTO> desativar(@PathVariable Long id){
+        return ResponseEntity.ok(entregadorService.desativar(id));
+    }
+
 }
