@@ -5,35 +5,29 @@ import com.redelog.api.dto.ClienteResponseDTO;
 import com.redelog.api.model.entities.Cliente;
 
 public class ClienteMapper {
-    private static ClienteMapper instance;
-    private ClienteMapper() {}
-    private static synchronized void createInstance() {
-        if (instance == null) {
-            instance = new ClienteMapper();
-        }
+
+    public static ClienteResponseDTO toDTO(Cliente cliente) {
+        ClienteResponseDTO dto = new ClienteResponseDTO();
+
+        dto.setId(cliente.getId());
+        dto.setNome(cliente.getNome());
+        dto.setTelefone(cliente.getTelefone());
+        dto.setEmail(cliente.getEmail());
+        dto.setCep(cliente.getCep());
+        dto.setEndereco(cliente.getEndereco());
+
+        return dto;
     }
-}
 
-public static ClienteResponseDTO toDTO(Cliente cliente) {
-    ClienteResponseDTO dto = new ClienteResponseDTO();
+    public static Cliente toEntity(ClienteRequestDTO dto) {
+        Cliente cliente = new Cliente();
 
-    dto.setNome(cliente.getNome());
-    dto.setTelefone(cliente.getTelefone());
-    dto.setEmail(cliente.getEmail());
-    dto.setCep(cliente.getCep());
-    dto.setEndereco(cliente.getEndereco());
+        cliente.setNome(dto.getNome());
+        cliente.setTelefone(dto.getTelefone());
+        cliente.setEmail(dto.getEmail());
+        cliente.setCep(dto.getCep());
+        cliente.setEndereco(dto.getEndereco());
 
-    return dto;
-}
-
-public static Cliente toEntity(ClienteRequestDTO dto) {
-    Cliente cliente = new Cliente();
-
-    cliente.setNome(dto.getNome());
-    cliente.setTelefone(dto.getTelefone());
-    cliente.setEmail(dto.getEmail());
-    cliente.setCep(dto.getCep());
-    cliente.setEndereco(dto.getEndereco());
-
-    return cliente;
+        return cliente;
+    }
 }

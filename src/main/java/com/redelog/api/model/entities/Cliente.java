@@ -21,6 +21,14 @@ public class Cliente {
 
     public Cliente(){}
 
+    public void atualizarDados(String nome, String telefone, String email, String cep, String endereco) {
+        this.nome = nome;
+        this.telefone = telefone;
+        this.email = email;
+        this.cep = cep;
+        this.endereco = endereco;
+    }
+
     public Long getId() {
         return id;
     }

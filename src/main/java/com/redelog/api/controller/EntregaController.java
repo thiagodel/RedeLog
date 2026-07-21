@@ -54,4 +54,25 @@ public class EntregaController {
         return ResponseEntity.noContent().build();
     }
 
+    @PatchMapping("/{id}/despachar")
+    public ResponseEntity<EntregaResponseDTO> despachar(@PathVariable Long id){
+        return ResponseEntity.ok(entregaService.despachar(id));
+    }
+
+    @PatchMapping("/{id}/sairParaEntrega")
+    public ResponseEntity<EntregaResponseDTO> sairParaEntrega(@PathVariable Long id){
+        return ResponseEntity.ok(entregaService.sairParaEntrega(id));
+    }
+
+    @PatchMapping("/{id}/finalizarEntrega")
+    public ResponseEntity<EntregaResponseDTO> finalizaEntrega(@PathVariable Long id){
+        return ResponseEntity.ok(entregaService.finalizarEntrega(id));
+    }
+
+    @PatchMapping("/{id}/registrarFalha")
+    public ResponseEntity<EntregaResponseDTO> registrarFalaha(@PathVariable Long id, @RequestParam String motivo){
+        EntregaResponseDTO dto = entregaService.registrarFalha(id, motivo);
+        return ResponseEntity.ok(dto);
+    }
+
 }
