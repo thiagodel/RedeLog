@@ -10,7 +10,7 @@ public class FilialResponseDTO {
 
     private Long id;
     private String nome;
-    private String cidade;
-    private String estado;
+    private EnderecoResponseDTO endereco;
+    private String numeroFilial;
 
 }

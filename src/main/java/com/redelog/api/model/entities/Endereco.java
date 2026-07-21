@@ -13,6 +13,16 @@ public class Endereco {
     String cep;
     String complemento;
 
+    public Endereco(){};
+
+    @Override
+    public String toString() {
+        return rua + ", " + numero + " - "
+                + bairro + ", "
+                + cidade + "/" + estado
+                + " CEP: " + cep;
+    }
+
     public String getRua() {
         return rua;
     }

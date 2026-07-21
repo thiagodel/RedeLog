@@ -1,6 +1,7 @@
 package com.redelog.api.dto;
 
 
+import com.redelog.api.model.entities.Endereco;
 import lombok.Getter;
 import lombok.Setter;
 
@@ -9,7 +10,8 @@ import lombok.Setter;
 public class FilialRequestDTO {
 
     private String nome;
-    private String cidade;
-    private String estado;
+    private EnderecoRequestDTO endereco;
+    private String numeroFilial;
+
 
 }
