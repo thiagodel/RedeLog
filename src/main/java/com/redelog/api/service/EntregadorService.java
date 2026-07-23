@@ -27,7 +27,6 @@ public class EntregadorService {
     }
 
     public Page<EntregadorResponseDTO> listarTodos(Pageable pageable){
-
         return entregadorRepository.findAll(pageable)
                 .map(EntregadorMapper::toDto);
     }
