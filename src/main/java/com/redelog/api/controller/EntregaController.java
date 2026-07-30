@@ -4,6 +4,7 @@ import com.redelog.api.dto.EntregaRequestDTO;
 import com.redelog.api.dto.EntregaResponseDTO;
 import com.redelog.api.service.EntregaService;
 
+import jakarta.validation.Valid;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 import org.springframework.http.ResponseEntity;
@@ -35,14 +36,14 @@ public class EntregaController {
 
     // Salvar
     @PostMapping
-    public ResponseEntity<EntregaResponseDTO> salvar (@RequestBody EntregaRequestDTO dto) {
+    public ResponseEntity<EntregaResponseDTO> salvar (@Valid @RequestBody EntregaRequestDTO dto) {
     	EntregaResponseDTO novaEntrega = entregaService.salvar(dto);
 
         return ResponseEntity.ok(novaEntrega);
     }
 
     @PutMapping("/{id}")
-    public ResponseEntity<EntregaResponseDTO> atualizar(@PathVariable Long id, @RequestBody EntregaRequestDTO dto){
+    public ResponseEntity<EntregaResponseDTO> atualizar(@PathVariable Long id,@Valid @RequestBody EntregaRequestDTO dto){
         EntregaResponseDTO entregaAtualizada = entregaService.atualizar(id, dto);
         return ResponseEntity.ok(entregaAtualizada);
     }

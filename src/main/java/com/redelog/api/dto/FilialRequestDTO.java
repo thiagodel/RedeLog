@@ -12,6 +12,6 @@ public class FilialRequestDTO {
     private String nome;
     private EnderecoRequestDTO endereco;
     private String numeroFilial;
-
+    private String cnpj;
 
 }
