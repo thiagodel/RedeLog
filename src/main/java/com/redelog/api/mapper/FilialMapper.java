@@ -11,8 +11,10 @@ public class FilialMapper {
     public static FilialResponseDTO toDTO(Filial filial) {
         FilialResponseDTO dto = new FilialResponseDTO();
 
+        dto.setNumeroFilial(filial.getNumeroFilial());
         dto.setId(filial.getId());
         dto.setNome(filial.getNome());
+        dto.setCnpj(filial.getCnpj());
 
         if (filial.getEndereco() != null) {
             Endereco endereco = filial.getEndereco();
@@ -36,7 +38,9 @@ public class FilialMapper {
 
         Filial filial = new Filial();
 
+        filial.setNumeroFilial(dto.getNumeroFilial());
         filial.setNome(dto.getNome());
+        filial.setCnpj(dto.getCnpj());
 
         if (dto.getEndereco() != null) {
 

@@ -5,12 +5,13 @@ import com.redelog.api.dto.ClienteResponseDTO;
 import com.redelog.api.mapper.ClienteMapper;
 import com.redelog.api.model.entities.Cliente;
 import com.redelog.api.repository.ClienteRepository;
-import jakarta.persistence.Id;
 import org.springframework.data.domain.Page;
+import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;
 import org.springframework.web.server.ResponseStatusException;
 
-import java.awt.print.Pageable;
+import static org.springframework.http.HttpStatus.NOT_FOUND;
+
 
 @Service
 
@@ -24,43 +25,49 @@ public class ClienteService {
     }
 
     public Page<ClienteResponseDTO> listarTodos(Pageable pageable){
-        return clienteRepository.findAll(pageable);
+        return clienteRepository.findAll(pageable)
             .map(ClienteMapper::toDTO);
 
     }
 
-    public ClienteResponseDTO buscarPorId(long Id){
+    public ClienteResponseDTO buscarPorId(long id){
 
-    Cliente cliente = clienteRepository.findById(Id)
-            .orElseThrow(( new ResponseStatusException
+    Cliente cliente = clienteRepository.findById(id)
+            .orElseThrow(() -> new ResponseStatusException(
                     NOT_FOUND, "Cliente não encontrado"));
-        return ClienteMapper.toDto(cliente);
 
+    return ClienteMapper.toDTO(cliente);
     }
 
     public ClienteResponseDTO salvar(ClienteRequestDTO dto){
 
     Cliente cliente = ClienteMapper.toEntity (dto);
-        Cliente salvo = ClienteRepository.save(cliente);
-    return ClienteMapper.toDto(salvo);
+        Cliente salvo = clienteRepository.save(cliente);
+    return ClienteMapper.toDTO(salvo);
     }
 
-    public ClienteResponseDTO atualizar(long id, ClienteRequestDTO dto){
+    public ClienteResponseDTO atualizar(long id, ClienteRequestDTO dto) {
+        Cliente cliente = clienteRepository.findById(id)
+                .orElseThrow(() -> new ResponseStatusException(
+                        NOT_FOUND, "Cliente não encontrado"));
 
-    Cliente cliente = ClienteRepository.findById(id)
-            .orElseThrow(()  new ResponseStatusException
-    NOT_FOUND, "Cliente não encontrado"));
+        cliente.atualizarDados(
+                dto.getNome(),
+                dto.getTelefone(),
+                dto.getEmail(),
+                dto.getCep(),
+                dto.getEndereco()
+        );
 
-    Cliente atualizado = ClienteRepository.save(cliente)
-    return ClienteMapper.toDto(atualizado);
+        Cliente atualizado = clienteRepository.save(cliente);
 
+        return ClienteMapper.toDTO(atualizado);
     }
 
     public void deletarPorId(long id){
-    Cliente cliente = ClienteRepository.findByID(id)
-            .orElseThrom(() new ResponseStatusException
-    NOT_FOUND, "Cliente não encontrado"));
+    Cliente cliente = clienteRepository.findById(id)
+                    .orElseThrow(() -> new ResponseStatusException(NOT_FOUND,"Cliente não encontrado com ID: " + id));
 
-    ClienteRepository.delete(cliente);
+    clienteRepository.delete(cliente);
     }
 }

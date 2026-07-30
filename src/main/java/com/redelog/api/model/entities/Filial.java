@@ -17,9 +17,9 @@ public class Filial {
     @Embedded
     private Endereco endereco;
     private String numeroFilial;
+    private String cnpj;
     public Filial() {
     }
-
 }
 
     

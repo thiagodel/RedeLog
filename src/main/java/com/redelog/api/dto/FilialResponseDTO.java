@@ -12,5 +12,6 @@ public class FilialResponseDTO {
     private String nome;
     private EnderecoResponseDTO endereco;
     private String numeroFilial;
+    private String cnpj;
 
 }

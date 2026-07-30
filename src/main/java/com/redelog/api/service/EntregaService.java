@@ -2,12 +2,11 @@ package com.redelog.api.service;
 
 import com.redelog.api.dto.EntregaRequestDTO;
 import com.redelog.api.dto.EntregaResponseDTO;
+import com.redelog.api.dto.EnderecoRequestDTO;
 import com.redelog.api.mapper.EntregaMapper;
 import com.redelog.api.model.entities.*;
 import com.redelog.api.model.enums.StatusEntrega;
 import com.redelog.api.repository.*;
-
-import java.util.List;
 
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
@@ -70,7 +69,7 @@ public class EntregaService {
         Filial filial = filialRepository.findById(dto.getFilialOrigemId())
                 .orElseThrow(() -> new ResponseStatusException(NOT_FOUND, "Filial não encontrada"));
 
-        Endereco endereco = dto.getEnderecoEntrega();
+        Endereco endereco = converterEndereco(dto.getEnderecoEntrega());
 
         if (endereco == null) {
             throw new ResponseStatusException(BAD_REQUEST, "Endereço não informado");
@@ -112,7 +111,7 @@ public class EntregaService {
         Filial filial = filialRepository.findById(dto.getFilialOrigemId())
                 .orElseThrow(() -> new ResponseStatusException(NOT_FOUND, "Filial não encontrada"));
 
-        Endereco endereco = dto.getEnderecoEntrega();
+        Endereco endereco = converterEndereco(dto.getEnderecoEntrega());
 
         if (endereco == null) {
             throw new ResponseStatusException(BAD_REQUEST, "Endereço não informado");
@@ -135,6 +134,23 @@ public class EntregaService {
         return entregaRepository.findById(id)
                 .orElseThrow(() -> new ResponseStatusException(
                         NOT_FOUND, "Entrega não encontrada"));
+    }
+
+    private Endereco converterEndereco(EnderecoRequestDTO enderecoDto) {
+        if (enderecoDto == null) {
+            return null;
+        }
+
+        Endereco endereco = new Endereco();
+        endereco.setRua(enderecoDto.getRua());
+        endereco.setNumero(enderecoDto.getNumero());
+        endereco.setBairro(enderecoDto.getBairro());
+        endereco.setCidade(enderecoDto.getCidade());
+        endereco.setEstado(enderecoDto.getEstado());
+        endereco.setCep(enderecoDto.getCep());
+        endereco.setComplemento(enderecoDto.getComplemento());
+
+        return endereco;
     }
 
     public EntregaResponseDTO despachar(Long id){
