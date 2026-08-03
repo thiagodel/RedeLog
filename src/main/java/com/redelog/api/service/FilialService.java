@@ -41,7 +41,7 @@ public class FilialService {
 
     public void deletarPorId(Long id) {
         Filial filial = filialRepository.findById(id)
-                .orElseThrow(() -> new RuntimeException("Filial não encontrada com ID: " + id));
+                .orElseThrow(() -> new ResponseStatusException(NOT_FOUND, "Filial não encontrada com ID: " + id));
         filialRepository.delete(filial);
     }
 
@@ -81,11 +81,19 @@ public class FilialService {
             );
         }
 
+        if (filialRepository.existsByNumeroFilial(dto.getNumeroFilial())) {
+            throw new ResponseStatusException(
+                    HttpStatus.CONFLICT,
+                    "Número da filial já cadastrado."
+            );
+        }
+
         Filial dadosAtualizados = FilialMapper.toEntity(dto);
 
         filial.setNome(dadosAtualizados.getNome());
         filial.setEndereco(dadosAtualizados.getEndereco());
         filial.setNumeroFilial(dadosAtualizados.getNumeroFilial());
+        filial.setCnpj(dadosAtualizados.getCnpj());
 
         Filial atualizada = filialRepository.save(filial);
 

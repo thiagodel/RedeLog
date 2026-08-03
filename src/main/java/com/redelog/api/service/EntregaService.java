@@ -48,7 +48,7 @@ public class EntregaService {
 
     public void deletarPorId(Long id) {
         Entrega entrega = entregaRepository.findById(id)
-                .orElseThrow(() -> new RuntimeException("Entrega não encontrada com ID: " + id));
+                .orElseThrow(() -> new ResponseStatusException(NOT_FOUND, "Entrega não encontrada com ID: " + id));
         entregaRepository.delete(entrega);
     }
 

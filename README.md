@@ -1,197 +1,143 @@
 # RedeLog API
 
-API backend do sistema **RedeLog**, uma plataforma de gerenciamento logístico para controle de entregas, motoristas e clientes.
+API REST do sistema RedeLog para o gerenciamento de clientes, entregadores,
+filiais e entregas. O backend é desenvolvido em Java 17 com Spring Boot e
+persiste os dados em MySQL.
 
-O projeto foi desenvolvido utilizando **Java + Spring Boot** para fornecer uma API REST consumida por aplicações **desktop (Electron)** e **mobile (Flutter)**.
+## Arquitetura
 
----
-
-# Arquitetura do Sistema
-
-```
-Flutter App (Entregador)
-        │
-        ▼
-Electron Dashboard (Admin / Filial)
-        │
-        ▼
-        API REST
-   (Spring Boot + Spring Web)
-        │
-        ▼
-      MySQL Database
+```text
+Clientes web, desktop ou mobile
+             |
+             v
+      API REST (Spring Boot)
+             |
+             v
+        MySQL / JPA
 ```
 
----
+O código segue uma separação por responsabilidades:
 
-# Tecnologias Utilizadas
-
-Backend
-
-* Java 17
-* Spring Boot
-* Spring Web
-* Spring Data JPA
-* Lombok
-* MySQL
-
-Ferramentas
-
-* Maven
-* IntelliJ IDEA / VSCode
-* Postman / Insomnia
-
----
-
-# Estrutura do Projeto
-
-```
+```text
 src/main/java/com/redelog/api
-
-controller     → Endpoints da API
-service        → Regras de negócio
-repository     → Acesso ao banco de dados
-model          → Entidades JPA
-dto            → Objetos de transferência
-config         → Configurações do projeto
+├── controller  # Endpoints HTTP
+├── service     # Regras de negócio
+├── repository  # Acesso aos dados com JPA
+├── model       # Entidades e enums do domínio
+├── dto         # Objetos de entrada e saída da API
+├── mapper      # Conversão entre entidades e DTOs
+└── config      # Configurações, como CORS
 ```
 
-Estrutura completa:
+## Tecnologias
 
-```
-redelog-api
-│
-├── controller
-│     EntregaController.java
-│     MotoristaController.java
-│
-├── service
-│     EntregaService.java
-│     MotoristaService.java
-│
-├── repository
-│     EntregaRepository.java
-│     MotoristaRepository.java
-│
-├── model
-│     Entrega.java
-│     Motorista.java
-│     Cliente.java
-│
-├── dto
-│     EntregaDTO.java
-│
-└── RedelogApiApplication.java
+- Java 17
+- Spring Boot 3
+- Spring Web, Validation e Data JPA
+- MySQL e H2 (testes)
+- Lombok
+- Maven
+
+## Configuração
+
+As configurações padrão ficam em
+`src/main/resources/application.properties`. Para executar com MySQL, defina
+as variáveis de ambiente abaixo (ou os valores equivalentes nas propriedades
+do Spring):
+
+```powershell
+$env:DB_USERNAME = "seu_usuario"
+$env:DB_PASSWORD = "sua_senha"
 ```
 
----
+O servidor inicia na porta `8081`. O perfil padrão é `dev`; suas propriedades
+ficam em `application-dev.properties`. O perfil `test` utiliza H2 em memória.
 
-# Configuração do Banco de Dados
+### CORS
 
-Arquivo:
+As origens permitidas são configuradas pela variável `CORS_ALLOWED_ORIGINS`,
+em lista separada por vírgulas. O padrão atende aplicações locais em portas
+comuns de desenvolvimento:
 
-```
-src/main/resources/application.properties
-```
-
-Exemplo de configuração:
-
-```
-spring.datasource.url=jdbc:mysql://localhost:3306/redelog
-spring.datasource.username=root
-spring.datasource.password=123456
-
-spring.jpa.hibernate.ddl-auto=update
-spring.jpa.show-sql=true
-spring.jpa.properties.hibernate.format_sql=true
+```powershell
+$env:CORS_ALLOWED_ORIGINS = "http://localhost:3000,http://localhost:5173"
 ```
 
----
+Em produção, informe apenas os domínios efetivamente utilizados pelo cliente,
+por exemplo `https://app.exemplo.com`. A API não libera qualquer origem e não
+envia credenciais em requisições CORS.
 
-# Executando o Projeto
+## Execução
 
-### 1 - Clonar o repositório
+O repositório depende do Maven instalado no ambiente. Execute:
 
-```
-git clone https://github.com/seu-usuario/redelog-api.git
-```
-
-### 2 - Entrar no diretório
-
-```
-cd redelog-api
+```powershell
+mvn spring-boot:run
 ```
 
-### 3 - Rodar o projeto
+Para rodar os testes:
 
+```powershell
+mvn test
 ```
-./mvnw spring-boot:run
-```
 
-Ou rodar diretamente pela IDE.
+> O Maven Wrapper está versionado, mas a pasta `.mvn/wrapper` não faz parte do
+> repositório atual. Até que ela seja adicionada, use o Maven instalado.
 
----
-
-# Endpoints Principais
+## Endpoints disponíveis
 
 ### Entregas
 
+- `GET /entregas` — lista paginada
+- `GET /entregas/{id}` — consulta por identificador
+- `POST /entregas` — cria uma entrega
+- `PUT /entregas/{id}` — atualiza uma entrega
+- `DELETE /entregas/{id}` — remove uma entrega
+- `PATCH /entregas/{id}/despachar`
+- `PATCH /entregas/{id}/sairParaEntrega`
+- `PATCH /entregas/{id}/finalizarEntrega`
+- `PATCH /entregas/{id}/registrarFalha?motivo=...`
+
+### Entregadores
+
+- `GET /entregadores`
+- `GET /entregadores/{id}`
+- `POST /entregadores`
+- `PUT /entregadores/{id}`
+- `DELETE /entregadores/{id}`
+- `PATCH /entregadores/{id}/ativar`
+- `PATCH /entregadores/{id}/desativar`
+
+### Clientes
+
+O serviço de clientes oferece listagem, consulta, cadastro, atualização e
+remoção. O controlador correspondente ainda precisa ser corrigido para que
+esses endpoints fiquem disponíveis.
+
+### Filiais
+
+- `GET /filiais`
+- `GET /filiais/{id}`
+- `POST /filiais`
+- `PUT /filiais/{id}`
+- `DELETE /filiais/{id}`
+
+O cadastro valida a unicidade de CNPJ e número da filial.
+
+## Estados de entrega
+
+```text
+CRIADA -> ENVIADA -> EM_ROTA -> ENTREGUE
+                         |
+                         -> FALHA
 ```
-GET /entregas
-GET /entregas/{id}
-POST /entregas
-PUT /entregas/{id}
-```
 
-### Motoristas
+## Situação atual
 
-```
-GET /motoristas
-POST /motoristas
-```
+Antes de publicar ou integrar clientes, corrija o `ClienteController`: ele
+contém erros de compilação. O projeto também precisa de testes que cubram os
+fluxos de negócio além do teste de carregamento do contexto.
 
-### Autenticação
+## Autores
 
-```
-POST /login
-```
-
----
-
-# Status de Entrega
-
-O sistema utiliza os seguintes status:
-
-```
-PENDENTE
-EM_ROTA
-ENTREGUE
-CANCELADO
-```
-
----
-
-# Integrações
-
-O backend é consumido por:
-
-* Aplicação Desktop (Electron)
-* Aplicação Mobile para entregadores (Flutter)
-
----
-
-# Objetivo do Projeto
-
-O RedeLog tem como objetivo demonstrar uma arquitetura completa de sistema logístico, incluindo:
-
-* Gestão de entregas
-* Controle de motoristas
-* Rastreamento de pedidos
-* Confirmação de entrega
-* Integração entre desktop e mobile
-
----
-
-# Autor
-
-Thiago Delmiro / Guilherme Augusto / Ruan Lucas
+Thiago Delmiro, Guilherme Augusto

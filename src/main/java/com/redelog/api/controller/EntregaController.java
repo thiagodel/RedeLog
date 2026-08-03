@@ -10,6 +10,7 @@ import org.springframework.data.domain.Pageable;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
+import java.net.URI;
 import java.util.List;
 
 @RestController
@@ -39,7 +40,11 @@ public class EntregaController {
     public ResponseEntity<EntregaResponseDTO> salvar (@Valid @RequestBody EntregaRequestDTO dto) {
     	EntregaResponseDTO novaEntrega = entregaService.salvar(dto);
 
-        return ResponseEntity.ok(novaEntrega);
+        URI location = URI.create("/entregas/" + novaEntrega.getId());
+
+        return ResponseEntity
+                .created(location)
+                .body(novaEntrega);
     }
 
     @PutMapping("/{id}")

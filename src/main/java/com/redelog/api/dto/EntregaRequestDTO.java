@@ -1,6 +1,7 @@
 package com.redelog.api.dto;
 
 import com.redelog.api.model.entities.Endereco;
+import jakarta.validation.Valid;
 import jakarta.validation.constraints.NotNull;
 import lombok.Getter;
 import lombok.Setter;
@@ -14,6 +15,7 @@ public class EntregaRequestDTO {
     @NotNull
     private Long clienteId;
 
+    @Valid
     @NotNull
     private EnderecoRequestDTO enderecoEntrega;
 
