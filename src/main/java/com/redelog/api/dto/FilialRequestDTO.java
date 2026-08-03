@@ -2,6 +2,7 @@ package com.redelog.api.dto;
 
 
 import com.redelog.api.model.entities.Endereco;
+import jakarta.validation.Valid;
 import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.NotNull;
 import jakarta.validation.constraints.Pattern;
@@ -15,6 +16,7 @@ public class FilialRequestDTO {
     @NotNull
     private String nome;
 
+    @Valid
     @NotNull(message = "Endereço obrigatório!")
     private EnderecoRequestDTO endereco;
     private String numeroFilial;

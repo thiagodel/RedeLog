@@ -9,6 +9,8 @@ import org.springframework.data.domain.Pageable;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
+import java.net.URI;
+
 
 @RestController
 @RequestMapping("/filiais")
@@ -31,7 +33,11 @@ public class FilialController {
     @PostMapping
     public ResponseEntity<FilialResponseDTO> cadastrar(@Valid @RequestBody FilialRequestDTO dto){
         FilialResponseDTO novaFilial = filialService.cadastrar(dto);
-        return ResponseEntity.ok(novaFilial);
+        URI location = URI.create("/filiais/" + novaFilial.getId());
+
+        return ResponseEntity
+                .created(location)
+                .body(novaFilial);
     }
 
     @PutMapping("/{id}")

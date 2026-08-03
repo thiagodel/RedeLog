@@ -81,6 +81,13 @@ public class FilialService {
             );
         }
 
+        if (filialRepository.existsByNumeroFilial(dto.getNumeroFilial())) {
+            throw new ResponseStatusException(
+                    HttpStatus.CONFLICT,
+                    "Número da filial já cadastrado."
+            );
+        }
+
         Filial dadosAtualizados = FilialMapper.toEntity(dto);
 
         filial.setNome(dadosAtualizados.getNome());

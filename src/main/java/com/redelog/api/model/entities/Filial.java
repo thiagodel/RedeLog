@@ -16,7 +16,9 @@ public class Filial {
 
     @Embedded
     private Endereco endereco;
+    @Column(unique = true)
     private String numeroFilial;
+    @Column(unique = true)
     private String cnpj;
     public Filial() {
     }
