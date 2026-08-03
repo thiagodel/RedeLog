@@ -4,57 +4,56 @@ import com.redelog.api.dto.ClienteRequestDTO;
 import com.redelog.api.dto.ClienteResponseDTO;
 import com.redelog.api.service.ClienteService;
 import jakarta.validation.Valid;
-import org.hibernate.query.Page;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.Pageable;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
-import java.awt.print.Pageable;
+
 
 @RestController
 @RequestMapping("/clientes")
 
 
 public class ClienteController {
-    private final ClienteController clienteController;
+    private final ClienteService clienteService;
 
-    public ClienteController(ClienteController clienteController) {this.clienteController = clienteController;}
+    public ClienteController(ClienteService clienteService){this.clienteService = clienteService;}
 
 
     @GetMapping
-    public ResponseEntity<Page<ClienteResponseDTO>>listarTodos(Pageable pageable){
-        return ResponseEntity.ok(clienteService.listarTodos(Pageable));
+    public ResponseEntity<Page<ClienteResponseDTO>> listarTodos(Pageable pageable){
+        return ResponseEntity.ok(clienteService.listarTodos(pageable));
     }
 
     @GetMapping("/{id}")
-    public ResponseEntity<ClienteResponseDTO>buscarPorId(@PathVariable long id){
-        return ResponseEntity.ok(clienteService.buscarPorId(long id));
+    public ResponseEntity<ClienteResponseDTO> buscarPorId(@PathVariable long id){
+        return ResponseEntity.ok(clienteService.buscarPorId(id));
     }
 
     @PostMapping
-    public ResponseEntity<ClienteResponseDTO>novoCadastro(@RequestBody ClienteRequestDTO clienteRequestDTO){
-        ClienteResponseDTO novoCadastro = clienteService.novoCadastro(DTO);
-        return ResponseEntity.ok(novoCadastro);
+    public ResponseEntity<ClienteResponseDTO> salvar(@Valid @RequestBody ClienteRequestDTO dto){
+        ClienteResponseDTO novoCliente = clienteService.salvar(dto);
+        return ResponseEntity.ok(novoCliente);
     }
 
     @PutMapping("/{id}")
-    public ResponseEntity<ClienteResponseDTO>atualizar(@PathVariable long id, @Valid @RequestBody ClienteRequestDTO dto){
-        ClienteRequestDTO novoCliente = ClienteService.atualizar(dto, id)
+    public ResponseEntity<ClienteResponseDTO> atualizar(@PathVariable Long id, @Valid @RequestBody ClienteRequestDTO dto){
+        ClienteResponseDTO clienteAtualizado = clienteService.atualizar(id, dto);
         return ResponseEntity.ok(clienteAtualizado);
     }
 
     @DeleteMapping("/{id}")
-    public ResponseEntity<Void>Deletar(@PathVariable long id){
-        ClienteService.deletarPorId(id);
-        return ResponseEntity.noContent().build();
+    public ResponseEntity<Void> deletarPorId(@PathVariable Long id){
+       clienteService.deletarPorId(id);
+       return ResponseEntity.noContent().build();
     }
 
-    @PatchMapping("/{id}/recebido")
-    public ResponseEntity<ClienteResponseDTO>clienteRecebeuEncomenda(@PathVariable long id, @RequestBody ClienteRequestDTO dto){
-        return ResponseEntity.ok(clienteRecebeuEncomenda);
-    }
 
-    @PatchMapping"/{id}/naoRecebido")
-    public ResponseEntity<ClienteResponseDTO>clienteNaoRecebeuEncomenda(@PathVariable long id, @RequestBody ClienteRequestDTO dto){
-        return ResponseEntity.ok(clienteNaoRecebeuEncomenda);
-    }
+
+
+
+
+
+
 }

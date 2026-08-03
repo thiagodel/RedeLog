@@ -14,7 +14,9 @@ public class EntregadorRequestDTO {
 
     @NotBlank
     private String telefone;
+
     private String email;
+
     @NotBlank
     private String placaVeiculo;
 

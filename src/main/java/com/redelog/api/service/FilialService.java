@@ -41,7 +41,7 @@ public class FilialService {
 
     public void deletarPorId(Long id) {
         Filial filial = filialRepository.findById(id)
-                .orElseThrow(() -> new RuntimeException("Filial não encontrada com ID: " + id));
+                .orElseThrow(() -> new ResponseStatusException(NOT_FOUND, "Filial não encontrada com ID: " + id));
         filialRepository.delete(filial);
     }
 
@@ -86,6 +86,7 @@ public class FilialService {
         filial.setNome(dadosAtualizados.getNome());
         filial.setEndereco(dadosAtualizados.getEndereco());
         filial.setNumeroFilial(dadosAtualizados.getNumeroFilial());
+        filial.setCnpj(dadosAtualizados.getCnpj());
 
         Filial atualizada = filialRepository.save(filial);
 
