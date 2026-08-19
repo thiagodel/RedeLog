@@ -725,3 +725,1022 @@ ADVERTÊNCIA: Unmatched cancel notification for request id 876
 2026.03.11 22:38:53 INFO  Memory monitor stopped
 2026.03.11 22:38:53 INFO  shutting down Metals
 2026.03.11 22:38:53 INFO  Exiting server
+2026.08.18 17:43:19 INFO  Started: Metals version 1.6.8 in folders 'C:\Project\spring.boot.redelog-api' for client Visual Studio Code 1.133.0.
+2026.08.18 17:43:19 INFO  Memory monitor started
+2026.08.18 17:43:20 WARN  Using H2 2.4.240 which is newer than the version Flyway has been verified with. The latest verified version of H2 is 2.3.232.
+2026.08.18 17:43:20 INFO  no build target found for C:\Project\spring.boot.redelog-api\src\main\java\com\redelog\api\service\ClienteService.java. Using fallback presentation compiler.
+2026.08.18 17:43:20 INFO  no build target found for C:\Project\spring.boot.redelog-api\src\main\java\com\redelog\api\service\ClienteService.java. Using fallback presentation compiler.
+ago. 18, 2026 5:43:21 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+ADVERTÊNCIA: Unmatched cancel notification for request id 4
+2026.08.18 17:43:20 INFO  no build target found for C:\Project\spring.boot.redelog-api\src\main\java\com\redelog\api\service\ClienteService.java. Using fallback presentation compiler.
+2026.08.18 17:43:33 INFO  running 'C:\Program Files\Java\zulu17.54.21-ca-jdk17.0.13-win_x64\bin\java.exe -Dfile.encoding=UTF-8 -Dmaven.multiModuleProjectDirectory=C:\Project\spring.boot.redelog-api -Dmaven.home=C:\Users\thiag\AppData\Local\Temp\metals14677226816421032666 -cp C:\Users\thiag\AppData\Local\Temp\metals14677226816421032666\maven-wrapper.jar org.apache.maven.wrapper.MavenWrapperMain generate-sources ch.epfl.scala:bloop-maven-plugin:2.0.5:bloopInstall -DdownloadSources=true'
+2026.08.18 17:43:35 INFO  [INFO] Scanning for projects...
+2026.08.18 17:43:35 INFO  Downloading from central: https://repo.maven.apache.org/maven2/ch/epfl/scala/bloop-maven-plugin/2.0.5/bloop-maven-plugin-2.0.5.pom
+2026.08.18 17:43:36 INFO  Progress (1): 1.1 kB
+2026.08.18 17:43:36 INFO  Progress (1): 2.5 kB
+2026.08.18 17:43:36 INFO  Progress (1): 5.6 kB
+2026.08.18 17:43:36 INFO  Progress (1): 8.0 kB
+2026.08.18 17:43:36 INFO                      
+2026.08.18 17:43:36 INFO  Downloaded from central: https://repo.maven.apache.org/maven2/ch/epfl/scala/bloop-maven-plugin/2.0.5/bloop-maven-plugin-2.0.5.pom (8.0 kB at 15 kB/s)
+2026.08.18 17:43:36 INFO  Downloading from central: https://repo.maven.apache.org/maven2/ch/epfl/scala/bloop-maven-plugin/2.0.5/bloop-maven-plugin-2.0.5.jar
+2026.08.18 17:43:36 INFO  Progress (1): 0.9/53 kB
+2026.08.18 17:43:36 INFO  Progress (1): 2.3/53 kB
+2026.08.18 17:43:36 INFO  Progress (1): 3.6/53 kB
+2026.08.18 17:43:36 INFO  Progress (1): 5.0/53 kB
+2026.08.18 17:43:36 INFO  Progress (1): 6.4/53 kB
+2026.08.18 17:43:36 INFO  Progress (1): 7.8/53 kB
+2026.08.18 17:43:36 INFO  Progress (1): 9.1/53 kB
+2026.08.18 17:43:36 INFO  Progress (1): 10/53 kB 
+2026.08.18 17:43:36 INFO  Progress (1): 12/53 kB
+2026.08.18 17:43:36 INFO  Progress (1): 13/53 kB
+2026.08.18 17:43:36 INFO  Progress (1): 15/53 kB
+2026.08.18 17:43:36 INFO  Progress (1): 16/53 kB
+2026.08.18 17:43:36 INFO  Progress (1): 17/53 kB
+2026.08.18 17:43:36 INFO  Progress (1): 19/53 kB
+2026.08.18 17:43:36 INFO  Progress (1): 20/53 kB
+2026.08.18 17:43:36 INFO  Progress (1): 21/53 kB
+2026.08.18 17:43:36 INFO  Progress (1): 23/53 kB
+2026.08.18 17:43:36 INFO  Progress (1): 24/53 kB
+2026.08.18 17:43:36 INFO  Progress (1): 26/53 kB
+2026.08.18 17:43:36 INFO  Progress (1): 27/53 kB
+2026.08.18 17:43:36 INFO  Progress (1): 28/53 kB
+2026.08.18 17:43:36 INFO  Progress (1): 30/53 kB
+2026.08.18 17:43:36 INFO  Progress (1): 31/53 kB
+2026.08.18 17:43:36 INFO  Progress (1): 32/53 kB
+2026.08.18 17:43:36 INFO  Progress (1): 34/53 kB
+2026.08.18 17:43:36 INFO  Progress (1): 35/53 kB
+2026.08.18 17:43:36 INFO  Progress (1): 36/53 kB
+2026.08.18 17:43:36 INFO  Progress (1): 38/53 kB
+2026.08.18 17:43:36 INFO  Progress (1): 39/53 kB
+2026.08.18 17:43:36 INFO  Progress (1): 41/53 kB
+2026.08.18 17:43:36 INFO  Progress (1): 42/53 kB
+2026.08.18 17:43:36 INFO  Progress (1): 43/53 kB
+2026.08.18 17:43:36 INFO  Progress (1): 45/53 kB
+2026.08.18 17:43:36 INFO  Progress (1): 46/53 kB
+2026.08.18 17:43:36 INFO  Progress (1): 47/53 kB
+2026.08.18 17:43:36 INFO  Progress (1): 49/53 kB
+2026.08.18 17:43:36 INFO  Progress (1): 50/53 kB
+2026.08.18 17:43:36 INFO  Progress (1): 52/53 kB
+2026.08.18 17:43:36 INFO  Progress (1): 53 kB   
+2026.08.18 17:43:36 INFO                     
+2026.08.18 17:43:36 INFO  Downloaded from central: https://repo.maven.apache.org/maven2/ch/epfl/scala/bloop-maven-plugin/2.0.5/bloop-maven-plugin-2.0.5.jar (53 kB at 213 kB/s)
+2026.08.18 17:43:36 INFO  [INFO] 
+2026.08.18 17:43:36 INFO  [INFO] ----------------------< com.redelog:redelog-api >-----------------------
+2026.08.18 17:43:36 INFO  [INFO] Building redelog-api 0.0.1-SNAPSHOT
+2026.08.18 17:43:36 INFO  [INFO]   from pom.xml
+2026.08.18 17:43:36 INFO  [INFO] --------------------------------[ jar ]---------------------------------
+2026.08.18 17:43:36 INFO  [INFO] 
+2026.08.18 17:43:36 INFO  [INFO] --- bloop:2.0.5:bloopInstall (default-cli) @ redelog-api ---
+2026.08.18 17:43:37 INFO  no build target found for C:\Project\spring.boot.redelog-api\src\main\java\com\redelog\api\service\ClienteService.java. Using fallback presentation compiler.
+2026.08.18 17:43:37 WARN  no build target for: C:\Project\spring.boot.redelog-api\src\main\java\com\redelog\api\service\ClienteService.java
+2026.08.18 17:43:37 INFO  no build target found for C:\Project\spring.boot.redelog-api\src\main\java\com\redelog\api\service\ClienteService.java. Using fallback presentation compiler.
+2026.08.18 17:43:37 INFO  no build target found for C:\Project\spring.boot.redelog-api\src\main\java\com\redelog\api\service\ClienteService.java. Using fallback presentation compiler.
+2026.08.18 17:43:37 INFO  no build target found for C:\Project\spring.boot.redelog-api\src\main\java\com\redelog\api\service\ClienteService.java. Using fallback presentation compiler.
+2026.08.18 17:43:37 INFO  no build target found for C:\Project\spring.boot.redelog-api\src\main\java\com\redelog\api\service\ClienteService.java. Using fallback presentation compiler.
+2026.08.18 17:43:38 INFO  [ERROR] org.scala-lang:scala([0-9]?)-library is missing from project dependencies
+2026.08.18 17:43:38 INFO  [INFO] Resolving artifact: org.springframework.boot:spring-boot-starter-jdbc:jar:3.5.11:compile (sources = false)
+2026.08.18 17:43:38 INFO  [INFO] SUCCESS: org.springframework.boot:spring-boot-starter-jdbc:jar:3.5.11:compile (sources = false)
+2026.08.18 17:43:38 INFO  [INFO] Resolving artifact: org.springframework.boot:spring-boot-starter-jdbc:jar:3.5.11:compile (sources = true)
+2026.08.18 17:43:38 INFO  [INFO] SUCCESS: org.springframework.boot:spring-boot-starter-jdbc:jar:3.5.11:compile (sources = true)
+2026.08.18 17:43:38 INFO  [INFO] Resolving artifact: jakarta.xml.bind:jakarta.xml.bind-api:jar:4.0.4:runtime (sources = false)
+2026.08.18 17:43:38 INFO  [INFO] SUCCESS: jakarta.xml.bind:jakarta.xml.bind-api:jar:4.0.4:runtime (sources = false)
+2026.08.18 17:43:38 INFO  [INFO] Resolving artifact: jakarta.xml.bind:jakarta.xml.bind-api:jar:4.0.4:runtime (sources = true)
+2026.08.18 17:43:38 INFO  [INFO] SUCCESS: jakarta.xml.bind:jakarta.xml.bind-api:jar:4.0.4:runtime (sources = true)
+2026.08.18 17:43:38 INFO  [INFO] Resolving artifact: org.springframework.boot:spring-boot-starter-logging:jar:3.5.11:compile (sources = false)
+2026.08.18 17:43:38 INFO  [INFO] SUCCESS: org.springframework.boot:spring-boot-starter-logging:jar:3.5.11:compile (sources = false)
+2026.08.18 17:43:38 INFO  [INFO] Resolving artifact: org.springframework.boot:spring-boot-starter-logging:jar:3.5.11:compile (sources = true)
+2026.08.18 17:43:38 INFO  [INFO] SUCCESS: org.springframework.boot:spring-boot-starter-logging:jar:3.5.11:compile (sources = true)
+2026.08.18 17:43:38 INFO  [INFO] Resolving artifact: org.hamcrest:hamcrest:jar:3.0:test (sources = false)
+2026.08.18 17:43:38 INFO  [INFO] SUCCESS: org.hamcrest:hamcrest:jar:3.0:test (sources = false)
+2026.08.18 17:43:38 INFO  [INFO] Resolving artifact: org.hamcrest:hamcrest:jar:3.0:test (sources = true)
+2026.08.18 17:43:38 INFO  [INFO] SUCCESS: org.hamcrest:hamcrest:jar:3.0:test (sources = true)
+2026.08.18 17:43:38 INFO  [INFO] Resolving artifact: org.yaml:snakeyaml:jar:2.4:compile (sources = false)
+2026.08.18 17:43:38 INFO  [INFO] SUCCESS: org.yaml:snakeyaml:jar:2.4:compile (sources = false)
+2026.08.18 17:43:38 INFO  [INFO] Resolving artifact: org.yaml:snakeyaml:jar:2.4:compile (sources = true)
+2026.08.18 17:43:38 INFO  [INFO] SUCCESS: org.yaml:snakeyaml:jar:2.4:compile (sources = true)
+2026.08.18 17:43:38 INFO  [INFO] Resolving artifact: org.springframework.boot:spring-boot-starter:jar:3.5.11:compile (sources = false)
+2026.08.18 17:43:38 INFO  [INFO] SUCCESS: org.springframework.boot:spring-boot-starter:jar:3.5.11:compile (sources = false)
+2026.08.18 17:43:38 INFO  [INFO] Resolving artifact: org.springframework.boot:spring-boot-starter:jar:3.5.11:compile (sources = true)
+2026.08.18 17:43:38 INFO  [INFO] SUCCESS: org.springframework.boot:spring-boot-starter:jar:3.5.11:compile (sources = true)
+2026.08.18 17:43:38 INFO  [INFO] Resolving artifact: net.minidev:json-smart:jar:2.5.2:test (sources = false)
+2026.08.18 17:43:38 INFO  [INFO] SUCCESS: net.minidev:json-smart:jar:2.5.2:test (sources = false)
+2026.08.18 17:43:38 INFO  [INFO] Resolving artifact: net.minidev:json-smart:jar:2.5.2:test (sources = true)
+2026.08.18 17:43:38 INFO  [INFO] SUCCESS: net.minidev:json-smart:jar:2.5.2:test (sources = true)
+2026.08.18 17:43:38 INFO  [INFO] Resolving artifact: com.sun.istack:istack-commons-runtime:jar:4.1.2:runtime (sources = false)
+2026.08.18 17:43:38 INFO  [INFO] SUCCESS: com.sun.istack:istack-commons-runtime:jar:4.1.2:runtime (sources = false)
+2026.08.18 17:43:38 INFO  [INFO] Resolving artifact: com.sun.istack:istack-commons-runtime:jar:4.1.2:runtime (sources = true)
+2026.08.18 17:43:38 INFO  [INFO] SUCCESS: com.sun.istack:istack-commons-runtime:jar:4.1.2:runtime (sources = true)
+2026.08.18 17:43:38 INFO  [INFO] Resolving artifact: org.objenesis:objenesis:jar:3.3:test (sources = false)
+2026.08.18 17:43:38 INFO  [INFO] SUCCESS: org.objenesis:objenesis:jar:3.3:test (sources = false)
+2026.08.18 17:43:38 INFO  [INFO] Resolving artifact: org.objenesis:objenesis:jar:3.3:test (sources = true)
+2026.08.18 17:43:38 INFO  [INFO] SUCCESS: org.objenesis:objenesis:jar:3.3:test (sources = true)
+2026.08.18 17:43:38 INFO  [INFO] Resolving artifact: org.springframework.boot:spring-boot-starter-web:jar:3.5.11:compile (sources = false)
+2026.08.18 17:43:38 INFO  [INFO] SUCCESS: org.springframework.boot:spring-boot-starter-web:jar:3.5.11:compile (sources = false)
+2026.08.18 17:43:38 INFO  [INFO] Resolving artifact: org.springframework.boot:spring-boot-starter-web:jar:3.5.11:compile (sources = true)
+2026.08.18 17:43:38 INFO  [INFO] SUCCESS: org.springframework.boot:spring-boot-starter-web:jar:3.5.11:compile (sources = true)
+2026.08.18 17:43:38 INFO  [INFO] Resolving artifact: org.apache.logging.log4j:log4j-to-slf4j:jar:2.24.3:compile (sources = false)
+2026.08.18 17:43:38 INFO  [INFO] SUCCESS: org.apache.logging.log4j:log4j-to-slf4j:jar:2.24.3:compile (sources = false)
+2026.08.18 17:43:38 INFO  [INFO] Resolving artifact: org.apache.logging.log4j:log4j-to-slf4j:jar:2.24.3:compile (sources = true)
+2026.08.18 17:43:38 INFO  [INFO] SUCCESS: org.apache.logging.log4j:log4j-to-slf4j:jar:2.24.3:compile (sources = true)
+2026.08.18 17:43:38 INFO  [INFO] Resolving artifact: org.antlr:antlr4-runtime:jar:4.13.0:compile (sources = false)
+2026.08.18 17:43:38 INFO  [INFO] SUCCESS: org.antlr:antlr4-runtime:jar:4.13.0:compile (sources = false)
+2026.08.18 17:43:38 INFO  [INFO] Resolving artifact: org.antlr:antlr4-runtime:jar:4.13.0:compile (sources = true)
+2026.08.18 17:43:38 INFO  [INFO] SUCCESS: org.antlr:antlr4-runtime:jar:4.13.0:compile (sources = true)
+2026.08.18 17:43:38 INFO  [INFO] Resolving artifact: org.junit.jupiter:junit-jupiter-params:jar:5.12.2:test (sources = false)
+2026.08.18 17:43:38 INFO  [INFO] SUCCESS: org.junit.jupiter:junit-jupiter-params:jar:5.12.2:test (sources = false)
+2026.08.18 17:43:38 INFO  [INFO] Resolving artifact: org.junit.jupiter:junit-jupiter-params:jar:5.12.2:test (sources = true)
+2026.08.18 17:43:38 INFO  [INFO] SUCCESS: org.junit.jupiter:junit-jupiter-params:jar:5.12.2:test (sources = true)
+2026.08.18 17:43:38 INFO  [INFO] Resolving artifact: org.slf4j:slf4j-api:jar:2.0.17:compile (sources = false)
+2026.08.18 17:43:38 INFO  [INFO] SUCCESS: org.slf4j:slf4j-api:jar:2.0.17:compile (sources = false)
+2026.08.18 17:43:38 INFO  [INFO] Resolving artifact: org.slf4j:slf4j-api:jar:2.0.17:compile (sources = true)
+2026.08.18 17:43:38 INFO  [INFO] SUCCESS: org.slf4j:slf4j-api:jar:2.0.17:compile (sources = true)
+2026.08.18 17:43:38 INFO  [INFO] Resolving artifact: org.hibernate.orm:hibernate-core:jar:6.6.42.Final:compile (sources = false)
+2026.08.18 17:43:38 INFO  [INFO] SUCCESS: org.hibernate.orm:hibernate-core:jar:6.6.42.Final:compile (sources = false)
+2026.08.18 17:43:38 INFO  [INFO] Resolving artifact: org.hibernate.orm:hibernate-core:jar:6.6.42.Final:compile (sources = true)
+2026.08.18 17:43:38 INFO  [INFO] SUCCESS: org.hibernate.orm:hibernate-core:jar:6.6.42.Final:compile (sources = true)
+2026.08.18 17:43:38 INFO  [INFO] Resolving artifact: ch.qos.logback:logback-core:jar:1.5.32:compile (sources = false)
+2026.08.18 17:43:38 INFO  [INFO] SUCCESS: ch.qos.logback:logback-core:jar:1.5.32:compile (sources = false)
+2026.08.18 17:43:38 INFO  [INFO] Resolving artifact: ch.qos.logback:logback-core:jar:1.5.32:compile (sources = true)
+2026.08.18 17:43:38 INFO  [INFO] SUCCESS: ch.qos.logback:logback-core:jar:1.5.32:compile (sources = true)
+2026.08.18 17:43:38 INFO  [INFO] Resolving artifact: org.springframework:spring-jdbc:jar:6.2.16:compile (sources = false)
+2026.08.18 17:43:38 INFO  [INFO] SUCCESS: org.springframework:spring-jdbc:jar:6.2.16:compile (sources = false)
+2026.08.18 17:43:38 INFO  [INFO] Resolving artifact: org.springframework:spring-jdbc:jar:6.2.16:compile (sources = true)
+2026.08.18 17:43:38 INFO  [INFO] SUCCESS: org.springframework:spring-jdbc:jar:6.2.16:compile (sources = true)
+2026.08.18 17:43:38 INFO  [INFO] Resolving artifact: net.minidev:accessors-smart:jar:2.5.2:test (sources = false)
+2026.08.18 17:43:38 INFO  [INFO] SUCCESS: net.minidev:accessors-smart:jar:2.5.2:test (sources = false)
+2026.08.18 17:43:38 INFO  [INFO] Resolving artifact: net.minidev:accessors-smart:jar:2.5.2:test (sources = true)
+2026.08.18 17:43:38 INFO  [INFO] SUCCESS: net.minidev:accessors-smart:jar:2.5.2:test (sources = true)
+2026.08.18 17:43:38 INFO  [INFO] Resolving artifact: com.h2database:h2:jar:2.3.232:runtime (sources = false)
+2026.08.18 17:43:38 INFO  [INFO] SUCCESS: com.h2database:h2:jar:2.3.232:runtime (sources = false)
+2026.08.18 17:43:38 INFO  [INFO] Resolving artifact: com.h2database:h2:jar:2.3.232:runtime (sources = true)
+2026.08.18 17:43:38 INFO  Downloading from central: https://repo.maven.apache.org/maven2/com/h2database/h2/2.3.232/h2-2.3.232-sources.jar
+2026.08.18 17:43:38 INFO  Progress (1): 0/1.8 MB
+2026.08.18 17:43:38 INFO  Progress (1): 0/1.8 MB
+2026.08.18 17:43:38 INFO  Progress (1): 0/1.8 MB
+2026.08.18 17:43:38 INFO  Progress (1): 0/1.8 MB
+2026.08.18 17:43:38 INFO  Progress (1): 0/1.8 MB
+2026.08.18 17:43:38 INFO  Progress (1): 0/1.8 MB
+2026.08.18 17:43:38 INFO  Progress (1): 0/1.8 MB
+2026.08.18 17:43:38 INFO  Progress (1): 0/1.8 MB
+2026.08.18 17:43:38 INFO  Progress (1): 0/1.8 MB
+2026.08.18 17:43:38 INFO  Progress (1): 0/1.8 MB
+2026.08.18 17:43:38 INFO  Progress (1): 0/1.8 MB
+2026.08.18 17:43:38 INFO  Progress (1): 0.1/1.8 MB
+2026.08.18 17:43:38 INFO  Progress (1): 0.1/1.8 MB
+2026.08.18 17:43:38 INFO  Progress (1): 0.1/1.8 MB
+2026.08.18 17:43:38 INFO  Progress (1): 0.1/1.8 MB
+2026.08.18 17:43:38 INFO  Progress (1): 0.1/1.8 MB
+2026.08.18 17:43:38 INFO  Progress (1): 0.1/1.8 MB
+2026.08.18 17:43:38 INFO  Progress (1): 0.1/1.8 MB
+2026.08.18 17:43:38 INFO  Progress (1): 0.1/1.8 MB
+2026.08.18 17:43:38 INFO  Progress (1): 0.1/1.8 MB
+2026.08.18 17:43:38 INFO  Progress (1): 0.1/1.8 MB
+2026.08.18 17:43:38 INFO  Progress (1): 0.1/1.8 MB
+2026.08.18 17:43:38 INFO  Progress (1): 0.1/1.8 MB
+2026.08.18 17:43:38 INFO  Progress (1): 0.1/1.8 MB
+2026.08.18 17:43:38 INFO  Progress (1): 0.1/1.8 MB
+2026.08.18 17:43:38 INFO  Progress (1): 0.1/1.8 MB
+2026.08.18 17:43:38 INFO  Progress (1): 0.1/1.8 MB
+2026.08.18 17:43:38 INFO  Progress (1): 0.1/1.8 MB
+2026.08.18 17:43:38 INFO  Progress (1): 0.1/1.8 MB
+2026.08.18 17:43:38 INFO  Progress (1): 0.1/1.8 MB
+2026.08.18 17:43:38 INFO  Progress (1): 0.1/1.8 MB
+2026.08.18 17:43:38 INFO  Progress (1): 0.1/1.8 MB
+2026.08.18 17:43:38 INFO  Progress (1): 0.1/1.8 MB
+2026.08.18 17:43:38 INFO  Progress (1): 0.1/1.8 MB
+2026.08.18 17:43:38 INFO  Progress (1): 0.1/1.8 MB
+2026.08.18 17:43:38 INFO  Progress (1): 0.1/1.8 MB
+2026.08.18 17:43:38 INFO  Progress (1): 0.2/1.8 MB
+2026.08.18 17:43:38 INFO  Progress (1): 0.2/1.8 MB
+2026.08.18 17:43:38 INFO  Progress (1): 0.2/1.8 MB
+2026.08.18 17:43:38 INFO  Progress (1): 0.2/1.8 MB
+2026.08.18 17:43:38 INFO  Progress (1): 0.2/1.8 MB
+2026.08.18 17:43:38 INFO  Progress (1): 0.2/1.8 MB
+2026.08.18 17:43:38 INFO  Progress (1): 0.2/1.8 MB
+2026.08.18 17:43:38 INFO  Progress (1): 0.2/1.8 MB
+2026.08.18 17:43:38 INFO  Progress (1): 0.3/1.8 MB
+2026.08.18 17:43:38 INFO  Progress (1): 0.3/1.8 MB
+2026.08.18 17:43:38 INFO  Progress (1): 0.3/1.8 MB
+2026.08.18 17:43:38 INFO  Progress (1): 0.3/1.8 MB
+2026.08.18 17:43:38 INFO  Progress (1): 0.3/1.8 MB
+2026.08.18 17:43:38 INFO  Progress (1): 0.3/1.8 MB
+2026.08.18 17:43:38 INFO  Progress (1): 0.4/1.8 MB
+2026.08.18 17:43:38 INFO  Progress (1): 0.4/1.8 MB
+2026.08.18 17:43:38 INFO  Progress (1): 0.4/1.8 MB
+2026.08.18 17:43:38 INFO  Progress (1): 0.4/1.8 MB
+2026.08.18 17:43:38 INFO  Progress (1): 0.4/1.8 MB
+2026.08.18 17:43:38 INFO  Progress (1): 0.4/1.8 MB
+2026.08.18 17:43:38 INFO  Progress (1): 0.5/1.8 MB
+2026.08.18 17:43:38 INFO  Progress (1): 0.5/1.8 MB
+2026.08.18 17:43:38 INFO  Progress (1): 0.5/1.8 MB
+2026.08.18 17:43:38 INFO  Progress (1): 0.5/1.8 MB
+2026.08.18 17:43:38 INFO  Progress (1): 0.5/1.8 MB
+2026.08.18 17:43:38 INFO  Progress (1): 0.5/1.8 MB
+2026.08.18 17:43:38 INFO  Progress (1): 0.5/1.8 MB
+2026.08.18 17:43:38 INFO  Progress (1): 0.6/1.8 MB
+2026.08.18 17:43:38 INFO  Progress (1): 0.6/1.8 MB
+2026.08.18 17:43:38 INFO  Progress (1): 0.6/1.8 MB
+2026.08.18 17:43:38 INFO  Progress (1): 0.6/1.8 MB
+2026.08.18 17:43:38 INFO  Progress (1): 0.6/1.8 MB
+2026.08.18 17:43:38 INFO  Progress (1): 0.6/1.8 MB
+2026.08.18 17:43:38 INFO  Progress (1): 0.7/1.8 MB
+2026.08.18 17:43:38 INFO  Progress (1): 0.7/1.8 MB
+2026.08.18 17:43:38 INFO  Progress (1): 0.7/1.8 MB
+2026.08.18 17:43:38 INFO  Progress (1): 0.7/1.8 MB
+2026.08.18 17:43:38 INFO  Progress (1): 0.7/1.8 MB
+2026.08.18 17:43:38 INFO  Progress (1): 0.7/1.8 MB
+2026.08.18 17:43:38 INFO  Progress (1): 0.8/1.8 MB
+2026.08.18 17:43:38 INFO  Progress (1): 0.8/1.8 MB
+2026.08.18 17:43:38 INFO  Progress (1): 0.8/1.8 MB
+2026.08.18 17:43:38 INFO  Progress (1): 0.8/1.8 MB
+2026.08.18 17:43:38 INFO  Progress (1): 0.8/1.8 MB
+2026.08.18 17:43:38 INFO  Progress (1): 0.8/1.8 MB
+2026.08.18 17:43:38 INFO  Progress (1): 0.9/1.8 MB
+2026.08.18 17:43:38 INFO  Progress (1): 0.9/1.8 MB
+2026.08.18 17:43:38 INFO  Progress (1): 0.9/1.8 MB
+2026.08.18 17:43:38 INFO  Progress (1): 0.9/1.8 MB
+2026.08.18 17:43:38 INFO  Progress (1): 0.9/1.8 MB
+2026.08.18 17:43:38 INFO  Progress (1): 0.9/1.8 MB
+2026.08.18 17:43:38 INFO  Progress (1): 1.0/1.8 MB
+2026.08.18 17:43:38 INFO  Progress (1): 1.0/1.8 MB
+2026.08.18 17:43:38 INFO  Progress (1): 1.0/1.8 MB
+2026.08.18 17:43:38 INFO  Progress (1): 1.0/1.8 MB
+2026.08.18 17:43:38 INFO  Progress (1): 1.0/1.8 MB
+2026.08.18 17:43:38 INFO  Progress (1): 1.0/1.8 MB
+2026.08.18 17:43:38 INFO  Progress (1): 1.1/1.8 MB
+2026.08.18 17:43:38 INFO  Progress (1): 1.1/1.8 MB
+2026.08.18 17:43:38 INFO  Progress (1): 1.1/1.8 MB
+2026.08.18 17:43:38 INFO  Progress (1): 1.1/1.8 MB
+2026.08.18 17:43:38 INFO  Progress (1): 1.1/1.8 MB
+2026.08.18 17:43:38 INFO  Progress (1): 1.1/1.8 MB
+2026.08.18 17:43:38 INFO  Progress (1): 1.2/1.8 MB
+2026.08.18 17:43:38 INFO  Progress (1): 1.2/1.8 MB
+2026.08.18 17:43:38 INFO  Progress (1): 1.2/1.8 MB
+2026.08.18 17:43:38 INFO  Progress (1): 1.2/1.8 MB
+2026.08.18 17:43:38 INFO  Progress (1): 1.2/1.8 MB
+2026.08.18 17:43:38 INFO  Progress (1): 1.2/1.8 MB
+2026.08.18 17:43:38 INFO  Progress (1): 1.3/1.8 MB
+2026.08.18 17:43:38 INFO  Progress (1): 1.3/1.8 MB
+2026.08.18 17:43:38 INFO  Progress (1): 1.3/1.8 MB
+2026.08.18 17:43:38 INFO  Progress (1): 1.3/1.8 MB
+2026.08.18 17:43:38 INFO  Progress (1): 1.3/1.8 MB
+2026.08.18 17:43:38 INFO  Progress (1): 1.3/1.8 MB
+2026.08.18 17:43:38 INFO  Progress (1): 1.4/1.8 MB
+2026.08.18 17:43:38 INFO  Progress (1): 1.4/1.8 MB
+2026.08.18 17:43:38 INFO  Progress (1): 1.4/1.8 MB
+2026.08.18 17:43:38 INFO  Progress (1): 1.4/1.8 MB
+2026.08.18 17:43:38 INFO  Progress (1): 1.4/1.8 MB
+2026.08.18 17:43:38 INFO  Progress (1): 1.4/1.8 MB
+2026.08.18 17:43:38 INFO  Progress (1): 1.4/1.8 MB
+2026.08.18 17:43:38 INFO  Progress (1): 1.5/1.8 MB
+2026.08.18 17:43:38 INFO  Progress (1): 1.5/1.8 MB
+2026.08.18 17:43:38 INFO  Progress (1): 1.5/1.8 MB
+2026.08.18 17:43:38 INFO  Progress (1): 1.5/1.8 MB
+2026.08.18 17:43:38 INFO  Progress (1): 1.5/1.8 MB
+2026.08.18 17:43:38 INFO  Progress (1): 1.5/1.8 MB
+2026.08.18 17:43:38 INFO  Progress (1): 1.6/1.8 MB
+2026.08.18 17:43:38 INFO  Progress (1): 1.6/1.8 MB
+2026.08.18 17:43:38 INFO  Progress (1): 1.6/1.8 MB
+2026.08.18 17:43:38 INFO  Progress (1): 1.6/1.8 MB
+2026.08.18 17:43:38 INFO  Progress (1): 1.6/1.8 MB
+2026.08.18 17:43:38 INFO  Progress (1): 1.6/1.8 MB
+2026.08.18 17:43:38 INFO  Progress (1): 1.7/1.8 MB
+2026.08.18 17:43:38 INFO  Progress (1): 1.7/1.8 MB
+2026.08.18 17:43:38 INFO  Progress (1): 1.7/1.8 MB
+2026.08.18 17:43:38 INFO  Progress (1): 1.7/1.8 MB
+2026.08.18 17:43:38 INFO  Progress (1): 1.7/1.8 MB
+2026.08.18 17:43:38 INFO  Progress (1): 1.7/1.8 MB
+2026.08.18 17:43:38 INFO  Progress (1): 1.8/1.8 MB
+2026.08.18 17:43:38 INFO  Progress (1): 1.8/1.8 MB
+2026.08.18 17:43:38 INFO  Progress (1): 1.8/1.8 MB
+2026.08.18 17:43:38 INFO  Progress (1): 1.8 MB    
+2026.08.18 17:43:38 INFO                      
+2026.08.18 17:43:38 INFO  Downloaded from central: https://repo.maven.apache.org/maven2/com/h2database/h2/2.3.232/h2-2.3.232-sources.jar (1.8 MB at 8.7 MB/s)
+2026.08.18 17:43:38 INFO  [INFO] SUCCESS: com.h2database:h2:jar:2.3.232:runtime (sources = true)
+2026.08.18 17:43:38 INFO  [INFO] Resolving artifact: org.springframework.boot:spring-boot-starter-tomcat:jar:3.5.11:compile (sources = false)
+2026.08.18 17:43:38 INFO  [INFO] SUCCESS: org.springframework.boot:spring-boot-starter-tomcat:jar:3.5.11:compile (sources = false)
+2026.08.18 17:43:38 INFO  [INFO] Resolving artifact: org.springframework.boot:spring-boot-starter-tomcat:jar:3.5.11:compile (sources = true)
+2026.08.18 17:43:38 INFO  [INFO] SUCCESS: org.springframework.boot:spring-boot-starter-tomcat:jar:3.5.11:compile (sources = true)
+2026.08.18 17:43:38 INFO  [INFO] Resolving artifact: org.assertj:assertj-core:jar:3.27.7:test (sources = false)
+2026.08.18 17:43:38 INFO  [INFO] SUCCESS: org.assertj:assertj-core:jar:3.27.7:test (sources = false)
+2026.08.18 17:43:38 INFO  [INFO] Resolving artifact: org.assertj:assertj-core:jar:3.27.7:test (sources = true)
+2026.08.18 17:43:38 INFO  [INFO] SUCCESS: org.assertj:assertj-core:jar:3.27.7:test (sources = true)
+2026.08.18 17:43:38 INFO  [INFO] Resolving artifact: org.mockito:mockito-junit-jupiter:jar:5.17.0:test (sources = false)
+2026.08.18 17:43:38 INFO  [INFO] SUCCESS: org.mockito:mockito-junit-jupiter:jar:5.17.0:test (sources = false)
+2026.08.18 17:43:38 INFO  [INFO] Resolving artifact: org.mockito:mockito-junit-jupiter:jar:5.17.0:test (sources = true)
+2026.08.18 17:43:38 INFO  [INFO] SUCCESS: org.mockito:mockito-junit-jupiter:jar:5.17.0:test (sources = true)
+2026.08.18 17:43:38 INFO  [INFO] Resolving artifact: org.mockito:mockito-core:jar:5.17.0:test (sources = false)
+2026.08.18 17:43:38 INFO  [INFO] SUCCESS: org.mockito:mockito-core:jar:5.17.0:test (sources = false)
+2026.08.18 17:43:38 INFO  [INFO] Resolving artifact: org.mockito:mockito-core:jar:5.17.0:test (sources = true)
+2026.08.18 17:43:38 INFO  [INFO] SUCCESS: org.mockito:mockito-core:jar:5.17.0:test (sources = true)
+2026.08.18 17:43:38 INFO  [INFO] Resolving artifact: org.ow2.asm:asm:jar:9.7.1:test (sources = false)
+2026.08.18 17:43:38 INFO  [INFO] SUCCESS: org.ow2.asm:asm:jar:9.7.1:test (sources = false)
+2026.08.18 17:43:38 INFO  [INFO] Resolving artifact: org.ow2.asm:asm:jar:9.7.1:test (sources = true)
+2026.08.18 17:43:38 INFO  [INFO] SUCCESS: org.ow2.asm:asm:jar:9.7.1:test (sources = true)
+2026.08.18 17:43:38 INFO  [INFO] Resolving artifact: org.junit.jupiter:junit-jupiter-api:jar:5.12.2:test (sources = false)
+2026.08.18 17:43:38 INFO  [INFO] SUCCESS: org.junit.jupiter:junit-jupiter-api:jar:5.12.2:test (sources = false)
+2026.08.18 17:43:38 INFO  [INFO] Resolving artifact: org.junit.jupiter:junit-jupiter-api:jar:5.12.2:test (sources = true)
+2026.08.18 17:43:38 INFO  [INFO] SUCCESS: org.junit.jupiter:junit-jupiter-api:jar:5.12.2:test (sources = true)
+2026.08.18 17:43:38 INFO  [INFO] Resolving artifact: org.springframework.boot:spring-boot-starter-test:jar:3.5.11:test (sources = false)
+2026.08.18 17:43:38 INFO  [INFO] SUCCESS: org.springframework.boot:spring-boot-starter-test:jar:3.5.11:test (sources = false)
+2026.08.18 17:43:38 INFO  [INFO] Resolving artifact: org.springframework.boot:spring-boot-starter-test:jar:3.5.11:test (sources = true)
+2026.08.18 17:43:38 INFO  [INFO] SUCCESS: org.springframework.boot:spring-boot-starter-test:jar:3.5.11:test (sources = true)
+2026.08.18 17:43:38 INFO  [INFO] Resolving artifact: org.slf4j:jul-to-slf4j:jar:2.0.17:compile (sources = false)
+2026.08.18 17:43:38 INFO  [INFO] SUCCESS: org.slf4j:jul-to-slf4j:jar:2.0.17:compile (sources = false)
+2026.08.18 17:43:38 INFO  [INFO] Resolving artifact: org.slf4j:jul-to-slf4j:jar:2.0.17:compile (sources = true)
+2026.08.18 17:43:38 INFO  [INFO] SUCCESS: org.slf4j:jul-to-slf4j:jar:2.0.17:compile (sources = true)
+2026.08.18 17:43:38 INFO  [INFO] Resolving artifact: com.fasterxml.jackson.datatype:jackson-datatype-jdk8:jar:2.19.4:compile (sources = false)
+2026.08.18 17:43:38 INFO  [INFO] SUCCESS: com.fasterxml.jackson.datatype:jackson-datatype-jdk8:jar:2.19.4:compile (sources = false)
+2026.08.18 17:43:38 INFO  [INFO] Resolving artifact: com.fasterxml.jackson.datatype:jackson-datatype-jdk8:jar:2.19.4:compile (sources = true)
+2026.08.18 17:43:38 INFO  [INFO] SUCCESS: com.fasterxml.jackson.datatype:jackson-datatype-jdk8:jar:2.19.4:compile (sources = true)
+2026.08.18 17:43:38 INFO  [INFO] Resolving artifact: com.fasterxml.jackson.module:jackson-module-parameter-names:jar:2.19.4:compile (sources = false)
+2026.08.18 17:43:38 INFO  [INFO] SUCCESS: com.fasterxml.jackson.module:jackson-module-parameter-names:jar:2.19.4:compile (sources = false)
+2026.08.18 17:43:38 INFO  [INFO] Resolving artifact: com.fasterxml.jackson.module:jackson-module-parameter-names:jar:2.19.4:compile (sources = true)
+2026.08.18 17:43:38 INFO  [INFO] SUCCESS: com.fasterxml.jackson.module:jackson-module-parameter-names:jar:2.19.4:compile (sources = true)
+2026.08.18 17:43:38 INFO  [INFO] Resolving artifact: org.springframework.data:spring-data-commons:jar:3.5.9:compile (sources = false)
+2026.08.18 17:43:38 INFO  [INFO] SUCCESS: org.springframework.data:spring-data-commons:jar:3.5.9:compile (sources = false)
+2026.08.18 17:43:38 INFO  [INFO] Resolving artifact: org.springframework.data:spring-data-commons:jar:3.5.9:compile (sources = true)
+2026.08.18 17:43:38 INFO  [INFO] SUCCESS: org.springframework.data:spring-data-commons:jar:3.5.9:compile (sources = true)
+2026.08.18 17:43:38 INFO  [INFO] Resolving artifact: org.apache.tomcat.embed:tomcat-embed-websocket:jar:10.1.52:compile (sources = false)
+2026.08.18 17:43:38 INFO  [INFO] SUCCESS: org.apache.tomcat.embed:tomcat-embed-websocket:jar:10.1.52:compile (sources = false)
+2026.08.18 17:43:38 INFO  [INFO] Resolving artifact: org.apache.tomcat.embed:tomcat-embed-websocket:jar:10.1.52:compile (sources = true)
+2026.08.18 17:43:38 INFO  [INFO] SUCCESS: org.apache.tomcat.embed:tomcat-embed-websocket:jar:10.1.52:compile (sources = true)
+2026.08.18 17:43:38 INFO  [INFO] Resolving artifact: jakarta.persistence:jakarta.persistence-api:jar:3.1.0:compile (sources = false)
+2026.08.18 17:43:38 INFO  [INFO] SUCCESS: jakarta.persistence:jakarta.persistence-api:jar:3.1.0:compile (sources = false)
+2026.08.18 17:43:38 INFO  [INFO] Resolving artifact: jakarta.persistence:jakarta.persistence-api:jar:3.1.0:compile (sources = true)
+2026.08.18 17:43:38 INFO  [INFO] SUCCESS: jakarta.persistence:jakarta.persistence-api:jar:3.1.0:compile (sources = true)
+2026.08.18 17:43:38 INFO  [INFO] Resolving artifact: org.opentest4j:opentest4j:jar:1.3.0:test (sources = false)
+2026.08.18 17:43:38 INFO  [INFO] SUCCESS: org.opentest4j:opentest4j:jar:1.3.0:test (sources = false)
+2026.08.18 17:43:38 INFO  [INFO] Resolving artifact: org.opentest4j:opentest4j:jar:1.3.0:test (sources = true)
+2026.08.18 17:43:38 INFO  [INFO] SUCCESS: org.opentest4j:opentest4j:jar:1.3.0:test (sources = true)
+2026.08.18 17:43:38 INFO  [INFO] Resolving artifact: ch.qos.logback:logback-classic:jar:1.5.32:compile (sources = false)
+2026.08.18 17:43:38 INFO  [INFO] SUCCESS: ch.qos.logback:logback-classic:jar:1.5.32:compile (sources = false)
+2026.08.18 17:43:38 INFO  [INFO] Resolving artifact: ch.qos.logback:logback-classic:jar:1.5.32:compile (sources = true)
+2026.08.18 17:43:38 INFO  [INFO] SUCCESS: ch.qos.logback:logback-classic:jar:1.5.32:compile (sources = true)
+2026.08.18 17:43:38 INFO  [INFO] Resolving artifact: org.apache.tomcat.embed:tomcat-embed-core:jar:10.1.52:compile (sources = false)
+2026.08.18 17:43:38 INFO  [INFO] SUCCESS: org.apache.tomcat.embed:tomcat-embed-core:jar:10.1.52:compile (sources = false)
+2026.08.18 17:43:38 INFO  [INFO] Resolving artifact: org.apache.tomcat.embed:tomcat-embed-core:jar:10.1.52:compile (sources = true)
+2026.08.18 17:43:38 INFO  [INFO] SUCCESS: org.apache.tomcat.embed:tomcat-embed-core:jar:10.1.52:compile (sources = true)
+2026.08.18 17:43:38 INFO  [INFO] Resolving artifact: org.springframework:spring-web:jar:6.2.16:compile (sources = false)
+2026.08.18 17:43:38 INFO  [INFO] SUCCESS: org.springframework:spring-web:jar:6.2.16:compile (sources = false)
+2026.08.18 17:43:38 INFO  [INFO] Resolving artifact: org.springframework:spring-web:jar:6.2.16:compile (sources = true)
+2026.08.18 17:43:38 INFO  [INFO] SUCCESS: org.springframework:spring-web:jar:6.2.16:compile (sources = true)
+2026.08.18 17:43:38 INFO  [INFO] Resolving artifact: org.springframework:spring-test:jar:6.2.16:test (sources = false)
+2026.08.18 17:43:38 INFO  [INFO] SUCCESS: org.springframework:spring-test:jar:6.2.16:test (sources = false)
+2026.08.18 17:43:38 INFO  [INFO] Resolving artifact: org.springframework:spring-test:jar:6.2.16:test (sources = true)
+2026.08.18 17:43:39 INFO  no build target found for C:\Project\spring.boot.redelog-api\src\main\java\com\redelog\api\service\ClienteService.java. Using fallback presentation compiler.
+2026.08.18 17:43:38 INFO  [INFO] SUCCESS: org.springframework:spring-test:jar:6.2.16:test (sources = true)
+2026.08.18 17:43:38 INFO  [INFO] Resolving artifact: io.smallrye:jandex:jar:3.2.0:runtime (sources = false)
+2026.08.18 17:43:38 INFO  [INFO] SUCCESS: io.smallrye:jandex:jar:3.2.0:runtime (sources = false)
+2026.08.18 17:43:38 INFO  [INFO] Resolving artifact: io.smallrye:jandex:jar:3.2.0:runtime (sources = true)
+2026.08.18 17:43:38 INFO  [INFO] SUCCESS: io.smallrye:jandex:jar:3.2.0:runtime (sources = true)
+2026.08.18 17:43:38 INFO  [INFO] Resolving artifact: org.junit.jupiter:junit-jupiter-engine:jar:5.12.2:test (sources = false)
+2026.08.18 17:43:38 INFO  [INFO] SUCCESS: org.junit.jupiter:junit-jupiter-engine:jar:5.12.2:test (sources = false)
+2026.08.18 17:43:38 INFO  [INFO] Resolving artifact: org.junit.jupiter:junit-jupiter-engine:jar:5.12.2:test (sources = true)
+2026.08.18 17:43:38 INFO  [INFO] SUCCESS: org.junit.jupiter:junit-jupiter-engine:jar:5.12.2:test (sources = true)
+2026.08.18 17:43:38 INFO  [INFO] Resolving artifact: org.springframework:spring-beans:jar:6.2.16:compile (sources = false)
+2026.08.18 17:43:38 INFO  [INFO] SUCCESS: org.springframework:spring-beans:jar:6.2.16:compile (sources = false)
+2026.08.18 17:43:38 INFO  [INFO] Resolving artifact: org.springframework:spring-beans:jar:6.2.16:compile (sources = true)
+2026.08.18 17:43:38 INFO  [INFO] SUCCESS: org.springframework:spring-beans:jar:6.2.16:compile (sources = true)
+2026.08.18 17:43:38 INFO  [INFO] Resolving artifact: org.apache.tomcat.embed:tomcat-embed-el:jar:10.1.52:compile (sources = false)
+2026.08.18 17:43:38 INFO  [INFO] SUCCESS: org.apache.tomcat.embed:tomcat-embed-el:jar:10.1.52:compile (sources = false)
+2026.08.18 17:43:38 INFO  [INFO] Resolving artifact: org.apache.tomcat.embed:tomcat-embed-el:jar:10.1.52:compile (sources = true)
+2026.08.18 17:43:38 INFO  [INFO] SUCCESS: org.apache.tomcat.embed:tomcat-embed-el:jar:10.1.52:compile (sources = true)
+2026.08.18 17:43:38 INFO  [INFO] Resolving artifact: org.skyscreamer:jsonassert:jar:1.5.3:test (sources = false)
+2026.08.18 17:43:38 INFO  [INFO] SUCCESS: org.skyscreamer:jsonassert:jar:1.5.3:test (sources = false)
+2026.08.18 17:43:38 INFO  [INFO] Resolving artifact: org.skyscreamer:jsonassert:jar:1.5.3:test (sources = true)
+2026.08.18 17:43:38 INFO  [INFO] SUCCESS: org.skyscreamer:jsonassert:jar:1.5.3:test (sources = true)
+2026.08.18 17:43:38 INFO  [INFO] Resolving artifact: org.springframework.data:spring-data-jpa:jar:3.5.9:compile (sources = false)
+2026.08.18 17:43:38 INFO  [INFO] SUCCESS: org.springframework.data:spring-data-jpa:jar:3.5.9:compile (sources = false)
+2026.08.18 17:43:38 INFO  [INFO] Resolving artifact: org.springframework.data:spring-data-jpa:jar:3.5.9:compile (sources = true)
+2026.08.18 17:43:38 INFO  [INFO] SUCCESS: org.springframework.data:spring-data-jpa:jar:3.5.9:compile (sources = true)
+2026.08.18 17:43:38 INFO  [INFO] Resolving artifact: org.glassfish.jaxb:jaxb-core:jar:4.0.6:runtime (sources = false)
+2026.08.18 17:43:38 INFO  [INFO] SUCCESS: org.glassfish.jaxb:jaxb-core:jar:4.0.6:runtime (sources = false)
+2026.08.18 17:43:38 INFO  [INFO] Resolving artifact: org.glassfish.jaxb:jaxb-core:jar:4.0.6:runtime (sources = true)
+2026.08.18 17:43:38 INFO  [INFO] SUCCESS: org.glassfish.jaxb:jaxb-core:jar:4.0.6:runtime (sources = true)
+2026.08.18 17:43:38 INFO  [INFO] Resolving artifact: org.springframework:spring-core:jar:6.2.16:compile (sources = false)
+2026.08.18 17:43:38 INFO  [INFO] SUCCESS: org.springframework:spring-core:jar:6.2.16:compile (sources = false)
+2026.08.18 17:43:38 INFO  [INFO] Resolving artifact: org.springframework:spring-core:jar:6.2.16:compile (sources = true)
+2026.08.18 17:43:38 INFO  [INFO] SUCCESS: org.springframework:spring-core:jar:6.2.16:compile (sources = true)
+2026.08.18 17:43:38 INFO  [INFO] Resolving artifact: com.fasterxml.jackson.core:jackson-core:jar:2.19.4:compile (sources = false)
+2026.08.18 17:43:38 INFO  [INFO] SUCCESS: com.fasterxml.jackson.core:jackson-core:jar:2.19.4:compile (sources = false)
+2026.08.18 17:43:38 INFO  [INFO] Resolving artifact: com.fasterxml.jackson.core:jackson-core:jar:2.19.4:compile (sources = true)
+2026.08.18 17:43:38 INFO  [INFO] SUCCESS: com.fasterxml.jackson.core:jackson-core:jar:2.19.4:compile (sources = true)
+2026.08.18 17:43:38 INFO  [INFO] Resolving artifact: org.projectlombok:lombok:jar:1.18.42:compile (sources = false)
+2026.08.18 17:43:38 INFO  [INFO] SUCCESS: org.projectlombok:lombok:jar:1.18.42:compile (sources = false)
+2026.08.18 17:43:38 INFO  [INFO] Resolving artifact: org.projectlombok:lombok:jar:1.18.42:compile (sources = true)
+2026.08.18 17:43:38 INFO  [INFO] SUCCESS: org.projectlombok:lombok:jar:1.18.42:compile (sources = true)
+2026.08.18 17:43:38 INFO  [INFO] Resolving artifact: jakarta.transaction:jakarta.transaction-api:jar:2.0.1:compile (sources = false)
+2026.08.18 17:43:38 INFO  [INFO] SUCCESS: jakarta.transaction:jakarta.transaction-api:jar:2.0.1:compile (sources = false)
+2026.08.18 17:43:38 INFO  [INFO] Resolving artifact: jakarta.transaction:jakarta.transaction-api:jar:2.0.1:compile (sources = true)
+2026.08.18 17:43:38 INFO  [INFO] SUCCESS: jakarta.transaction:jakarta.transaction-api:jar:2.0.1:compile (sources = true)
+2026.08.18 17:43:38 INFO  [INFO] Resolving artifact: org.springframework.boot:spring-boot-starter-data-jpa:jar:3.5.11:compile (sources = false)
+2026.08.18 17:43:38 INFO  [INFO] SUCCESS: org.springframework.boot:spring-boot-starter-data-jpa:jar:3.5.11:compile (sources = false)
+2026.08.18 17:43:38 INFO  [INFO] Resolving artifact: org.springframework.boot:spring-boot-starter-data-jpa:jar:3.5.11:compile (sources = true)
+2026.08.18 17:43:38 INFO  [INFO] SUCCESS: org.springframework.boot:spring-boot-starter-data-jpa:jar:3.5.11:compile (sources = true)
+2026.08.18 17:43:38 INFO  [INFO] Resolving artifact: jakarta.validation:jakarta.validation-api:jar:3.0.2:compile (sources = false)
+2026.08.18 17:43:38 INFO  [INFO] SUCCESS: jakarta.validation:jakarta.validation-api:jar:3.0.2:compile (sources = false)
+2026.08.18 17:43:38 INFO  [INFO] Resolving artifact: jakarta.validation:jakarta.validation-api:jar:3.0.2:compile (sources = true)
+2026.08.18 17:43:38 INFO  [INFO] SUCCESS: jakarta.validation:jakarta.validation-api:jar:3.0.2:compile (sources = true)
+2026.08.18 17:43:38 INFO  [INFO] Resolving artifact: org.springframework:spring-tx:jar:6.2.16:compile (sources = false)
+2026.08.18 17:43:38 INFO  [INFO] SUCCESS: org.springframework:spring-tx:jar:6.2.16:compile (sources = false)
+2026.08.18 17:43:38 INFO  [INFO] Resolving artifact: org.springframework:spring-tx:jar:6.2.16:compile (sources = true)
+2026.08.18 17:43:38 INFO  [INFO] SUCCESS: org.springframework:spring-tx:jar:6.2.16:compile (sources = true)
+2026.08.18 17:43:38 INFO  [INFO] Resolving artifact: org.springframework:spring-orm:jar:6.2.16:compile (sources = false)
+2026.08.18 17:43:38 INFO  [INFO] SUCCESS: org.springframework:spring-orm:jar:6.2.16:compile (sources = false)
+2026.08.18 17:43:38 INFO  [INFO] Resolving artifact: org.springframework:spring-orm:jar:6.2.16:compile (sources = true)
+2026.08.18 17:43:38 INFO  [INFO] SUCCESS: org.springframework:spring-orm:jar:6.2.16:compile (sources = true)
+2026.08.18 17:43:38 INFO  [INFO] Resolving artifact: org.springframework.boot:spring-boot-test:jar:3.5.11:test (sources = false)
+2026.08.18 17:43:38 INFO  [INFO] SUCCESS: org.springframework.boot:spring-boot-test:jar:3.5.11:test (sources = false)
+2026.08.18 17:43:38 INFO  [INFO] Resolving artifact: org.springframework.boot:spring-boot-test:jar:3.5.11:test (sources = true)
+2026.08.18 17:43:38 INFO  [INFO] SUCCESS: org.springframework.boot:spring-boot-test:jar:3.5.11:test (sources = true)
+2026.08.18 17:43:38 INFO  [INFO] Resolving artifact: com.fasterxml.jackson.datatype:jackson-datatype-jsr310:jar:2.19.4:compile (sources = false)
+2026.08.18 17:43:38 INFO  [INFO] SUCCESS: com.fasterxml.jackson.datatype:jackson-datatype-jsr310:jar:2.19.4:compile (sources = false)
+2026.08.18 17:43:38 INFO  [INFO] Resolving artifact: com.fasterxml.jackson.datatype:jackson-datatype-jsr310:jar:2.19.4:compile (sources = true)
+2026.08.18 17:43:38 INFO  [INFO] SUCCESS: com.fasterxml.jackson.datatype:jackson-datatype-jsr310:jar:2.19.4:compile (sources = true)
+2026.08.18 17:43:38 INFO  [INFO] Resolving artifact: org.hibernate.validator:hibernate-validator:jar:8.0.3.Final:compile (sources = false)
+2026.08.18 17:43:38 INFO  [INFO] SUCCESS: org.hibernate.validator:hibernate-validator:jar:8.0.3.Final:compile (sources = false)
+2026.08.18 17:43:38 INFO  [INFO] Resolving artifact: org.hibernate.validator:hibernate-validator:jar:8.0.3.Final:compile (sources = true)
+2026.08.18 17:43:38 INFO  [INFO] SUCCESS: org.hibernate.validator:hibernate-validator:jar:8.0.3.Final:compile (sources = true)
+2026.08.18 17:43:38 INFO  [INFO] Resolving artifact: org.glassfish.jaxb:txw2:jar:4.0.6:runtime (sources = false)
+2026.08.18 17:43:38 INFO  [INFO] SUCCESS: org.glassfish.jaxb:txw2:jar:4.0.6:runtime (sources = false)
+2026.08.18 17:43:38 INFO  [INFO] Resolving artifact: org.glassfish.jaxb:txw2:jar:4.0.6:runtime (sources = true)
+2026.08.18 17:43:39 INFO  no build target found for C:\Project\spring.boot.redelog-api\src\main\java\com\redelog\api\service\EntregadorService.java. Using fallback presentation compiler.
+2026.08.18 17:43:38 INFO  [INFO] SUCCESS: org.glassfish.jaxb:txw2:jar:4.0.6:runtime (sources = true)
+2026.08.18 17:43:38 INFO  [INFO] Resolving artifact: org.xmlunit:xmlunit-core:jar:2.10.4:test (sources = false)
+2026.08.18 17:43:38 INFO  [INFO] SUCCESS: org.xmlunit:xmlunit-core:jar:2.10.4:test (sources = false)
+2026.08.18 17:43:38 INFO  [INFO] Resolving artifact: org.xmlunit:xmlunit-core:jar:2.10.4:test (sources = true)
+2026.08.18 17:43:38 INFO  [INFO] SUCCESS: org.xmlunit:xmlunit-core:jar:2.10.4:test (sources = true)
+2026.08.18 17:43:38 INFO  [INFO] Resolving artifact: org.springframework.boot:spring-boot:jar:3.5.11:compile (sources = false)
+2026.08.18 17:43:38 INFO  [INFO] SUCCESS: org.springframework.boot:spring-boot:jar:3.5.11:compile (sources = false)
+2026.08.18 17:43:38 INFO  [INFO] Resolving artifact: org.springframework.boot:spring-boot:jar:3.5.11:compile (sources = true)
+2026.08.18 17:43:38 INFO  [INFO] SUCCESS: org.springframework.boot:spring-boot:jar:3.5.11:compile (sources = true)
+2026.08.18 17:43:38 INFO  [INFO] Resolving artifact: jakarta.annotation:jakarta.annotation-api:jar:2.1.1:compile (sources = false)
+2026.08.18 17:43:38 INFO  [INFO] SUCCESS: jakarta.annotation:jakarta.annotation-api:jar:2.1.1:compile (sources = false)
+2026.08.18 17:43:38 INFO  [INFO] Resolving artifact: jakarta.annotation:jakarta.annotation-api:jar:2.1.1:compile (sources = true)
+2026.08.18 17:43:38 INFO  [INFO] SUCCESS: jakarta.annotation:jakarta.annotation-api:jar:2.1.1:compile (sources = true)
+2026.08.18 17:43:38 INFO  [INFO] Resolving artifact: org.awaitility:awaitility:jar:4.2.2:test (sources = false)
+2026.08.18 17:43:38 INFO  [INFO] SUCCESS: org.awaitility:awaitility:jar:4.2.2:test (sources = false)
+2026.08.18 17:43:38 INFO  [INFO] Resolving artifact: org.awaitility:awaitility:jar:4.2.2:test (sources = true)
+2026.08.18 17:43:38 INFO  [INFO] SUCCESS: org.awaitility:awaitility:jar:4.2.2:test (sources = true)
+2026.08.18 17:43:38 INFO  [INFO] Resolving artifact: org.springframework:spring-webmvc:jar:6.2.16:compile (sources = false)
+2026.08.18 17:43:38 INFO  [INFO] SUCCESS: org.springframework:spring-webmvc:jar:6.2.16:compile (sources = false)
+2026.08.18 17:43:38 INFO  [INFO] Resolving artifact: org.springframework:spring-webmvc:jar:6.2.16:compile (sources = true)
+2026.08.18 17:43:38 INFO  [INFO] SUCCESS: org.springframework:spring-webmvc:jar:6.2.16:compile (sources = true)
+2026.08.18 17:43:38 INFO  [INFO] Resolving artifact: org.springframework.boot:spring-boot-starter-json:jar:3.5.11:compile (sources = false)
+2026.08.18 17:43:38 INFO  [INFO] SUCCESS: org.springframework.boot:spring-boot-starter-json:jar:3.5.11:compile (sources = false)
+2026.08.18 17:43:38 INFO  [INFO] Resolving artifact: org.springframework.boot:spring-boot-starter-json:jar:3.5.11:compile (sources = true)
+2026.08.18 17:43:38 INFO  [INFO] SUCCESS: org.springframework.boot:spring-boot-starter-json:jar:3.5.11:compile (sources = true)
+2026.08.18 17:43:38 INFO  [INFO] Resolving artifact: com.fasterxml.jackson.core:jackson-databind:jar:2.19.4:compile (sources = false)
+2026.08.18 17:43:38 INFO  [INFO] SUCCESS: com.fasterxml.jackson.core:jackson-databind:jar:2.19.4:compile (sources = false)
+2026.08.18 17:43:38 INFO  [INFO] Resolving artifact: com.fasterxml.jackson.core:jackson-databind:jar:2.19.4:compile (sources = true)
+2026.08.18 17:43:38 INFO  [INFO] SUCCESS: com.fasterxml.jackson.core:jackson-databind:jar:2.19.4:compile (sources = true)
+2026.08.18 17:43:38 INFO  [INFO] Resolving artifact: jakarta.inject:jakarta.inject-api:jar:2.0.1:runtime (sources = false)
+2026.08.18 17:43:38 INFO  [INFO] SUCCESS: jakarta.inject:jakarta.inject-api:jar:2.0.1:runtime (sources = false)
+2026.08.18 17:43:38 INFO  [INFO] Resolving artifact: jakarta.inject:jakarta.inject-api:jar:2.0.1:runtime (sources = true)
+2026.08.18 17:43:38 INFO  [INFO] SUCCESS: jakarta.inject:jakarta.inject-api:jar:2.0.1:runtime (sources = true)
+2026.08.18 17:43:38 INFO  [INFO] Resolving artifact: org.junit.jupiter:junit-jupiter:jar:5.12.2:test (sources = false)
+2026.08.18 17:43:38 INFO  [INFO] SUCCESS: org.junit.jupiter:junit-jupiter:jar:5.12.2:test (sources = false)
+2026.08.18 17:43:38 INFO  [INFO] Resolving artifact: org.junit.jupiter:junit-jupiter:jar:5.12.2:test (sources = true)
+2026.08.18 17:43:38 INFO  [INFO] SUCCESS: org.junit.jupiter:junit-jupiter:jar:5.12.2:test (sources = true)
+2026.08.18 17:43:38 INFO  [INFO] Resolving artifact: org.springframework.boot:spring-boot-starter-validation:jar:3.5.11:compile (sources = false)
+2026.08.18 17:43:38 INFO  [INFO] SUCCESS: org.springframework.boot:spring-boot-starter-validation:jar:3.5.11:compile (sources = false)
+2026.08.18 17:43:38 INFO  [INFO] Resolving artifact: org.springframework.boot:spring-boot-starter-validation:jar:3.5.11:compile (sources = true)
+2026.08.18 17:43:38 INFO  [INFO] SUCCESS: org.springframework.boot:spring-boot-starter-validation:jar:3.5.11:compile (sources = true)
+2026.08.18 17:43:38 INFO  [INFO] Resolving artifact: org.springframework:spring-context:jar:6.2.16:compile (sources = false)
+2026.08.18 17:43:38 INFO  [INFO] SUCCESS: org.springframework:spring-context:jar:6.2.16:compile (sources = false)
+2026.08.18 17:43:38 INFO  [INFO] Resolving artifact: org.springframework:spring-context:jar:6.2.16:compile (sources = true)
+2026.08.18 17:43:38 INFO  [INFO] SUCCESS: org.springframework:spring-context:jar:6.2.16:compile (sources = true)
+2026.08.18 17:43:38 INFO  [INFO] Resolving artifact: org.aspectj:aspectjweaver:jar:1.9.25.1:compile (sources = false)
+2026.08.18 17:43:38 INFO  [INFO] SUCCESS: org.aspectj:aspectjweaver:jar:1.9.25.1:compile (sources = false)
+2026.08.18 17:43:38 INFO  [INFO] Resolving artifact: org.aspectj:aspectjweaver:jar:1.9.25.1:compile (sources = true)
+2026.08.18 17:43:38 INFO  [INFO] SUCCESS: org.aspectj:aspectjweaver:jar:1.9.25.1:compile (sources = true)
+2026.08.18 17:43:38 INFO  [INFO] Resolving artifact: org.springframework:spring-aspects:jar:6.2.16:compile (sources = false)
+2026.08.18 17:43:38 INFO  [INFO] SUCCESS: org.springframework:spring-aspects:jar:6.2.16:compile (sources = false)
+2026.08.18 17:43:38 INFO  [INFO] Resolving artifact: org.springframework:spring-aspects:jar:6.2.16:compile (sources = true)
+2026.08.18 17:43:38 INFO  [INFO] SUCCESS: org.springframework:spring-aspects:jar:6.2.16:compile (sources = true)
+2026.08.18 17:43:38 INFO  [INFO] Resolving artifact: org.springframework.boot:spring-boot-autoconfigure:jar:3.5.11:compile (sources = false)
+2026.08.18 17:43:38 INFO  [INFO] SUCCESS: org.springframework.boot:spring-boot-autoconfigure:jar:3.5.11:compile (sources = false)
+2026.08.18 17:43:38 INFO  [INFO] Resolving artifact: org.springframework.boot:spring-boot-autoconfigure:jar:3.5.11:compile (sources = true)
+2026.08.18 17:43:38 INFO  [INFO] SUCCESS: org.springframework.boot:spring-boot-autoconfigure:jar:3.5.11:compile (sources = true)
+2026.08.18 17:43:38 INFO  [INFO] Resolving artifact: org.junit.platform:junit-platform-commons:jar:1.12.2:test (sources = false)
+2026.08.18 17:43:38 INFO  [INFO] SUCCESS: org.junit.platform:junit-platform-commons:jar:1.12.2:test (sources = false)
+2026.08.18 17:43:38 INFO  [INFO] Resolving artifact: org.junit.platform:junit-platform-commons:jar:1.12.2:test (sources = true)
+2026.08.18 17:43:38 INFO  [INFO] SUCCESS: org.junit.platform:junit-platform-commons:jar:1.12.2:test (sources = true)
+2026.08.18 17:43:38 INFO  [INFO] Resolving artifact: net.bytebuddy:byte-buddy:jar:1.17.8:runtime (sources = false)
+2026.08.18 17:43:38 INFO  [INFO] SUCCESS: net.bytebuddy:byte-buddy:jar:1.17.8:runtime (sources = false)
+2026.08.18 17:43:38 INFO  [INFO] Resolving artifact: net.bytebuddy:byte-buddy:jar:1.17.8:runtime (sources = true)
+2026.08.18 17:43:38 INFO  [INFO] SUCCESS: net.bytebuddy:byte-buddy:jar:1.17.8:runtime (sources = true)
+2026.08.18 17:43:38 INFO  [INFO] Resolving artifact: io.micrometer:micrometer-observation:jar:1.15.9:compile (sources = false)
+2026.08.18 17:43:38 INFO  [INFO] SUCCESS: io.micrometer:micrometer-observation:jar:1.15.9:compile (sources = false)
+2026.08.18 17:43:38 INFO  [INFO] Resolving artifact: io.micrometer:micrometer-observation:jar:1.15.9:compile (sources = true)
+2026.08.18 17:43:38 INFO  [INFO] SUCCESS: io.micrometer:micrometer-observation:jar:1.15.9:compile (sources = true)
+2026.08.18 17:43:38 INFO  [INFO] Resolving artifact: org.glassfish.jaxb:jaxb-runtime:jar:4.0.6:runtime (sources = false)
+2026.08.18 17:43:38 INFO  [INFO] SUCCESS: org.glassfish.jaxb:jaxb-runtime:jar:4.0.6:runtime (sources = false)
+2026.08.18 17:43:38 INFO  [INFO] Resolving artifact: org.glassfish.jaxb:jaxb-runtime:jar:4.0.6:runtime (sources = true)
+2026.08.18 17:43:38 INFO  [INFO] SUCCESS: org.glassfish.jaxb:jaxb-runtime:jar:4.0.6:runtime (sources = true)
+2026.08.18 17:43:38 INFO  [INFO] Resolving artifact: com.jayway.jsonpath:json-path:jar:2.9.0:test (sources = false)
+2026.08.18 17:43:38 INFO  [INFO] SUCCESS: com.jayway.jsonpath:json-path:jar:2.9.0:test (sources = false)
+2026.08.18 17:43:38 INFO  [INFO] Resolving artifact: com.jayway.jsonpath:json-path:jar:2.9.0:test (sources = true)
+2026.08.18 17:43:38 INFO  [INFO] SUCCESS: com.jayway.jsonpath:json-path:jar:2.9.0:test (sources = true)
+2026.08.18 17:43:38 INFO  [INFO] Resolving artifact: org.hibernate.common:hibernate-commons-annotations:jar:7.0.3.Final:runtime (sources = false)
+2026.08.18 17:43:38 INFO  [INFO] SUCCESS: org.hibernate.common:hibernate-commons-annotations:jar:7.0.3.Final:runtime (sources = false)
+2026.08.18 17:43:38 INFO  [INFO] Resolving artifact: org.hibernate.common:hibernate-commons-annotations:jar:7.0.3.Final:runtime (sources = true)
+2026.08.18 17:43:38 INFO  [INFO] SUCCESS: org.hibernate.common:hibernate-commons-annotations:jar:7.0.3.Final:runtime (sources = true)
+2026.08.18 17:43:38 INFO  [INFO] Resolving artifact: jakarta.activation:jakarta.activation-api:jar:2.1.4:runtime (sources = false)
+2026.08.18 17:43:38 INFO  [INFO] SUCCESS: jakarta.activation:jakarta.activation-api:jar:2.1.4:runtime (sources = false)
+2026.08.18 17:43:38 INFO  [INFO] Resolving artifact: jakarta.activation:jakarta.activation-api:jar:2.1.4:runtime (sources = true)
+2026.08.18 17:43:38 INFO  [INFO] SUCCESS: jakarta.activation:jakarta.activation-api:jar:2.1.4:runtime (sources = true)
+2026.08.18 17:43:39 INFO  no build target found for C:\Project\spring.boot.redelog-api\src\main\java\com\redelog\api\service\EntregadorService.java. Using fallback presentation compiler.
+2026.08.18 17:43:38 INFO  [INFO] Resolving artifact: org.jboss.logging:jboss-logging:jar:3.6.2.Final:compile (sources = false)
+2026.08.18 17:43:38 INFO  [INFO] SUCCESS: org.jboss.logging:jboss-logging:jar:3.6.2.Final:compile (sources = false)
+2026.08.18 17:43:38 INFO  [INFO] Resolving artifact: org.jboss.logging:jboss-logging:jar:3.6.2.Final:compile (sources = true)
+2026.08.18 17:43:38 INFO  [INFO] SUCCESS: org.jboss.logging:jboss-logging:jar:3.6.2.Final:compile (sources = true)
+2026.08.18 17:43:38 INFO  [INFO] Resolving artifact: org.apiguardian:apiguardian-api:jar:1.1.2:test (sources = false)
+2026.08.18 17:43:38 INFO  [INFO] SUCCESS: org.apiguardian:apiguardian-api:jar:1.1.2:test (sources = false)
+2026.08.18 17:43:38 INFO  [INFO] Resolving artifact: org.apiguardian:apiguardian-api:jar:1.1.2:test (sources = true)
+2026.08.18 17:43:38 INFO  [INFO] SUCCESS: org.apiguardian:apiguardian-api:jar:1.1.2:test (sources = true)
+2026.08.18 17:43:38 INFO  [INFO] Resolving artifact: com.fasterxml:classmate:jar:1.7.3:compile (sources = false)
+2026.08.18 17:43:38 INFO  [INFO] SUCCESS: com.fasterxml:classmate:jar:1.7.3:compile (sources = false)
+2026.08.18 17:43:38 INFO  [INFO] Resolving artifact: com.fasterxml:classmate:jar:1.7.3:compile (sources = true)
+2026.08.18 17:43:38 INFO  [INFO] SUCCESS: com.fasterxml:classmate:jar:1.7.3:compile (sources = true)
+2026.08.18 17:43:38 INFO  [INFO] Resolving artifact: org.junit.platform:junit-platform-engine:jar:1.12.2:test (sources = false)
+2026.08.18 17:43:38 INFO  [INFO] SUCCESS: org.junit.platform:junit-platform-engine:jar:1.12.2:test (sources = false)
+2026.08.18 17:43:38 INFO  [INFO] Resolving artifact: org.junit.platform:junit-platform-engine:jar:1.12.2:test (sources = true)
+2026.08.18 17:43:38 INFO  [INFO] SUCCESS: org.junit.platform:junit-platform-engine:jar:1.12.2:test (sources = true)
+2026.08.18 17:43:38 INFO  [INFO] Resolving artifact: org.springframework:spring-aop:jar:6.2.16:compile (sources = false)
+2026.08.18 17:43:38 INFO  [INFO] SUCCESS: org.springframework:spring-aop:jar:6.2.16:compile (sources = false)
+2026.08.18 17:43:38 INFO  [INFO] Resolving artifact: org.springframework:spring-aop:jar:6.2.16:compile (sources = true)
+2026.08.18 17:43:38 INFO  [INFO] SUCCESS: org.springframework:spring-aop:jar:6.2.16:compile (sources = true)
+2026.08.18 17:43:38 INFO  [INFO] Resolving artifact: org.springframework:spring-jcl:jar:6.2.16:compile (sources = false)
+2026.08.18 17:43:38 INFO  [INFO] SUCCESS: org.springframework:spring-jcl:jar:6.2.16:compile (sources = false)
+2026.08.18 17:43:38 INFO  [INFO] Resolving artifact: org.springframework:spring-jcl:jar:6.2.16:compile (sources = true)
+2026.08.18 17:43:38 INFO  [INFO] SUCCESS: org.springframework:spring-jcl:jar:6.2.16:compile (sources = true)
+2026.08.18 17:43:38 INFO  [INFO] Resolving artifact: com.mysql:mysql-connector-j:jar:9.6.0:runtime (sources = false)
+2026.08.18 17:43:38 INFO  [INFO] SUCCESS: com.mysql:mysql-connector-j:jar:9.6.0:runtime (sources = false)
+2026.08.18 17:43:38 INFO  [INFO] Resolving artifact: com.mysql:mysql-connector-j:jar:9.6.0:runtime (sources = true)
+2026.08.18 17:43:38 INFO  [INFO] SUCCESS: com.mysql:mysql-connector-j:jar:9.6.0:runtime (sources = true)
+2026.08.18 17:43:38 INFO  [INFO] Resolving artifact: org.springframework.boot:spring-boot-test-autoconfigure:jar:3.5.11:test (sources = false)
+2026.08.18 17:43:38 INFO  [INFO] SUCCESS: org.springframework.boot:spring-boot-test-autoconfigure:jar:3.5.11:test (sources = false)
+2026.08.18 17:43:38 INFO  [INFO] Resolving artifact: org.springframework.boot:spring-boot-test-autoconfigure:jar:3.5.11:test (sources = true)
+2026.08.18 17:43:38 INFO  [INFO] SUCCESS: org.springframework.boot:spring-boot-test-autoconfigure:jar:3.5.11:test (sources = true)
+2026.08.18 17:43:38 INFO  [INFO] Resolving artifact: com.fasterxml.jackson.core:jackson-annotations:jar:2.19.4:compile (sources = false)
+2026.08.18 17:43:38 INFO  [INFO] SUCCESS: com.fasterxml.jackson.core:jackson-annotations:jar:2.19.4:compile (sources = false)
+2026.08.18 17:43:38 INFO  [INFO] Resolving artifact: com.fasterxml.jackson.core:jackson-annotations:jar:2.19.4:compile (sources = true)
+2026.08.18 17:43:38 INFO  [INFO] SUCCESS: com.fasterxml.jackson.core:jackson-annotations:jar:2.19.4:compile (sources = true)
+2026.08.18 17:43:38 INFO  [INFO] Resolving artifact: org.eclipse.angus:angus-activation:jar:2.0.3:runtime (sources = false)
+2026.08.18 17:43:38 INFO  [INFO] SUCCESS: org.eclipse.angus:angus-activation:jar:2.0.3:runtime (sources = false)
+2026.08.18 17:43:38 INFO  [INFO] Resolving artifact: org.eclipse.angus:angus-activation:jar:2.0.3:runtime (sources = true)
+2026.08.18 17:43:38 INFO  [INFO] SUCCESS: org.eclipse.angus:angus-activation:jar:2.0.3:runtime (sources = true)
+2026.08.18 17:43:38 INFO  [INFO] Resolving artifact: com.vaadin.external.google:android-json:jar:0.0.20131108.vaadin1:test (sources = false)
+2026.08.18 17:43:38 INFO  [INFO] SUCCESS: com.vaadin.external.google:android-json:jar:0.0.20131108.vaadin1:test (sources = false)
+2026.08.18 17:43:38 INFO  [INFO] Resolving artifact: com.vaadin.external.google:android-json:jar:0.0.20131108.vaadin1:test (sources = true)
+2026.08.18 17:43:38 INFO  [INFO] SUCCESS: com.vaadin.external.google:android-json:jar:0.0.20131108.vaadin1:test (sources = true)
+2026.08.18 17:43:38 INFO  [INFO] Resolving artifact: org.apache.logging.log4j:log4j-api:jar:2.24.3:compile (sources = false)
+2026.08.18 17:43:39 INFO  [INFO] SUCCESS: org.apache.logging.log4j:log4j-api:jar:2.24.3:compile (sources = false)
+2026.08.18 17:43:39 INFO  [INFO] Resolving artifact: org.apache.logging.log4j:log4j-api:jar:2.24.3:compile (sources = true)
+2026.08.18 17:43:39 INFO  [INFO] SUCCESS: org.apache.logging.log4j:log4j-api:jar:2.24.3:compile (sources = true)
+2026.08.18 17:43:39 INFO  [INFO] Resolving artifact: net.bytebuddy:byte-buddy-agent:jar:1.17.8:test (sources = false)
+2026.08.18 17:43:39 INFO  [INFO] SUCCESS: net.bytebuddy:byte-buddy-agent:jar:1.17.8:test (sources = false)
+2026.08.18 17:43:39 INFO  [INFO] Resolving artifact: net.bytebuddy:byte-buddy-agent:jar:1.17.8:test (sources = true)
+2026.08.18 17:43:39 INFO  [INFO] SUCCESS: net.bytebuddy:byte-buddy-agent:jar:1.17.8:test (sources = true)
+2026.08.18 17:43:39 INFO  [INFO] Resolving artifact: org.springframework:spring-expression:jar:6.2.16:compile (sources = false)
+2026.08.18 17:43:39 INFO  [INFO] SUCCESS: org.springframework:spring-expression:jar:6.2.16:compile (sources = false)
+2026.08.18 17:43:39 INFO  [INFO] Resolving artifact: org.springframework:spring-expression:jar:6.2.16:compile (sources = true)
+2026.08.18 17:43:39 INFO  [INFO] SUCCESS: org.springframework:spring-expression:jar:6.2.16:compile (sources = true)
+2026.08.18 17:43:39 INFO  [INFO] Resolving artifact: io.micrometer:micrometer-commons:jar:1.15.9:compile (sources = false)
+2026.08.18 17:43:39 INFO  [INFO] SUCCESS: io.micrometer:micrometer-commons:jar:1.15.9:compile (sources = false)
+2026.08.18 17:43:39 INFO  [INFO] Resolving artifact: io.micrometer:micrometer-commons:jar:1.15.9:compile (sources = true)
+2026.08.18 17:43:39 INFO  [INFO] SUCCESS: io.micrometer:micrometer-commons:jar:1.15.9:compile (sources = true)
+2026.08.18 17:43:39 INFO  [INFO] Resolving artifact: com.zaxxer:HikariCP:jar:6.3.3:compile (sources = false)
+2026.08.18 17:43:39 INFO  [INFO] SUCCESS: com.zaxxer:HikariCP:jar:6.3.3:compile (sources = false)
+2026.08.18 17:43:39 INFO  [INFO] Resolving artifact: com.zaxxer:HikariCP:jar:6.3.3:compile (sources = true)
+2026.08.18 17:43:39 INFO  [INFO] SUCCESS: com.zaxxer:HikariCP:jar:6.3.3:compile (sources = true)
+2026.08.18 17:43:39 INFO  [INFO] Generated .bloop\redelog-api.json
+2026.08.18 17:43:39 INFO  [INFO] Starting to write configuration for project: redelog-api with configuration: compile
+2026.08.18 17:43:39 INFO  [INFO] Resolving artifact: org.springframework.boot:spring-boot-starter-jdbc:jar:3.5.11:compile (sources = false)
+2026.08.18 17:43:39 INFO  [INFO] SUCCESS: org.springframework.boot:spring-boot-starter-jdbc:jar:3.5.11:compile (sources = false)
+2026.08.18 17:43:39 INFO  [INFO] Resolving artifact: org.springframework.boot:spring-boot-starter-jdbc:jar:3.5.11:compile (sources = true)
+2026.08.18 17:43:39 INFO  [INFO] SUCCESS: org.springframework.boot:spring-boot-starter-jdbc:jar:3.5.11:compile (sources = true)
+2026.08.18 17:43:39 INFO  [INFO] Resolving artifact: jakarta.xml.bind:jakarta.xml.bind-api:jar:4.0.4:runtime (sources = false)
+2026.08.18 17:43:39 INFO  [INFO] SUCCESS: jakarta.xml.bind:jakarta.xml.bind-api:jar:4.0.4:runtime (sources = false)
+2026.08.18 17:43:39 INFO  [INFO] Resolving artifact: jakarta.xml.bind:jakarta.xml.bind-api:jar:4.0.4:runtime (sources = true)
+2026.08.18 17:43:39 INFO  [INFO] SUCCESS: jakarta.xml.bind:jakarta.xml.bind-api:jar:4.0.4:runtime (sources = true)
+2026.08.18 17:43:39 INFO  [INFO] Resolving artifact: org.springframework.boot:spring-boot-starter-logging:jar:3.5.11:compile (sources = false)
+2026.08.18 17:43:39 INFO  [INFO] SUCCESS: org.springframework.boot:spring-boot-starter-logging:jar:3.5.11:compile (sources = false)
+2026.08.18 17:43:39 INFO  [INFO] Resolving artifact: org.springframework.boot:spring-boot-starter-logging:jar:3.5.11:compile (sources = true)
+2026.08.18 17:43:39 INFO  [INFO] SUCCESS: org.springframework.boot:spring-boot-starter-logging:jar:3.5.11:compile (sources = true)
+2026.08.18 17:43:39 INFO  [INFO] Resolving artifact: org.hamcrest:hamcrest:jar:3.0:test (sources = false)
+2026.08.18 17:43:39 INFO  [INFO] SUCCESS: org.hamcrest:hamcrest:jar:3.0:test (sources = false)
+2026.08.18 17:43:39 INFO  [INFO] Resolving artifact: org.hamcrest:hamcrest:jar:3.0:test (sources = true)
+2026.08.18 17:43:39 INFO  [INFO] SUCCESS: org.hamcrest:hamcrest:jar:3.0:test (sources = true)
+2026.08.18 17:43:39 INFO  [INFO] Resolving artifact: org.yaml:snakeyaml:jar:2.4:compile (sources = false)
+2026.08.18 17:43:39 INFO  [INFO] SUCCESS: org.yaml:snakeyaml:jar:2.4:compile (sources = false)
+2026.08.18 17:43:39 INFO  [INFO] Resolving artifact: org.yaml:snakeyaml:jar:2.4:compile (sources = true)
+2026.08.18 17:43:39 INFO  [INFO] SUCCESS: org.yaml:snakeyaml:jar:2.4:compile (sources = true)
+2026.08.18 17:43:39 INFO  [INFO] Resolving artifact: org.springframework.boot:spring-boot-starter:jar:3.5.11:compile (sources = false)
+2026.08.18 17:43:39 INFO  [INFO] SUCCESS: org.springframework.boot:spring-boot-starter:jar:3.5.11:compile (sources = false)
+2026.08.18 17:43:39 INFO  [INFO] Resolving artifact: org.springframework.boot:spring-boot-starter:jar:3.5.11:compile (sources = true)
+2026.08.18 17:43:39 INFO  [INFO] SUCCESS: org.springframework.boot:spring-boot-starter:jar:3.5.11:compile (sources = true)
+2026.08.18 17:43:39 INFO  [INFO] Resolving artifact: net.minidev:json-smart:jar:2.5.2:test (sources = false)
+2026.08.18 17:43:39 INFO  [INFO] SUCCESS: net.minidev:json-smart:jar:2.5.2:test (sources = false)
+2026.08.18 17:43:39 INFO  [INFO] Resolving artifact: net.minidev:json-smart:jar:2.5.2:test (sources = true)
+2026.08.18 17:43:39 INFO  [INFO] SUCCESS: net.minidev:json-smart:jar:2.5.2:test (sources = true)
+2026.08.18 17:43:39 INFO  [INFO] Resolving artifact: com.sun.istack:istack-commons-runtime:jar:4.1.2:runtime (sources = false)
+2026.08.18 17:43:39 INFO  [INFO] SUCCESS: com.sun.istack:istack-commons-runtime:jar:4.1.2:runtime (sources = false)
+2026.08.18 17:43:39 INFO  [INFO] Resolving artifact: com.sun.istack:istack-commons-runtime:jar:4.1.2:runtime (sources = true)
+2026.08.18 17:43:39 INFO  [INFO] SUCCESS: com.sun.istack:istack-commons-runtime:jar:4.1.2:runtime (sources = true)
+2026.08.18 17:43:39 INFO  [INFO] Resolving artifact: org.objenesis:objenesis:jar:3.3:test (sources = false)
+2026.08.18 17:43:39 INFO  [INFO] SUCCESS: org.objenesis:objenesis:jar:3.3:test (sources = false)
+2026.08.18 17:43:39 INFO  [INFO] Resolving artifact: org.objenesis:objenesis:jar:3.3:test (sources = true)
+2026.08.18 17:43:39 INFO  [INFO] SUCCESS: org.objenesis:objenesis:jar:3.3:test (sources = true)
+2026.08.18 17:43:39 INFO  [INFO] Resolving artifact: org.springframework.boot:spring-boot-starter-web:jar:3.5.11:compile (sources = false)
+2026.08.18 17:43:39 INFO  [INFO] SUCCESS: org.springframework.boot:spring-boot-starter-web:jar:3.5.11:compile (sources = false)
+2026.08.18 17:43:39 INFO  [INFO] Resolving artifact: org.springframework.boot:spring-boot-starter-web:jar:3.5.11:compile (sources = true)
+2026.08.18 17:43:39 INFO  [INFO] SUCCESS: org.springframework.boot:spring-boot-starter-web:jar:3.5.11:compile (sources = true)
+2026.08.18 17:43:39 INFO  [INFO] Resolving artifact: org.apache.logging.log4j:log4j-to-slf4j:jar:2.24.3:compile (sources = false)
+2026.08.18 17:43:39 INFO  [INFO] SUCCESS: org.apache.logging.log4j:log4j-to-slf4j:jar:2.24.3:compile (sources = false)
+2026.08.18 17:43:39 INFO  [INFO] Resolving artifact: org.apache.logging.log4j:log4j-to-slf4j:jar:2.24.3:compile (sources = true)
+2026.08.18 17:43:39 INFO  [INFO] SUCCESS: org.apache.logging.log4j:log4j-to-slf4j:jar:2.24.3:compile (sources = true)
+2026.08.18 17:43:39 INFO  [INFO] Resolving artifact: org.antlr:antlr4-runtime:jar:4.13.0:compile (sources = false)
+2026.08.18 17:43:39 INFO  [INFO] SUCCESS: org.antlr:antlr4-runtime:jar:4.13.0:compile (sources = false)
+2026.08.18 17:43:39 INFO  [INFO] Resolving artifact: org.antlr:antlr4-runtime:jar:4.13.0:compile (sources = true)
+2026.08.18 17:43:39 INFO  [INFO] SUCCESS: org.antlr:antlr4-runtime:jar:4.13.0:compile (sources = true)
+2026.08.18 17:43:39 INFO  [INFO] Resolving artifact: org.junit.jupiter:junit-jupiter-params:jar:5.12.2:test (sources = false)
+2026.08.18 17:43:39 INFO  [INFO] SUCCESS: org.junit.jupiter:junit-jupiter-params:jar:5.12.2:test (sources = false)
+2026.08.18 17:43:39 INFO  [INFO] Resolving artifact: org.junit.jupiter:junit-jupiter-params:jar:5.12.2:test (sources = true)
+2026.08.18 17:43:39 INFO  [INFO] SUCCESS: org.junit.jupiter:junit-jupiter-params:jar:5.12.2:test (sources = true)
+2026.08.18 17:43:39 INFO  [INFO] Resolving artifact: org.slf4j:slf4j-api:jar:2.0.17:compile (sources = false)
+2026.08.18 17:43:39 INFO  [INFO] SUCCESS: org.slf4j:slf4j-api:jar:2.0.17:compile (sources = false)
+2026.08.18 17:43:39 INFO  [INFO] Resolving artifact: org.slf4j:slf4j-api:jar:2.0.17:compile (sources = true)
+2026.08.18 17:43:39 INFO  [INFO] SUCCESS: org.slf4j:slf4j-api:jar:2.0.17:compile (sources = true)
+2026.08.18 17:43:39 INFO  [INFO] Resolving artifact: org.hibernate.orm:hibernate-core:jar:6.6.42.Final:compile (sources = false)
+2026.08.18 17:43:39 INFO  [INFO] SUCCESS: org.hibernate.orm:hibernate-core:jar:6.6.42.Final:compile (sources = false)
+2026.08.18 17:43:39 INFO  [INFO] Resolving artifact: org.hibernate.orm:hibernate-core:jar:6.6.42.Final:compile (sources = true)
+2026.08.18 17:43:39 INFO  [INFO] SUCCESS: org.hibernate.orm:hibernate-core:jar:6.6.42.Final:compile (sources = true)
+2026.08.18 17:43:39 INFO  [INFO] Resolving artifact: ch.qos.logback:logback-core:jar:1.5.32:compile (sources = false)
+2026.08.18 17:43:39 INFO  [INFO] SUCCESS: ch.qos.logback:logback-core:jar:1.5.32:compile (sources = false)
+2026.08.18 17:43:39 INFO  [INFO] Resolving artifact: ch.qos.logback:logback-core:jar:1.5.32:compile (sources = true)
+2026.08.18 17:43:39 INFO  [INFO] SUCCESS: ch.qos.logback:logback-core:jar:1.5.32:compile (sources = true)
+2026.08.18 17:43:39 INFO  [INFO] Resolving artifact: org.springframework:spring-jdbc:jar:6.2.16:compile (sources = false)
+2026.08.18 17:43:39 INFO  [INFO] SUCCESS: org.springframework:spring-jdbc:jar:6.2.16:compile (sources = false)
+2026.08.18 17:43:39 INFO  [INFO] Resolving artifact: org.springframework:spring-jdbc:jar:6.2.16:compile (sources = true)
+2026.08.18 17:43:39 INFO  [INFO] SUCCESS: org.springframework:spring-jdbc:jar:6.2.16:compile (sources = true)
+2026.08.18 17:43:39 INFO  [INFO] Resolving artifact: net.minidev:accessors-smart:jar:2.5.2:test (sources = false)
+2026.08.18 17:43:39 INFO  [INFO] SUCCESS: net.minidev:accessors-smart:jar:2.5.2:test (sources = false)
+2026.08.18 17:43:39 INFO  [INFO] Resolving artifact: net.minidev:accessors-smart:jar:2.5.2:test (sources = true)
+2026.08.18 17:43:39 INFO  [INFO] SUCCESS: net.minidev:accessors-smart:jar:2.5.2:test (sources = true)
+2026.08.18 17:43:39 INFO  [INFO] Resolving artifact: com.h2database:h2:jar:2.3.232:runtime (sources = false)
+2026.08.18 17:43:39 INFO  [INFO] SUCCESS: com.h2database:h2:jar:2.3.232:runtime (sources = false)
+2026.08.18 17:43:39 INFO  [INFO] Resolving artifact: com.h2database:h2:jar:2.3.232:runtime (sources = true)
+2026.08.18 17:43:39 INFO  [INFO] SUCCESS: com.h2database:h2:jar:2.3.232:runtime (sources = true)
+2026.08.18 17:43:39 INFO  [INFO] Resolving artifact: org.springframework.boot:spring-boot-starter-tomcat:jar:3.5.11:compile (sources = false)
+2026.08.18 17:43:39 INFO  [INFO] SUCCESS: org.springframework.boot:spring-boot-starter-tomcat:jar:3.5.11:compile (sources = false)
+2026.08.18 17:43:39 INFO  [INFO] Resolving artifact: org.springframework.boot:spring-boot-starter-tomcat:jar:3.5.11:compile (sources = true)
+2026.08.18 17:43:40 INFO  no build target found for C:\Project\spring.boot.redelog-api\src\main\java\com\redelog\api\service\EntregadorService.java. Using fallback presentation compiler.
+2026.08.18 17:43:39 INFO  [INFO] SUCCESS: org.springframework.boot:spring-boot-starter-tomcat:jar:3.5.11:compile (sources = true)
+2026.08.18 17:43:39 INFO  [INFO] Resolving artifact: org.assertj:assertj-core:jar:3.27.7:test (sources = false)
+2026.08.18 17:43:39 INFO  [INFO] SUCCESS: org.assertj:assertj-core:jar:3.27.7:test (sources = false)
+2026.08.18 17:43:39 INFO  [INFO] Resolving artifact: org.assertj:assertj-core:jar:3.27.7:test (sources = true)
+2026.08.18 17:43:39 INFO  [INFO] SUCCESS: org.assertj:assertj-core:jar:3.27.7:test (sources = true)
+2026.08.18 17:43:39 INFO  [INFO] Resolving artifact: org.mockito:mockito-junit-jupiter:jar:5.17.0:test (sources = false)
+2026.08.18 17:43:39 INFO  [INFO] SUCCESS: org.mockito:mockito-junit-jupiter:jar:5.17.0:test (sources = false)
+2026.08.18 17:43:39 INFO  [INFO] Resolving artifact: org.mockito:mockito-junit-jupiter:jar:5.17.0:test (sources = true)
+2026.08.18 17:43:39 INFO  [INFO] SUCCESS: org.mockito:mockito-junit-jupiter:jar:5.17.0:test (sources = true)
+2026.08.18 17:43:39 INFO  [INFO] Resolving artifact: org.mockito:mockito-core:jar:5.17.0:test (sources = false)
+2026.08.18 17:43:39 INFO  [INFO] SUCCESS: org.mockito:mockito-core:jar:5.17.0:test (sources = false)
+2026.08.18 17:43:39 INFO  [INFO] Resolving artifact: org.mockito:mockito-core:jar:5.17.0:test (sources = true)
+2026.08.18 17:43:39 INFO  [INFO] SUCCESS: org.mockito:mockito-core:jar:5.17.0:test (sources = true)
+2026.08.18 17:43:39 INFO  [INFO] Resolving artifact: org.ow2.asm:asm:jar:9.7.1:test (sources = false)
+2026.08.18 17:43:39 INFO  [INFO] SUCCESS: org.ow2.asm:asm:jar:9.7.1:test (sources = false)
+2026.08.18 17:43:39 INFO  [INFO] Resolving artifact: org.ow2.asm:asm:jar:9.7.1:test (sources = true)
+2026.08.18 17:43:39 INFO  [INFO] SUCCESS: org.ow2.asm:asm:jar:9.7.1:test (sources = true)
+2026.08.18 17:43:39 INFO  [INFO] Resolving artifact: org.junit.jupiter:junit-jupiter-api:jar:5.12.2:test (sources = false)
+2026.08.18 17:43:39 INFO  [INFO] SUCCESS: org.junit.jupiter:junit-jupiter-api:jar:5.12.2:test (sources = false)
+2026.08.18 17:43:39 INFO  [INFO] Resolving artifact: org.junit.jupiter:junit-jupiter-api:jar:5.12.2:test (sources = true)
+2026.08.18 17:43:39 INFO  [INFO] SUCCESS: org.junit.jupiter:junit-jupiter-api:jar:5.12.2:test (sources = true)
+2026.08.18 17:43:39 INFO  [INFO] Resolving artifact: org.springframework.boot:spring-boot-starter-test:jar:3.5.11:test (sources = false)
+2026.08.18 17:43:39 INFO  [INFO] SUCCESS: org.springframework.boot:spring-boot-starter-test:jar:3.5.11:test (sources = false)
+2026.08.18 17:43:39 INFO  [INFO] Resolving artifact: org.springframework.boot:spring-boot-starter-test:jar:3.5.11:test (sources = true)
+2026.08.18 17:43:39 INFO  [INFO] SUCCESS: org.springframework.boot:spring-boot-starter-test:jar:3.5.11:test (sources = true)
+2026.08.18 17:43:39 INFO  [INFO] Resolving artifact: org.slf4j:jul-to-slf4j:jar:2.0.17:compile (sources = false)
+2026.08.18 17:43:39 INFO  [INFO] SUCCESS: org.slf4j:jul-to-slf4j:jar:2.0.17:compile (sources = false)
+2026.08.18 17:43:39 INFO  [INFO] Resolving artifact: org.slf4j:jul-to-slf4j:jar:2.0.17:compile (sources = true)
+2026.08.18 17:43:39 INFO  [INFO] SUCCESS: org.slf4j:jul-to-slf4j:jar:2.0.17:compile (sources = true)
+2026.08.18 17:43:39 INFO  [INFO] Resolving artifact: com.fasterxml.jackson.datatype:jackson-datatype-jdk8:jar:2.19.4:compile (sources = false)
+2026.08.18 17:43:39 INFO  [INFO] SUCCESS: com.fasterxml.jackson.datatype:jackson-datatype-jdk8:jar:2.19.4:compile (sources = false)
+2026.08.18 17:43:39 INFO  [INFO] Resolving artifact: com.fasterxml.jackson.datatype:jackson-datatype-jdk8:jar:2.19.4:compile (sources = true)
+2026.08.18 17:43:39 INFO  [INFO] SUCCESS: com.fasterxml.jackson.datatype:jackson-datatype-jdk8:jar:2.19.4:compile (sources = true)
+2026.08.18 17:43:39 INFO  [INFO] Resolving artifact: com.fasterxml.jackson.module:jackson-module-parameter-names:jar:2.19.4:compile (sources = false)
+2026.08.18 17:43:39 INFO  [INFO] SUCCESS: com.fasterxml.jackson.module:jackson-module-parameter-names:jar:2.19.4:compile (sources = false)
+2026.08.18 17:43:39 INFO  [INFO] Resolving artifact: com.fasterxml.jackson.module:jackson-module-parameter-names:jar:2.19.4:compile (sources = true)
+2026.08.18 17:43:39 INFO  [INFO] SUCCESS: com.fasterxml.jackson.module:jackson-module-parameter-names:jar:2.19.4:compile (sources = true)
+2026.08.18 17:43:39 INFO  [INFO] Resolving artifact: org.springframework.data:spring-data-commons:jar:3.5.9:compile (sources = false)
+2026.08.18 17:43:39 INFO  [INFO] SUCCESS: org.springframework.data:spring-data-commons:jar:3.5.9:compile (sources = false)
+2026.08.18 17:43:39 INFO  [INFO] Resolving artifact: org.springframework.data:spring-data-commons:jar:3.5.9:compile (sources = true)
+2026.08.18 17:43:39 INFO  [INFO] SUCCESS: org.springframework.data:spring-data-commons:jar:3.5.9:compile (sources = true)
+2026.08.18 17:43:39 INFO  [INFO] Resolving artifact: org.apache.tomcat.embed:tomcat-embed-websocket:jar:10.1.52:compile (sources = false)
+2026.08.18 17:43:39 INFO  [INFO] SUCCESS: org.apache.tomcat.embed:tomcat-embed-websocket:jar:10.1.52:compile (sources = false)
+2026.08.18 17:43:39 INFO  [INFO] Resolving artifact: org.apache.tomcat.embed:tomcat-embed-websocket:jar:10.1.52:compile (sources = true)
+2026.08.18 17:43:39 INFO  [INFO] SUCCESS: org.apache.tomcat.embed:tomcat-embed-websocket:jar:10.1.52:compile (sources = true)
+2026.08.18 17:43:39 INFO  [INFO] Resolving artifact: jakarta.persistence:jakarta.persistence-api:jar:3.1.0:compile (sources = false)
+2026.08.18 17:43:39 INFO  [INFO] SUCCESS: jakarta.persistence:jakarta.persistence-api:jar:3.1.0:compile (sources = false)
+2026.08.18 17:43:39 INFO  [INFO] Resolving artifact: jakarta.persistence:jakarta.persistence-api:jar:3.1.0:compile (sources = true)
+2026.08.18 17:43:39 INFO  [INFO] SUCCESS: jakarta.persistence:jakarta.persistence-api:jar:3.1.0:compile (sources = true)
+2026.08.18 17:43:39 INFO  [INFO] Resolving artifact: org.opentest4j:opentest4j:jar:1.3.0:test (sources = false)
+2026.08.18 17:43:39 INFO  [INFO] SUCCESS: org.opentest4j:opentest4j:jar:1.3.0:test (sources = false)
+2026.08.18 17:43:39 INFO  [INFO] Resolving artifact: org.opentest4j:opentest4j:jar:1.3.0:test (sources = true)
+2026.08.18 17:43:39 INFO  [INFO] SUCCESS: org.opentest4j:opentest4j:jar:1.3.0:test (sources = true)
+2026.08.18 17:43:39 INFO  [INFO] Resolving artifact: ch.qos.logback:logback-classic:jar:1.5.32:compile (sources = false)
+2026.08.18 17:43:39 INFO  [INFO] SUCCESS: ch.qos.logback:logback-classic:jar:1.5.32:compile (sources = false)
+2026.08.18 17:43:39 INFO  [INFO] Resolving artifact: ch.qos.logback:logback-classic:jar:1.5.32:compile (sources = true)
+2026.08.18 17:43:39 INFO  [INFO] SUCCESS: ch.qos.logback:logback-classic:jar:1.5.32:compile (sources = true)
+2026.08.18 17:43:39 INFO  [INFO] Resolving artifact: org.apache.tomcat.embed:tomcat-embed-core:jar:10.1.52:compile (sources = false)
+2026.08.18 17:43:39 INFO  [INFO] SUCCESS: org.apache.tomcat.embed:tomcat-embed-core:jar:10.1.52:compile (sources = false)
+2026.08.18 17:43:39 INFO  [INFO] Resolving artifact: org.apache.tomcat.embed:tomcat-embed-core:jar:10.1.52:compile (sources = true)
+2026.08.18 17:43:39 INFO  [INFO] SUCCESS: org.apache.tomcat.embed:tomcat-embed-core:jar:10.1.52:compile (sources = true)
+2026.08.18 17:43:39 INFO  [INFO] Resolving artifact: org.springframework:spring-web:jar:6.2.16:compile (sources = false)
+2026.08.18 17:43:39 INFO  [INFO] SUCCESS: org.springframework:spring-web:jar:6.2.16:compile (sources = false)
+2026.08.18 17:43:39 INFO  [INFO] Resolving artifact: org.springframework:spring-web:jar:6.2.16:compile (sources = true)
+2026.08.18 17:43:39 INFO  [INFO] SUCCESS: org.springframework:spring-web:jar:6.2.16:compile (sources = true)
+2026.08.18 17:43:39 INFO  [INFO] Resolving artifact: org.springframework:spring-test:jar:6.2.16:test (sources = false)
+2026.08.18 17:43:39 INFO  [INFO] SUCCESS: org.springframework:spring-test:jar:6.2.16:test (sources = false)
+2026.08.18 17:43:39 INFO  [INFO] Resolving artifact: org.springframework:spring-test:jar:6.2.16:test (sources = true)
+2026.08.18 17:43:39 INFO  [INFO] SUCCESS: org.springframework:spring-test:jar:6.2.16:test (sources = true)
+2026.08.18 17:43:39 INFO  [INFO] Resolving artifact: io.smallrye:jandex:jar:3.2.0:runtime (sources = false)
+2026.08.18 17:43:39 INFO  [INFO] SUCCESS: io.smallrye:jandex:jar:3.2.0:runtime (sources = false)
+2026.08.18 17:43:39 INFO  [INFO] Resolving artifact: io.smallrye:jandex:jar:3.2.0:runtime (sources = true)
+2026.08.18 17:43:39 INFO  [INFO] SUCCESS: io.smallrye:jandex:jar:3.2.0:runtime (sources = true)
+2026.08.18 17:43:39 INFO  [INFO] Resolving artifact: org.junit.jupiter:junit-jupiter-engine:jar:5.12.2:test (sources = false)
+2026.08.18 17:43:39 INFO  [INFO] SUCCESS: org.junit.jupiter:junit-jupiter-engine:jar:5.12.2:test (sources = false)
+2026.08.18 17:43:39 INFO  [INFO] Resolving artifact: org.junit.jupiter:junit-jupiter-engine:jar:5.12.2:test (sources = true)
+2026.08.18 17:43:39 INFO  [INFO] SUCCESS: org.junit.jupiter:junit-jupiter-engine:jar:5.12.2:test (sources = true)
+2026.08.18 17:43:39 INFO  [INFO] Resolving artifact: org.springframework:spring-beans:jar:6.2.16:compile (sources = false)
+2026.08.18 17:43:39 INFO  [INFO] SUCCESS: org.springframework:spring-beans:jar:6.2.16:compile (sources = false)
+2026.08.18 17:43:39 INFO  [INFO] Resolving artifact: org.springframework:spring-beans:jar:6.2.16:compile (sources = true)
+2026.08.18 17:43:39 INFO  [INFO] SUCCESS: org.springframework:spring-beans:jar:6.2.16:compile (sources = true)
+2026.08.18 17:43:39 INFO  [INFO] Resolving artifact: org.apache.tomcat.embed:tomcat-embed-el:jar:10.1.52:compile (sources = false)
+2026.08.18 17:43:39 INFO  [INFO] SUCCESS: org.apache.tomcat.embed:tomcat-embed-el:jar:10.1.52:compile (sources = false)
+2026.08.18 17:43:39 INFO  [INFO] Resolving artifact: org.apache.tomcat.embed:tomcat-embed-el:jar:10.1.52:compile (sources = true)
+2026.08.18 17:43:39 INFO  [INFO] SUCCESS: org.apache.tomcat.embed:tomcat-embed-el:jar:10.1.52:compile (sources = true)
+2026.08.18 17:43:39 INFO  [INFO] Resolving artifact: org.skyscreamer:jsonassert:jar:1.5.3:test (sources = false)
+2026.08.18 17:43:39 INFO  [INFO] SUCCESS: org.skyscreamer:jsonassert:jar:1.5.3:test (sources = false)
+2026.08.18 17:43:39 INFO  [INFO] Resolving artifact: org.skyscreamer:jsonassert:jar:1.5.3:test (sources = true)
+2026.08.18 17:43:39 INFO  [INFO] SUCCESS: org.skyscreamer:jsonassert:jar:1.5.3:test (sources = true)
+2026.08.18 17:43:39 INFO  [INFO] Resolving artifact: org.springframework.data:spring-data-jpa:jar:3.5.9:compile (sources = false)
+2026.08.18 17:43:39 INFO  [INFO] SUCCESS: org.springframework.data:spring-data-jpa:jar:3.5.9:compile (sources = false)
+2026.08.18 17:43:39 INFO  [INFO] Resolving artifact: org.springframework.data:spring-data-jpa:jar:3.5.9:compile (sources = true)
+2026.08.18 17:43:39 INFO  [INFO] SUCCESS: org.springframework.data:spring-data-jpa:jar:3.5.9:compile (sources = true)
+2026.08.18 17:43:39 INFO  [INFO] Resolving artifact: org.glassfish.jaxb:jaxb-core:jar:4.0.6:runtime (sources = false)
+2026.08.18 17:43:39 INFO  [INFO] SUCCESS: org.glassfish.jaxb:jaxb-core:jar:4.0.6:runtime (sources = false)
+2026.08.18 17:43:39 INFO  [INFO] Resolving artifact: org.glassfish.jaxb:jaxb-core:jar:4.0.6:runtime (sources = true)
+2026.08.18 17:43:39 INFO  [INFO] SUCCESS: org.glassfish.jaxb:jaxb-core:jar:4.0.6:runtime (sources = true)
+2026.08.18 17:43:39 INFO  [INFO] Resolving artifact: org.springframework:spring-core:jar:6.2.16:compile (sources = false)
+2026.08.18 17:43:39 INFO  [INFO] SUCCESS: org.springframework:spring-core:jar:6.2.16:compile (sources = false)
+2026.08.18 17:43:39 INFO  [INFO] Resolving artifact: org.springframework:spring-core:jar:6.2.16:compile (sources = true)
+2026.08.18 17:43:39 INFO  [INFO] SUCCESS: org.springframework:spring-core:jar:6.2.16:compile (sources = true)
+2026.08.18 17:43:39 INFO  [INFO] Resolving artifact: com.fasterxml.jackson.core:jackson-core:jar:2.19.4:compile (sources = false)
+2026.08.18 17:43:39 INFO  [INFO] SUCCESS: com.fasterxml.jackson.core:jackson-core:jar:2.19.4:compile (sources = false)
+2026.08.18 17:43:39 INFO  [INFO] Resolving artifact: com.fasterxml.jackson.core:jackson-core:jar:2.19.4:compile (sources = true)
+2026.08.18 17:43:39 INFO  [INFO] SUCCESS: com.fasterxml.jackson.core:jackson-core:jar:2.19.4:compile (sources = true)
+2026.08.18 17:43:39 INFO  [INFO] Resolving artifact: org.projectlombok:lombok:jar:1.18.42:compile (sources = false)
+2026.08.18 17:43:39 INFO  [INFO] SUCCESS: org.projectlombok:lombok:jar:1.18.42:compile (sources = false)
+2026.08.18 17:43:39 INFO  [INFO] Resolving artifact: org.projectlombok:lombok:jar:1.18.42:compile (sources = true)
+2026.08.18 17:43:39 INFO  [INFO] SUCCESS: org.projectlombok:lombok:jar:1.18.42:compile (sources = true)
+2026.08.18 17:43:39 INFO  [INFO] Resolving artifact: jakarta.transaction:jakarta.transaction-api:jar:2.0.1:compile (sources = false)
+2026.08.18 17:43:39 INFO  [INFO] SUCCESS: jakarta.transaction:jakarta.transaction-api:jar:2.0.1:compile (sources = false)
+2026.08.18 17:43:39 INFO  [INFO] Resolving artifact: jakarta.transaction:jakarta.transaction-api:jar:2.0.1:compile (sources = true)
+2026.08.18 17:43:39 INFO  [INFO] SUCCESS: jakarta.transaction:jakarta.transaction-api:jar:2.0.1:compile (sources = true)
+2026.08.18 17:43:39 INFO  [INFO] Resolving artifact: org.springframework.boot:spring-boot-starter-data-jpa:jar:3.5.11:compile (sources = false)
+2026.08.18 17:43:39 INFO  [INFO] SUCCESS: org.springframework.boot:spring-boot-starter-data-jpa:jar:3.5.11:compile (sources = false)
+2026.08.18 17:43:39 INFO  [INFO] Resolving artifact: org.springframework.boot:spring-boot-starter-data-jpa:jar:3.5.11:compile (sources = true)
+2026.08.18 17:43:39 INFO  [INFO] SUCCESS: org.springframework.boot:spring-boot-starter-data-jpa:jar:3.5.11:compile (sources = true)
+2026.08.18 17:43:39 INFO  [INFO] Resolving artifact: jakarta.validation:jakarta.validation-api:jar:3.0.2:compile (sources = false)
+2026.08.18 17:43:39 INFO  [INFO] SUCCESS: jakarta.validation:jakarta.validation-api:jar:3.0.2:compile (sources = false)
+2026.08.18 17:43:39 INFO  [INFO] Resolving artifact: jakarta.validation:jakarta.validation-api:jar:3.0.2:compile (sources = true)
+2026.08.18 17:43:39 INFO  [INFO] SUCCESS: jakarta.validation:jakarta.validation-api:jar:3.0.2:compile (sources = true)
+2026.08.18 17:43:39 INFO  [INFO] Resolving artifact: org.springframework:spring-tx:jar:6.2.16:compile (sources = false)
+2026.08.18 17:43:39 INFO  [INFO] SUCCESS: org.springframework:spring-tx:jar:6.2.16:compile (sources = false)
+2026.08.18 17:43:39 INFO  [INFO] Resolving artifact: org.springframework:spring-tx:jar:6.2.16:compile (sources = true)
+2026.08.18 17:43:39 INFO  [INFO] SUCCESS: org.springframework:spring-tx:jar:6.2.16:compile (sources = true)
+2026.08.18 17:43:39 INFO  [INFO] Resolving artifact: org.springframework:spring-orm:jar:6.2.16:compile (sources = false)
+2026.08.18 17:43:39 INFO  [INFO] SUCCESS: org.springframework:spring-orm:jar:6.2.16:compile (sources = false)
+2026.08.18 17:43:39 INFO  [INFO] Resolving artifact: org.springframework:spring-orm:jar:6.2.16:compile (sources = true)
+2026.08.18 17:43:39 INFO  [INFO] SUCCESS: org.springframework:spring-orm:jar:6.2.16:compile (sources = true)
+2026.08.18 17:43:39 INFO  [INFO] Resolving artifact: org.springframework.boot:spring-boot-test:jar:3.5.11:test (sources = false)
+2026.08.18 17:43:39 INFO  [INFO] SUCCESS: org.springframework.boot:spring-boot-test:jar:3.5.11:test (sources = false)
+2026.08.18 17:43:39 INFO  [INFO] Resolving artifact: org.springframework.boot:spring-boot-test:jar:3.5.11:test (sources = true)
+2026.08.18 17:43:39 INFO  [INFO] SUCCESS: org.springframework.boot:spring-boot-test:jar:3.5.11:test (sources = true)
+2026.08.18 17:43:39 INFO  [INFO] Resolving artifact: com.fasterxml.jackson.datatype:jackson-datatype-jsr310:jar:2.19.4:compile (sources = false)
+2026.08.18 17:43:39 INFO  [INFO] SUCCESS: com.fasterxml.jackson.datatype:jackson-datatype-jsr310:jar:2.19.4:compile (sources = false)
+2026.08.18 17:43:39 INFO  [INFO] Resolving artifact: com.fasterxml.jackson.datatype:jackson-datatype-jsr310:jar:2.19.4:compile (sources = true)
+2026.08.18 17:43:39 INFO  [INFO] SUCCESS: com.fasterxml.jackson.datatype:jackson-datatype-jsr310:jar:2.19.4:compile (sources = true)
+2026.08.18 17:43:39 INFO  [INFO] Resolving artifact: org.hibernate.validator:hibernate-validator:jar:8.0.3.Final:compile (sources = false)
+2026.08.18 17:43:39 INFO  [INFO] SUCCESS: org.hibernate.validator:hibernate-validator:jar:8.0.3.Final:compile (sources = false)
+2026.08.18 17:43:39 INFO  [INFO] Resolving artifact: org.hibernate.validator:hibernate-validator:jar:8.0.3.Final:compile (sources = true)
+2026.08.18 17:43:39 INFO  [INFO] SUCCESS: org.hibernate.validator:hibernate-validator:jar:8.0.3.Final:compile (sources = true)
+ago. 18, 2026 5:43:40 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+ADVERTÊNCIA: Unmatched cancel notification for request id 22
+2026.08.18 17:43:39 INFO  [INFO] Resolving artifact: org.glassfish.jaxb:txw2:jar:4.0.6:runtime (sources = false)
+2026.08.18 17:43:39 INFO  [INFO] SUCCESS: org.glassfish.jaxb:txw2:jar:4.0.6:runtime (sources = false)
+2026.08.18 17:43:39 INFO  [INFO] Resolving artifact: org.glassfish.jaxb:txw2:jar:4.0.6:runtime (sources = true)
+2026.08.18 17:43:39 INFO  [INFO] SUCCESS: org.glassfish.jaxb:txw2:jar:4.0.6:runtime (sources = true)
+2026.08.18 17:43:39 INFO  [INFO] Resolving artifact: org.xmlunit:xmlunit-core:jar:2.10.4:test (sources = false)
+2026.08.18 17:43:39 INFO  [INFO] SUCCESS: org.xmlunit:xmlunit-core:jar:2.10.4:test (sources = false)
+2026.08.18 17:43:39 INFO  [INFO] Resolving artifact: org.xmlunit:xmlunit-core:jar:2.10.4:test (sources = true)
+2026.08.18 17:43:39 INFO  [INFO] SUCCESS: org.xmlunit:xmlunit-core:jar:2.10.4:test (sources = true)
+2026.08.18 17:43:39 INFO  [INFO] Resolving artifact: org.springframework.boot:spring-boot:jar:3.5.11:compile (sources = false)
+2026.08.18 17:43:39 INFO  [INFO] SUCCESS: org.springframework.boot:spring-boot:jar:3.5.11:compile (sources = false)
+2026.08.18 17:43:39 INFO  [INFO] Resolving artifact: org.springframework.boot:spring-boot:jar:3.5.11:compile (sources = true)
+2026.08.18 17:43:39 INFO  [INFO] SUCCESS: org.springframework.boot:spring-boot:jar:3.5.11:compile (sources = true)
+2026.08.18 17:43:39 INFO  [INFO] Resolving artifact: jakarta.annotation:jakarta.annotation-api:jar:2.1.1:compile (sources = false)
+2026.08.18 17:43:39 INFO  [INFO] SUCCESS: jakarta.annotation:jakarta.annotation-api:jar:2.1.1:compile (sources = false)
+2026.08.18 17:43:39 INFO  [INFO] Resolving artifact: jakarta.annotation:jakarta.annotation-api:jar:2.1.1:compile (sources = true)
+2026.08.18 17:43:39 INFO  [INFO] SUCCESS: jakarta.annotation:jakarta.annotation-api:jar:2.1.1:compile (sources = true)
+2026.08.18 17:43:39 INFO  [INFO] Resolving artifact: org.awaitility:awaitility:jar:4.2.2:test (sources = false)
+2026.08.18 17:43:39 INFO  [INFO] SUCCESS: org.awaitility:awaitility:jar:4.2.2:test (sources = false)
+2026.08.18 17:43:39 INFO  [INFO] Resolving artifact: org.awaitility:awaitility:jar:4.2.2:test (sources = true)
+2026.08.18 17:43:39 INFO  [INFO] SUCCESS: org.awaitility:awaitility:jar:4.2.2:test (sources = true)
+2026.08.18 17:43:39 INFO  [INFO] Resolving artifact: org.springframework:spring-webmvc:jar:6.2.16:compile (sources = false)
+2026.08.18 17:43:39 INFO  [INFO] SUCCESS: org.springframework:spring-webmvc:jar:6.2.16:compile (sources = false)
+2026.08.18 17:43:39 INFO  [INFO] Resolving artifact: org.springframework:spring-webmvc:jar:6.2.16:compile (sources = true)
+2026.08.18 17:43:39 INFO  [INFO] SUCCESS: org.springframework:spring-webmvc:jar:6.2.16:compile (sources = true)
+2026.08.18 17:43:39 INFO  [INFO] Resolving artifact: org.springframework.boot:spring-boot-starter-json:jar:3.5.11:compile (sources = false)
+2026.08.18 17:43:39 INFO  [INFO] SUCCESS: org.springframework.boot:spring-boot-starter-json:jar:3.5.11:compile (sources = false)
+2026.08.18 17:43:39 INFO  [INFO] Resolving artifact: org.springframework.boot:spring-boot-starter-json:jar:3.5.11:compile (sources = true)
+2026.08.18 17:43:39 INFO  [INFO] SUCCESS: org.springframework.boot:spring-boot-starter-json:jar:3.5.11:compile (sources = true)
+2026.08.18 17:43:39 INFO  [INFO] Resolving artifact: com.fasterxml.jackson.core:jackson-databind:jar:2.19.4:compile (sources = false)
+2026.08.18 17:43:39 INFO  [INFO] SUCCESS: com.fasterxml.jackson.core:jackson-databind:jar:2.19.4:compile (sources = false)
+2026.08.18 17:43:39 INFO  [INFO] Resolving artifact: com.fasterxml.jackson.core:jackson-databind:jar:2.19.4:compile (sources = true)
+2026.08.18 17:43:39 INFO  [INFO] SUCCESS: com.fasterxml.jackson.core:jackson-databind:jar:2.19.4:compile (sources = true)
+2026.08.18 17:43:39 INFO  [INFO] Resolving artifact: jakarta.inject:jakarta.inject-api:jar:2.0.1:runtime (sources = false)
+2026.08.18 17:43:39 INFO  [INFO] SUCCESS: jakarta.inject:jakarta.inject-api:jar:2.0.1:runtime (sources = false)
+2026.08.18 17:43:39 INFO  [INFO] Resolving artifact: jakarta.inject:jakarta.inject-api:jar:2.0.1:runtime (sources = true)
+2026.08.18 17:43:39 INFO  [INFO] SUCCESS: jakarta.inject:jakarta.inject-api:jar:2.0.1:runtime (sources = true)
+2026.08.18 17:43:39 INFO  [INFO] Resolving artifact: org.junit.jupiter:junit-jupiter:jar:5.12.2:test (sources = false)
+2026.08.18 17:43:39 INFO  [INFO] SUCCESS: org.junit.jupiter:junit-jupiter:jar:5.12.2:test (sources = false)
+2026.08.18 17:43:39 INFO  [INFO] Resolving artifact: org.junit.jupiter:junit-jupiter:jar:5.12.2:test (sources = true)
+2026.08.18 17:43:39 INFO  [INFO] SUCCESS: org.junit.jupiter:junit-jupiter:jar:5.12.2:test (sources = true)
+2026.08.18 17:43:39 INFO  [INFO] Resolving artifact: org.springframework.boot:spring-boot-starter-validation:jar:3.5.11:compile (sources = false)
+2026.08.18 17:43:39 INFO  [INFO] SUCCESS: org.springframework.boot:spring-boot-starter-validation:jar:3.5.11:compile (sources = false)
+2026.08.18 17:43:39 INFO  [INFO] Resolving artifact: org.springframework.boot:spring-boot-starter-validation:jar:3.5.11:compile (sources = true)
+2026.08.18 17:43:39 INFO  [INFO] SUCCESS: org.springframework.boot:spring-boot-starter-validation:jar:3.5.11:compile (sources = true)
+2026.08.18 17:43:39 INFO  [INFO] Resolving artifact: org.springframework:spring-context:jar:6.2.16:compile (sources = false)
+2026.08.18 17:43:39 INFO  [INFO] SUCCESS: org.springframework:spring-context:jar:6.2.16:compile (sources = false)
+2026.08.18 17:43:39 INFO  [INFO] Resolving artifact: org.springframework:spring-context:jar:6.2.16:compile (sources = true)
+2026.08.18 17:43:39 INFO  [INFO] SUCCESS: org.springframework:spring-context:jar:6.2.16:compile (sources = true)
+2026.08.18 17:43:40 INFO  no build target found for C:\Project\spring.boot.redelog-api\src\main\java\com\redelog\api\service\EntregadorService.java. Using fallback presentation compiler.
+2026.08.18 17:43:39 INFO  [INFO] Resolving artifact: org.aspectj:aspectjweaver:jar:1.9.25.1:compile (sources = false)
+2026.08.18 17:43:39 INFO  [INFO] SUCCESS: org.aspectj:aspectjweaver:jar:1.9.25.1:compile (sources = false)
+2026.08.18 17:43:39 INFO  [INFO] Resolving artifact: org.aspectj:aspectjweaver:jar:1.9.25.1:compile (sources = true)
+2026.08.18 17:43:39 INFO  [INFO] SUCCESS: org.aspectj:aspectjweaver:jar:1.9.25.1:compile (sources = true)
+2026.08.18 17:43:39 INFO  [INFO] Resolving artifact: org.springframework:spring-aspects:jar:6.2.16:compile (sources = false)
+2026.08.18 17:43:39 INFO  [INFO] SUCCESS: org.springframework:spring-aspects:jar:6.2.16:compile (sources = false)
+2026.08.18 17:43:39 INFO  [INFO] Resolving artifact: org.springframework:spring-aspects:jar:6.2.16:compile (sources = true)
+2026.08.18 17:43:39 INFO  [INFO] SUCCESS: org.springframework:spring-aspects:jar:6.2.16:compile (sources = true)
+2026.08.18 17:43:39 INFO  [INFO] Resolving artifact: org.springframework.boot:spring-boot-autoconfigure:jar:3.5.11:compile (sources = false)
+2026.08.18 17:43:39 INFO  [INFO] SUCCESS: org.springframework.boot:spring-boot-autoconfigure:jar:3.5.11:compile (sources = false)
+2026.08.18 17:43:39 INFO  [INFO] Resolving artifact: org.springframework.boot:spring-boot-autoconfigure:jar:3.5.11:compile (sources = true)
+2026.08.18 17:43:39 INFO  [INFO] SUCCESS: org.springframework.boot:spring-boot-autoconfigure:jar:3.5.11:compile (sources = true)
+2026.08.18 17:43:39 INFO  [INFO] Resolving artifact: org.junit.platform:junit-platform-commons:jar:1.12.2:test (sources = false)
+2026.08.18 17:43:39 INFO  [INFO] SUCCESS: org.junit.platform:junit-platform-commons:jar:1.12.2:test (sources = false)
+2026.08.18 17:43:39 INFO  [INFO] Resolving artifact: org.junit.platform:junit-platform-commons:jar:1.12.2:test (sources = true)
+2026.08.18 17:43:39 INFO  [INFO] SUCCESS: org.junit.platform:junit-platform-commons:jar:1.12.2:test (sources = true)
+2026.08.18 17:43:39 INFO  [INFO] Resolving artifact: net.bytebuddy:byte-buddy:jar:1.17.8:runtime (sources = false)
+2026.08.18 17:43:39 INFO  [INFO] SUCCESS: net.bytebuddy:byte-buddy:jar:1.17.8:runtime (sources = false)
+2026.08.18 17:43:39 INFO  [INFO] Resolving artifact: net.bytebuddy:byte-buddy:jar:1.17.8:runtime (sources = true)
+2026.08.18 17:43:39 INFO  [INFO] SUCCESS: net.bytebuddy:byte-buddy:jar:1.17.8:runtime (sources = true)
+2026.08.18 17:43:39 INFO  [INFO] Resolving artifact: io.micrometer:micrometer-observation:jar:1.15.9:compile (sources = false)
+2026.08.18 17:43:40 INFO  no build target found for C:\Project\spring.boot.redelog-api\src\main\java\com\redelog\api\service\EntregaService.java. Using fallback presentation compiler.
+2026.08.18 17:43:39 INFO  [INFO] SUCCESS: io.micrometer:micrometer-observation:jar:1.15.9:compile (sources = false)
+2026.08.18 17:43:39 INFO  [INFO] Resolving artifact: io.micrometer:micrometer-observation:jar:1.15.9:compile (sources = true)
+2026.08.18 17:43:39 INFO  [INFO] SUCCESS: io.micrometer:micrometer-observation:jar:1.15.9:compile (sources = true)
+2026.08.18 17:43:39 INFO  [INFO] Resolving artifact: org.glassfish.jaxb:jaxb-runtime:jar:4.0.6:runtime (sources = false)
+2026.08.18 17:43:39 INFO  [INFO] SUCCESS: org.glassfish.jaxb:jaxb-runtime:jar:4.0.6:runtime (sources = false)
+2026.08.18 17:43:39 INFO  [INFO] Resolving artifact: org.glassfish.jaxb:jaxb-runtime:jar:4.0.6:runtime (sources = true)
+2026.08.18 17:43:39 INFO  [INFO] SUCCESS: org.glassfish.jaxb:jaxb-runtime:jar:4.0.6:runtime (sources = true)
+2026.08.18 17:43:39 INFO  [INFO] Resolving artifact: com.jayway.jsonpath:json-path:jar:2.9.0:test (sources = false)
+2026.08.18 17:43:39 INFO  [INFO] SUCCESS: com.jayway.jsonpath:json-path:jar:2.9.0:test (sources = false)
+2026.08.18 17:43:39 INFO  [INFO] Resolving artifact: com.jayway.jsonpath:json-path:jar:2.9.0:test (sources = true)
+2026.08.18 17:43:39 INFO  [INFO] SUCCESS: com.jayway.jsonpath:json-path:jar:2.9.0:test (sources = true)
+2026.08.18 17:43:39 INFO  [INFO] Resolving artifact: org.hibernate.common:hibernate-commons-annotations:jar:7.0.3.Final:runtime (sources = false)
+2026.08.18 17:43:39 INFO  [INFO] SUCCESS: org.hibernate.common:hibernate-commons-annotations:jar:7.0.3.Final:runtime (sources = false)
+2026.08.18 17:43:39 INFO  [INFO] Resolving artifact: org.hibernate.common:hibernate-commons-annotations:jar:7.0.3.Final:runtime (sources = true)
+2026.08.18 17:43:39 INFO  [INFO] SUCCESS: org.hibernate.common:hibernate-commons-annotations:jar:7.0.3.Final:runtime (sources = true)
+2026.08.18 17:43:39 INFO  [INFO] Resolving artifact: jakarta.activation:jakarta.activation-api:jar:2.1.4:runtime (sources = false)
+2026.08.18 17:43:39 INFO  [INFO] SUCCESS: jakarta.activation:jakarta.activation-api:jar:2.1.4:runtime (sources = false)
+2026.08.18 17:43:39 INFO  [INFO] Resolving artifact: jakarta.activation:jakarta.activation-api:jar:2.1.4:runtime (sources = true)
+2026.08.18 17:43:39 INFO  [INFO] SUCCESS: jakarta.activation:jakarta.activation-api:jar:2.1.4:runtime (sources = true)
+2026.08.18 17:43:39 INFO  [INFO] Resolving artifact: org.jboss.logging:jboss-logging:jar:3.6.2.Final:compile (sources = false)
+2026.08.18 17:43:39 INFO  [INFO] SUCCESS: org.jboss.logging:jboss-logging:jar:3.6.2.Final:compile (sources = false)
+2026.08.18 17:43:39 INFO  [INFO] Resolving artifact: org.jboss.logging:jboss-logging:jar:3.6.2.Final:compile (sources = true)
+2026.08.18 17:43:39 INFO  [INFO] SUCCESS: org.jboss.logging:jboss-logging:jar:3.6.2.Final:compile (sources = true)
+2026.08.18 17:43:39 INFO  [INFO] Resolving artifact: org.apiguardian:apiguardian-api:jar:1.1.2:test (sources = false)
+2026.08.18 17:43:39 INFO  [INFO] SUCCESS: org.apiguardian:apiguardian-api:jar:1.1.2:test (sources = false)
+2026.08.18 17:43:39 INFO  [INFO] Resolving artifact: org.apiguardian:apiguardian-api:jar:1.1.2:test (sources = true)
+2026.08.18 17:43:39 INFO  [INFO] SUCCESS: org.apiguardian:apiguardian-api:jar:1.1.2:test (sources = true)
+2026.08.18 17:43:39 INFO  [INFO] Resolving artifact: com.fasterxml:classmate:jar:1.7.3:compile (sources = false)
+2026.08.18 17:43:39 INFO  [INFO] SUCCESS: com.fasterxml:classmate:jar:1.7.3:compile (sources = false)
+2026.08.18 17:43:39 INFO  [INFO] Resolving artifact: com.fasterxml:classmate:jar:1.7.3:compile (sources = true)
+2026.08.18 17:43:39 INFO  [INFO] SUCCESS: com.fasterxml:classmate:jar:1.7.3:compile (sources = true)
+2026.08.18 17:43:39 INFO  [INFO] Resolving artifact: org.junit.platform:junit-platform-engine:jar:1.12.2:test (sources = false)
+2026.08.18 17:43:40 INFO  [INFO] SUCCESS: org.junit.platform:junit-platform-engine:jar:1.12.2:test (sources = false)
+2026.08.18 17:43:40 INFO  [INFO] Resolving artifact: org.junit.platform:junit-platform-engine:jar:1.12.2:test (sources = true)
+2026.08.18 17:43:40 INFO  [INFO] SUCCESS: org.junit.platform:junit-platform-engine:jar:1.12.2:test (sources = true)
+2026.08.18 17:43:40 INFO  [INFO] Resolving artifact: org.springframework:spring-aop:jar:6.2.16:compile (sources = false)
+2026.08.18 17:43:40 INFO  [INFO] SUCCESS: org.springframework:spring-aop:jar:6.2.16:compile (sources = false)
+2026.08.18 17:43:40 INFO  [INFO] Resolving artifact: org.springframework:spring-aop:jar:6.2.16:compile (sources = true)
+2026.08.18 17:43:40 INFO  [INFO] SUCCESS: org.springframework:spring-aop:jar:6.2.16:compile (sources = true)
+2026.08.18 17:43:40 INFO  [INFO] Resolving artifact: org.springframework:spring-jcl:jar:6.2.16:compile (sources = false)
+2026.08.18 17:43:40 INFO  [INFO] SUCCESS: org.springframework:spring-jcl:jar:6.2.16:compile (sources = false)
+2026.08.18 17:43:40 INFO  [INFO] Resolving artifact: org.springframework:spring-jcl:jar:6.2.16:compile (sources = true)
+2026.08.18 17:43:40 INFO  [INFO] SUCCESS: org.springframework:spring-jcl:jar:6.2.16:compile (sources = true)
+2026.08.18 17:43:40 INFO  [INFO] Resolving artifact: com.mysql:mysql-connector-j:jar:9.6.0:runtime (sources = false)
+ago. 18, 2026 5:43:40 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+ADVERTÊNCIA: Unmatched cancel notification for request id 23
+2026.08.18 17:43:40 INFO  [INFO] SUCCESS: com.mysql:mysql-connector-j:jar:9.6.0:runtime (sources = false)
+2026.08.18 17:43:40 INFO  [INFO] Resolving artifact: com.mysql:mysql-connector-j:jar:9.6.0:runtime (sources = true)
+2026.08.18 17:43:40 INFO  [INFO] SUCCESS: com.mysql:mysql-connector-j:jar:9.6.0:runtime (sources = true)
+2026.08.18 17:43:40 INFO  [INFO] Resolving artifact: org.springframework.boot:spring-boot-test-autoconfigure:jar:3.5.11:test (sources = false)
+2026.08.18 17:43:40 INFO  no build target found for C:\Project\spring.boot.redelog-api\src\main\java\com\redelog\api\service\EntregaService.java. Using fallback presentation compiler.
+2026.08.18 17:43:40 INFO  [INFO] SUCCESS: org.springframework.boot:spring-boot-test-autoconfigure:jar:3.5.11:test (sources = false)
+2026.08.18 17:43:40 INFO  [INFO] Resolving artifact: org.springframework.boot:spring-boot-test-autoconfigure:jar:3.5.11:test (sources = true)
+2026.08.18 17:43:40 INFO  [INFO] SUCCESS: org.springframework.boot:spring-boot-test-autoconfigure:jar:3.5.11:test (sources = true)
+2026.08.18 17:43:40 INFO  [INFO] Resolving artifact: com.fasterxml.jackson.core:jackson-annotations:jar:2.19.4:compile (sources = false)
+2026.08.18 17:43:40 INFO  [INFO] SUCCESS: com.fasterxml.jackson.core:jackson-annotations:jar:2.19.4:compile (sources = false)
+2026.08.18 17:43:40 INFO  [INFO] Resolving artifact: com.fasterxml.jackson.core:jackson-annotations:jar:2.19.4:compile (sources = true)
+2026.08.18 17:43:40 INFO  [INFO] SUCCESS: com.fasterxml.jackson.core:jackson-annotations:jar:2.19.4:compile (sources = true)
+2026.08.18 17:43:40 INFO  [INFO] Resolving artifact: org.eclipse.angus:angus-activation:jar:2.0.3:runtime (sources = false)
+2026.08.18 17:43:40 INFO  [INFO] SUCCESS: org.eclipse.angus:angus-activation:jar:2.0.3:runtime (sources = false)
+2026.08.18 17:43:40 INFO  [INFO] Resolving artifact: org.eclipse.angus:angus-activation:jar:2.0.3:runtime (sources = true)
+2026.08.18 17:43:40 INFO  [INFO] SUCCESS: org.eclipse.angus:angus-activation:jar:2.0.3:runtime (sources = true)
+2026.08.18 17:43:40 INFO  [INFO] Resolving artifact: com.vaadin.external.google:android-json:jar:0.0.20131108.vaadin1:test (sources = false)
+2026.08.18 17:43:40 INFO  [INFO] SUCCESS: com.vaadin.external.google:android-json:jar:0.0.20131108.vaadin1:test (sources = false)
+2026.08.18 17:43:40 INFO  [INFO] Resolving artifact: com.vaadin.external.google:android-json:jar:0.0.20131108.vaadin1:test (sources = true)
+2026.08.18 17:43:40 INFO  [INFO] SUCCESS: com.vaadin.external.google:android-json:jar:0.0.20131108.vaadin1:test (sources = true)
+2026.08.18 17:43:40 INFO  [INFO] Resolving artifact: org.apache.logging.log4j:log4j-api:jar:2.24.3:compile (sources = false)
+2026.08.18 17:43:40 INFO  [INFO] SUCCESS: org.apache.logging.log4j:log4j-api:jar:2.24.3:compile (sources = false)
+2026.08.18 17:43:40 INFO  [INFO] Resolving artifact: org.apache.logging.log4j:log4j-api:jar:2.24.3:compile (sources = true)
+2026.08.18 17:43:40 INFO  [INFO] SUCCESS: org.apache.logging.log4j:log4j-api:jar:2.24.3:compile (sources = true)
+2026.08.18 17:43:40 INFO  [INFO] Resolving artifact: net.bytebuddy:byte-buddy-agent:jar:1.17.8:test (sources = false)
+2026.08.18 17:43:40 INFO  [INFO] SUCCESS: net.bytebuddy:byte-buddy-agent:jar:1.17.8:test (sources = false)
+2026.08.18 17:43:40 INFO  [INFO] Resolving artifact: net.bytebuddy:byte-buddy-agent:jar:1.17.8:test (sources = true)
+2026.08.18 17:43:40 INFO  [INFO] SUCCESS: net.bytebuddy:byte-buddy-agent:jar:1.17.8:test (sources = true)
+2026.08.18 17:43:40 INFO  [INFO] Resolving artifact: org.springframework:spring-expression:jar:6.2.16:compile (sources = false)
+2026.08.18 17:43:40 INFO  [INFO] SUCCESS: org.springframework:spring-expression:jar:6.2.16:compile (sources = false)
+2026.08.18 17:43:40 INFO  [INFO] Resolving artifact: org.springframework:spring-expression:jar:6.2.16:compile (sources = true)
+2026.08.18 17:43:40 INFO  [INFO] SUCCESS: org.springframework:spring-expression:jar:6.2.16:compile (sources = true)
+2026.08.18 17:43:40 INFO  [INFO] Resolving artifact: io.micrometer:micrometer-commons:jar:1.15.9:compile (sources = false)
+2026.08.18 17:43:40 INFO  [INFO] SUCCESS: io.micrometer:micrometer-commons:jar:1.15.9:compile (sources = false)
+2026.08.18 17:43:40 INFO  [INFO] Resolving artifact: io.micrometer:micrometer-commons:jar:1.15.9:compile (sources = true)
+2026.08.18 17:43:40 INFO  [INFO] SUCCESS: io.micrometer:micrometer-commons:jar:1.15.9:compile (sources = true)
+2026.08.18 17:43:40 INFO  [INFO] Resolving artifact: com.zaxxer:HikariCP:jar:6.3.3:compile (sources = false)
+2026.08.18 17:43:40 INFO  [INFO] SUCCESS: com.zaxxer:HikariCP:jar:6.3.3:compile (sources = false)
+2026.08.18 17:43:40 INFO  [INFO] Resolving artifact: com.zaxxer:HikariCP:jar:6.3.3:compile (sources = true)
+2026.08.18 17:43:40 INFO  [INFO] SUCCESS: com.zaxxer:HikariCP:jar:6.3.3:compile (sources = true)
+2026.08.18 17:43:40 INFO  [INFO] Generated .bloop\redelog-api-test.json
+2026.08.18 17:43:40 INFO  [INFO] Starting to write configuration for project: redelog-api with configuration: test
+2026.08.18 17:43:40 INFO  [INFO] ------------------------------------------------------------------------
+2026.08.18 17:43:40 INFO  [INFO] BUILD SUCCESS
+2026.08.18 17:43:40 INFO  [INFO] ------------------------------------------------------------------------
+2026.08.18 17:43:40 INFO  [INFO] Total time:  5.924 s
+2026.08.18 17:43:40 INFO  [INFO] Finished at: 2026-08-18T17:43:41-03:00
+2026.08.18 17:43:40 INFO  [INFO] ------------------------------------------------------------------------
+2026.08.18 17:43:41 INFO  time: ran 'mvn bloopInstall' in 7.88s
+2026.08.18 17:43:41 INFO  Attempting to connect to the build server...
+2026.08.18 17:43:41 INFO  No running Bloop server found, starting one.
+2026.08.18 17:43:41 INFO  no build target found for C:\Project\spring.boot.redelog-api\src\main\java\com\redelog\api\service\EntregaService.java. Using fallback presentation compiler.
+2026.08.18 17:43:44 INFO  no build target found for C:\Project\spring.boot.redelog-api\src\main\java\com\redelog\api\service\EntregaService.java. Using fallback presentation compiler.
+2026.08.18 17:43:44 INFO  no build target found for C:\Project\spring.boot.redelog-api\src\main\java\com\redelog\api\dto\EnderecoResponseDTO.java. Using fallback presentation compiler.
+2026.08.18 17:43:44 INFO  no build target found for C:\Project\spring.boot.redelog-api\src\main\java\com\redelog\api\dto\EnderecoResponseDTO.java. Using fallback presentation compiler.
+2026.08.18 17:43:44 INFO  no build target found for C:\Project\spring.boot.redelog-api\src\main\java\com\redelog\api\dto\EnderecoResponseDTO.java. Using fallback presentation compiler.
+2026.08.18 17:43:46 INFO  Starting compilation server
+2026.08.18 17:43:48 INFO  no build target found for C:\Project\spring.boot.redelog-api\src\main\java\com\redelog\api\dto\EnderecoResponseDTO.java. Using fallback presentation compiler.
+2026.08.18 17:43:48 INFO  Tracing is disabled for protocol BSP. To enable tracing of incoming and outgoing JSON messages, create an empty file at C:\Project\spring.boot.redelog-api\.metals\bsp.trace.json or C:\Users\thiag\AppData\Local\scalameta\metals\cache\bsp.trace.json
+2026.08.18 17:43:48 INFO  no build target found for C:\Project\spring.boot.redelog-api\src\main\java\com\redelog\api\dto\EnderecoResponseDTO.java. Using fallback presentation compiler.
+2026.08.18 17:43:48 INFO  no build target found for C:\Project\spring.boot.redelog-api\src\main\java\com\redelog\api\dto\EnderecoResponseDTO.java. Using fallback presentation compiler.
+2026.08.18 17:43:48 INFO  no build target found for C:\Project\spring.boot.redelog-api\src\main\java\com\redelog\api\dto\EnderecoResponseDTO.java. Using fallback presentation compiler.
+2026.08.18 17:43:48 INFO  no build target found for C:\Project\spring.boot.redelog-api\src\main\java\com\redelog\api\dto\EnderecoResponseDTO.java. Using fallback presentation compiler.
+2026.08.18 17:43:48 INFO  no build target found for C:\Project\spring.boot.redelog-api\src\main\java\com\redelog\api\dto\EnderecoResponseDTO.java. Using fallback presentation compiler.
+2026.08.18 17:43:48 INFO  no build target found for C:\Project\spring.boot.redelog-api\src\main\java\com\redelog\api\dto\EnderecoResponseDTO.java. Using fallback presentation compiler.
+2026.08.18 17:43:49 INFO  no build target found for C:\Project\spring.boot.redelog-api\src\main\java\com\redelog\api\dto\EnderecoResponseDTO.java. Using fallback presentation compiler.
+2026.08.18 17:43:49 INFO  no build target found for C:\Project\spring.boot.redelog-api\src\main\java\com\redelog\api\dto\EnderecoResponseDTO.java. Using fallback presentation compiler.
+2026.08.18 17:43:49 INFO  no build target found for C:\Project\spring.boot.redelog-api\src\main\java\com\redelog\api\dto\EnderecoResponseDTO.java. Using fallback presentation compiler.
+2026.08.18 17:43:49 INFO  no build target found for C:\Project\spring.boot.redelog-api\src\main\java\com\redelog\api\dto\EnderecoResponseDTO.java. Using fallback presentation compiler.
+2026.08.18 17:43:51 INFO  time: Connected to build server in 10s
+2026.08.18 17:43:51 INFO  Connected to Build server: Bloop v2.1.1
+2026.08.18 17:43:51 INFO  time: Imported build in 0.29s
+2026.08.18 17:43:54 WARN  Using H2 2.4.240 which is newer than the version Flyway has been verified with. The latest verified version of H2 is 2.3.232.
+2026.08.18 17:44:08 INFO  time: indexed workspace in 16s
+2026.08.18 17:44:09 INFO  compiling redelog-api (38 java sources)
+2026.08.18 17:44:13 INFO  compiling redelog-api-test (2 java sources)
+2026.08.18 17:44:13 INFO  time: compiled redelog-api in 4.72s
+2026.08.18 17:44:16 INFO  time: compiled redelog-api-test in 3.37s
+2026.08.18 17:44:16 WARN  Could not load snapshot text for C:\Project\spring.boot.redelog-api\src\main\java\com\redelog\api\service\ClienteService.java
+2026.08.18 17:44:16 WARN  Could not load snapshot text for C:\Project\spring.boot.redelog-api\src\main\java\com\redelog\api\service\EntregaService.java
+2026.08.18 17:44:16 WARN  Could not load snapshot text for C:\Project\spring.boot.redelog-api\src\main\java\com\redelog\api\service\ClienteService.java
+2026.08.18 17:44:37 INFO  Shutting down server
+2026.08.18 17:44:37 INFO  Memory monitor stopped
+2026.08.18 17:44:37 INFO  shutting down Metals
+2026.08.18 17:44:37 INFO  Shut down connection with build server.
+2026.08.18 17:44:37 INFO  Exiting server
