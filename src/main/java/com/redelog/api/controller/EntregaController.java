@@ -2,17 +2,21 @@ package com.redelog.api.controller;
 
 import com.redelog.api.dto.EntregaRequestDTO;
 import com.redelog.api.dto.EntregaResponseDTO;
+import com.redelog.api.dto.HistoricoEntregaResponseDTO;
 import com.redelog.api.service.EntregaService;
 
 import jakarta.validation.Valid;
+import jakarta.validation.constraints.NotBlank;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 import org.springframework.http.ResponseEntity;
+import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.*;
 
 import java.net.URI;
 import java.util.List;
 
+@Validated
 @RestController
 @RequestMapping("/entregas")
 public class EntregaController {
@@ -76,9 +80,14 @@ public class EntregaController {
     }
 
     @PatchMapping("/{id}/registrarFalha")
-    public ResponseEntity<EntregaResponseDTO> registrarFalaha(@PathVariable Long id, @RequestParam String motivo){
+    public ResponseEntity<EntregaResponseDTO> registrarFalaha(@PathVariable Long id, @RequestParam @NotBlank String motivo){
         EntregaResponseDTO dto = entregaService.registrarFalha(id, motivo);
         return ResponseEntity.ok(dto);
+    }
+
+    @GetMapping("/{id}/historico")
+    public List<HistoricoEntregaResponseDTO> listarHistorico(@PathVariable Long id) {
+        return entregaService.listarHistorico(id);
     }
 
 }

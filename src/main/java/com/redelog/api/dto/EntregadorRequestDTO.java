@@ -1,5 +1,6 @@
 package com.redelog.api.dto;
 
+import jakarta.validation.constraints.Email;
 import jakarta.validation.constraints.NotBlank;
 import lombok.Getter;
 import lombok.Setter;
@@ -15,6 +16,7 @@ public class EntregadorRequestDTO {
     @NotBlank
     private String telefone;
 
+    @Email
     private String email;
 
     @NotBlank

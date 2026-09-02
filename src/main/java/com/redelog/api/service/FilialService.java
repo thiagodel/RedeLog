@@ -81,7 +81,7 @@ public class FilialService {
             );
         }
 
-        if (filialRepository.existsByNumeroFilial(dto.getNumeroFilial())) {
+        if (filialRepository.existsByNumeroFilialAndIdNot(dto.getNumeroFilial(), id)) {
             throw new ResponseStatusException(
                     HttpStatus.CONFLICT,
                     "Número da filial já cadastrado."
