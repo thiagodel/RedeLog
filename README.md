@@ -69,20 +69,17 @@ envia credenciais em requisições CORS.
 
 ## Execução
 
-O repositório depende do Maven instalado no ambiente. Execute:
+Execute pelo Maven Wrapper versionado no repositório:
 
 ```powershell
-mvn spring-boot:run
+.\mvnw.cmd spring-boot:run
 ```
 
 Para rodar os testes:
 
 ```powershell
-mvn test
+.\mvnw.cmd test
 ```
-
-> O Maven Wrapper está versionado, mas a pasta `.mvn/wrapper` não faz parte do
-> repositório atual. Até que ela seja adicionada, use o Maven instalado.
 
 ## Endpoints disponíveis
 

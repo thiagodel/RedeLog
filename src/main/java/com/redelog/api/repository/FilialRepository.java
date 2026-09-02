@@ -8,4 +8,5 @@ public interface FilialRepository extends JpaRepository<Filial, Long> {
     boolean existsByCnpj(String cnpj);
 
     boolean existsByNumeroFilial(String numeroFilial);
+    boolean existsByNumeroFilialAndIdNot(String numeroFilial, Long id);
 }

@@ -1,0 +1,6 @@
+#FileLock
+#Wed Sep 02 17:35:49 BRT 2026
+server=localhost\:56521
+hostName=localhost
+method=file
+id=1a063d5c534822a9567afd0b2edc028fe9b5c00c0b2

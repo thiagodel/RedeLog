@@ -48,6 +48,7 @@ public class Entrega {
     private LocalDateTime dataEntrega;
 
     @OneToMany(mappedBy = "entrega", cascade = CascadeType.ALL, orphanRemoval = true)
+    @OrderBy("data ASC")
     private List<HistoricoEntrega> historico = new ArrayList<>();
 
     // 🔹 Construtor

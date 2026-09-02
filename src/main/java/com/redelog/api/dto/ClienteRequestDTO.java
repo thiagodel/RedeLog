@@ -19,7 +19,10 @@ public class ClienteRequestDTO {
     @Email
     private String email;
 
-    @Pattern(regexp = "\\d{8}", message = "CEP deve conter 8 dígitos")
+    @Pattern(
+            regexp = "\\d{5}-\\d{3}",
+            message = "CEP deve estar no formato 00000-000"
+    )
     private String cep;
 
     private String endereco;

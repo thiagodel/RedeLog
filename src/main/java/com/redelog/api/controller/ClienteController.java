@@ -36,7 +36,7 @@ public class ClienteController {
     public ResponseEntity<ClienteResponseDTO> salvar(@Valid @RequestBody ClienteRequestDTO dto){
         ClienteResponseDTO novoCliente = clienteService.salvar(dto);
 
-        URI location = URI.create("/filiais/" + novoCliente.getId());
+        URI location = URI.create("/clientes/" + novoCliente.getId());
 
         return ResponseEntity
                 .created(location)

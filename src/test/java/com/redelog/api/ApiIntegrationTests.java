@@ -69,7 +69,7 @@ class ApiIntegrationTests {
         mockMvc.perform(put("/clientes/{id}", clienteId)
                         .contentType(MediaType.APPLICATION_JSON)
                         .content("""
-                                {"nome":"Ana Souza","telefone":"11999990000","email":"ana@redelog.com","cep":"01001000","endereco":"Rua A"}
+                                {"nome":"Ana Souza","telefone":"11999990000","email":"ana@redelog.com","cep":"01001-000","endereco":"Rua A"}
                                 """))
                 .andExpect(status().isOk())
                 .andExpect(jsonPath("$.nome").value("Ana Souza"));
@@ -87,6 +87,14 @@ class ApiIntegrationTests {
         mockMvc.perform(patch("/entregas/{id}/despachar", entregaId))
                 .andExpect(status().isOk())
                 .andExpect(jsonPath("$.status").value("ENVIADA"));
+
+        mockMvc.perform(get("/entregas/{id}/historico", entregaId))
+                .andExpect(status().isOk())
+                .andExpect(jsonPath("$.length()").value(2))
+                .andExpect(jsonPath("$[0].status").value("CRIADA"))
+                .andExpect(jsonPath("$[0].observacao").value("Entrega criada"))
+                .andExpect(jsonPath("$[0].entrega").doesNotExist())
+                .andExpect(jsonPath("$[1].status").value("ENVIADA"));
 
         mockMvc.perform(patch("/entregas/{id}/sairParaEntrega", entregaId))
                 .andExpect(status().isOk())
@@ -137,9 +145,9 @@ class ApiIntegrationTests {
         MvcResult result = mockMvc.perform(post("/clientes")
                         .contentType(MediaType.APPLICATION_JSON)
                         .content("""
-                                {"nome":"%s","telefone":"11999990000","email":"%s","cep":"01001000","endereco":"Rua A"}
+                                {"nome":"%s","telefone":"11999990000","email":"%s","cep":"01001-000","endereco":"Rua A"}
                                 """.formatted(nome, email)))
-                .andExpect(status().isOk())
+                .andExpect(status().isCreated())
                 .andReturn();
         return responseId(result);
     }
@@ -150,7 +158,7 @@ class ApiIntegrationTests {
                         .content("""
                                 {"nome":"Carlos Lima","telefone":"11988887777","email":"carlos@redelog.com","placaVeiculo":"ABC1D23"}
                                 """))
-                .andExpect(status().isOk())
+                .andExpect(status().isCreated())
                 .andReturn();
         return responseId(result);
     }
@@ -159,9 +167,9 @@ class ApiIntegrationTests {
         MvcResult result = mockMvc.perform(post("/filiais")
                         .contentType(MediaType.APPLICATION_JSON)
                         .content("""
-                                {"nome":"Filial Centro","numeroFilial":"CENTRO-01","cnpj":"12345678000190","endereco":{"rua":"Rua Central","numero":"100","bairro":"Centro","cidade":"São Paulo","estado":"SP","cep":"01001000"}}
+                                {"nome":"Filial Centro","numeroFilial":"CENTRO-01","cnpj":"12345678000190","endereco":{"rua":"Rua Central","numero":"100","bairro":"Centro","cidade":"São Paulo","estado":"SP","cep":"01001-000"}}
                                 """))
-                .andExpect(status().isOk())
+                .andExpect(status().isCreated())
                 .andReturn();
         return responseId(result);
     }
@@ -170,9 +178,9 @@ class ApiIntegrationTests {
         MvcResult result = mockMvc.perform(post("/entregas")
                         .contentType(MediaType.APPLICATION_JSON)
                         .content("""
-                                {"clienteId":%d,"entregadorId":%d,"filialOrigemId":%d,"enderecoEntrega":{"rua":"Rua da Entrega","numero":"20","bairro":"Jardins","cidade":"São Paulo","estado":"SP","cep":"01415000"}}
+                                {"clienteId":%d,"entregadorId":%d,"filialOrigemId":%d,"enderecoEntrega":{"rua":"Rua da Entrega","numero":"20","bairro":"Jardins","cidade":"São Paulo","estado":"SP","cep":"01415-000"}}
                                 """.formatted(clienteId, entregadorId, filialId)))
-                .andExpect(status().isOk())
+                .andExpect(status().isCreated())
                 .andExpect(jsonPath("$.status").value("CRIADA"))
                 .andReturn();
         return responseId(result);

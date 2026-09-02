@@ -1773,3 +1773,157 @@ INFORMAÇÕES: Unsupported notification method: $/setTrace
 Running the [1mclean[0m sub-command to clear the working directory and remove caches might help.
 If the error persists, please report the issue as a bug and attach a log with increased verbosity by passing [1m-v -v -v[0m.
 2026.08.18 21:17:11 INFO  Exiting server
+2026.09.02 17:35:46 INFO  Started: Metals version 1.6.8 in folders 'C:\Project\spring.boot.redelog-api' for client Visual Studio Code 1.134.0.
+2026.09.02 17:35:46 INFO  Memory monitor started
+2026.09.02 17:35:48 WARN  Using H2 2.4.240 which is newer than the version Flyway has been verified with. The latest verified version of H2 is 2.3.232.
+2026.09.02 17:35:49 INFO  Attempting to connect to the build server...
+2026.09.02 17:35:49 INFO  No running Bloop server found, starting one.
+2026.09.02 17:35:52 INFO  Starting compilation server
+2026.09.02 17:35:58 INFO  Tracing is disabled for protocol BSP. To enable tracing of incoming and outgoing JSON messages, create an empty file at C:\Project\spring.boot.redelog-api\.metals\bsp.trace.json or C:\Users\thiag\AppData\Local\scalameta\metals\cache\bsp.trace.json
+2026.09.02 17:36:01 INFO  time: Connected to build server in 11s
+2026.09.02 17:36:01 INFO  Connected to Build server: Bloop v2.1.1
+2026.09.02 17:36:02 INFO  time: Imported build in 0.49s
+2026.09.02 17:36:21 WARN  Using H2 2.4.240 which is newer than the version Flyway has been verified with. The latest verified version of H2 is 2.3.232.
+2026.09.02 17:36:26 INFO  time: indexed workspace in 24s
+set. 02, 2026 5:43:57 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+ADVERTÊNCIA: Unmatched cancel notification for request id 1
+2026.09.02 17:43:58 INFO  compiling redelog-api (3 java sources)
+set. 02, 2026 5:44:01 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+ADVERTÊNCIA: Unmatched cancel notification for request id 8
+set. 02, 2026 5:44:02 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+ADVERTÊNCIA: Unmatched cancel notification for request id 9
+2026.09.02 17:44:03 INFO  time: compiled redelog-api in 4.41s
+2026.09.02 17:44:03 INFO  compiling redelog-api (2 java sources)
+2026.09.02 17:44:05 INFO  time: compiled redelog-api in 2.43s
+2026.09.02 17:44:05 WARN  Could not load snapshot text for C:\Project\spring.boot.redelog-api\src\main\java\com\redelog\api\service\FilialService.java
+2026.09.02 17:45:00 WARN  Could not load snapshot text for C:\Project\spring.boot.redelog-api\src\main\java\com\redelog\api\service\FilialService.java
+2026.09.02 17:45:18 WARN  Could not load snapshot text for C:\Project\spring.boot.redelog-api\src\main\java\com\redelog\api\service\FilialService.java
+set. 02, 2026 6:13:27 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+ADVERTÊNCIA: Unmatched cancel notification for request id 36
+set. 02, 2026 6:13:34 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+ADVERTÊNCIA: Unmatched cancel notification for request id 45
+set. 02, 2026 6:15:58 PM org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+INFORMAÇÕES: Unsupported notification method: $/setTrace
+2026.09.02 18:17:08 WARN  Could not load snapshot text for C:\Project\spring.boot.redelog-api\src\main\java\com\redelog\api\service\FilialService.java
+2026.09.02 18:28:58 WARN  Could not load snapshot text for C:\Project\spring.boot.redelog-api\src\main\java\com\redelog\api\service\FilialService.java
+set. 02, 2026 6:30:14 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+ADVERTÊNCIA: Unmatched cancel notification for request id 87
+2026.09.02 18:31:25 WARN  Could not load snapshot text for C:\Project\spring.boot.redelog-api\src\main\java\com\redelog\api\service\FilialService.java
+2026.09.02 18:31:47 WARN  Could not load snapshot text for C:\Project\spring.boot.redelog-api\src\main\java\com\redelog\api\service\FilialService.java
+2026.09.02 18:32:28 WARN  Could not load snapshot text for C:\Project\spring.boot.redelog-api\src\main\java\com\redelog\api\service\FilialService.java
+set. 02, 2026 6:32:46 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleNotification
+ADVERTÊNCIA: Notification threw an exception: {
+  "jsonrpc": "2.0",
+  "method": "metals/didFocusTextDocument",
+  "params": [
+    "jdt://contents/java.base/jdk.internal.reflect/NativeMethodAccessorImpl.java?%3Dredelog-api%2FC%3A%5C%2FProgram%20Files%5C%2FJava%5C%2Fzulu17.54.21-ca-jdk17.0.13-win_x64%5C%2Flib%5C%2Fjrt-fs.jar%60java.base%3D%2Fjavadoc_location%3D%2Fhttps%3A%5C%2F%5C%2Fdocs.oracle.com%5C%2Fen%5C%2Fjava%5C%2Fjavase%5C%2F17%5C%2Fdocs%5C%2Fapi%5C%2F%3D%2F%3D%2Fmaven.pomderived%3D%2Ftrue%3D%2F%3Cjdk.internal.reflect%28NativeMethodAccessorImpl.class"
+  ]
+}
+java.nio.file.FileSystemNotFoundException: Provider "jdt" not installed
+	at java.base/java.nio.file.Path.of(Path.java:212)
+	at java.base/java.nio.file.Paths.get(Paths.java:98)
+	at scala.meta.internal.mtags.MtagsEnrichments$XtensionURIMtags.toAbsolutePath(MtagsEnrichments.scala:149)
+	at scala.meta.internal.mtags.MtagsEnrichments$XtensionStringMtags.toAbsolutePath(MtagsEnrichments.scala:221)
+	at scala.meta.internal.metals.MetalsEnrichments$XtensionString.toAbsolutePath(MetalsEnrichments.scala:787)
+	at scala.meta.internal.metals.MetalsEnrichments$XtensionString.toAbsolutePath(MetalsEnrichments.scala:784)
+	at scala.meta.internal.metals.WorkspaceLspService.didFocus(WorkspaceLspService.scala:808)
+	at scala.meta.metals.lsp.DelegatingScalaService.didFocus(DelegatingScalaService.scala:42)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:569)
+	at org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint.lambda$recursiveFindRpcMethods$0(GenericEndpoint.java:65)
+	at org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint.notify(GenericEndpoint.java:160)
+	at org.eclipse.lsp4j.jsonrpc.RemoteEndpoint.handleNotification(RemoteEndpoint.java:225)
+	at org.eclipse.lsp4j.jsonrpc.RemoteEndpoint.consume(RemoteEndpoint.java:192)
+	at org.eclipse.lsp4j.jsonrpc.json.StreamMessageProducer.handleMessage(StreamMessageProducer.java:189)
+	at org.eclipse.lsp4j.jsonrpc.json.StreamMessageProducer.listen(StreamMessageProducer.java:97)
+	at org.eclipse.lsp4j.jsonrpc.json.ConcurrentMessageProcessor.run(ConcurrentMessageProcessor.java:97)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:539)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:840)
+
+2026.09.02 18:33:10 WARN  Could not load snapshot text for C:\Project\spring.boot.redelog-api\src\main\java\com\redelog\api\service\FilialService.java
+2026.09.02 18:33:21 WARN  Could not load snapshot text for C:\Project\spring.boot.redelog-api\src\main\java\com\redelog\api\service\FilialService.java
+2026.09.02 18:34:52 WARN  Could not load snapshot text for C:\Project\spring.boot.redelog-api\src\main\java\com\redelog\api\service\FilialService.java
+2026.09.02 18:35:27 WARN  Could not load snapshot text for C:\Project\spring.boot.redelog-api\src\main\java\com\redelog\api\service\FilialService.java
+set. 02, 2026 6:35:38 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleNotification
+ADVERTÊNCIA: Notification threw an exception: {
+  "jsonrpc": "2.0",
+  "method": "metals/didFocusTextDocument",
+  "params": [
+    "jdt://contents/java.base/jdk.internal.reflect/NativeMethodAccessorImpl.java?%3Dredelog-api%2FC%3A%5C%2FProgram%20Files%5C%2FJava%5C%2Fzulu17.54.21-ca-jdk17.0.13-win_x64%5C%2Flib%5C%2Fjrt-fs.jar%60java.base%3D%2Fjavadoc_location%3D%2Fhttps%3A%5C%2F%5C%2Fdocs.oracle.com%5C%2Fen%5C%2Fjava%5C%2Fjavase%5C%2F17%5C%2Fdocs%5C%2Fapi%5C%2F%3D%2F%3D%2Fmaven.pomderived%3D%2Ftrue%3D%2F%3Cjdk.internal.reflect%28NativeMethodAccessorImpl.class"
+  ]
+}
+java.nio.file.FileSystemNotFoundException: Provider "jdt" not installed
+	at java.base/java.nio.file.Path.of(Path.java:212)
+	at java.base/java.nio.file.Paths.get(Paths.java:98)
+	at scala.meta.internal.mtags.MtagsEnrichments$XtensionURIMtags.toAbsolutePath(MtagsEnrichments.scala:149)
+	at scala.meta.internal.mtags.MtagsEnrichments$XtensionStringMtags.toAbsolutePath(MtagsEnrichments.scala:221)
+	at scala.meta.internal.metals.MetalsEnrichments$XtensionString.toAbsolutePath(MetalsEnrichments.scala:787)
+	at scala.meta.internal.metals.MetalsEnrichments$XtensionString.toAbsolutePath(MetalsEnrichments.scala:784)
+	at scala.meta.internal.metals.WorkspaceLspService.didFocus(WorkspaceLspService.scala:808)
+	at scala.meta.metals.lsp.DelegatingScalaService.didFocus(DelegatingScalaService.scala:42)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:569)
+	at org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint.lambda$recursiveFindRpcMethods$0(GenericEndpoint.java:65)
+	at org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint.notify(GenericEndpoint.java:160)
+	at org.eclipse.lsp4j.jsonrpc.RemoteEndpoint.handleNotification(RemoteEndpoint.java:225)
+	at org.eclipse.lsp4j.jsonrpc.RemoteEndpoint.consume(RemoteEndpoint.java:192)
+	at org.eclipse.lsp4j.jsonrpc.json.StreamMessageProducer.handleMessage(StreamMessageProducer.java:189)
+	at org.eclipse.lsp4j.jsonrpc.json.StreamMessageProducer.listen(StreamMessageProducer.java:97)
+	at org.eclipse.lsp4j.jsonrpc.json.ConcurrentMessageProcessor.run(ConcurrentMessageProcessor.java:97)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:539)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:840)
+
+2026.09.02 18:43:48 INFO  compiling redelog-api (1 java source)
+2026.09.02 18:43:51 INFO  time: compiled redelog-api in 2.65s
+2026.09.02 18:49:22 INFO  compiling redelog-api (1 java source)
+2026.09.02 18:49:25 INFO  time: compiled redelog-api in 2.19s
+2026.09.02 18:51:12 INFO  compiling redelog-api (2 java sources)
+2026.09.02 18:51:14 INFO  time: compiled redelog-api in 2.36s
+2026.09.02 18:52:57 INFO  compiling redelog-api-test (1 java source)
+2026.09.02 18:53:00 INFO  time: compiled redelog-api-test in 3.33s
+2026.09.02 18:53:20 INFO  compiling redelog-api-test (1 java source)
+2026.09.02 18:53:23 INFO  time: compiled redelog-api-test in 2.62s
+2026.09.02 18:54:10 INFO  compiling redelog-api-test (1 java source)
+2026.09.02 18:54:13 INFO  time: compiled redelog-api-test in 2.47s
+2026.09.02 19:02:30 INFO  compiling redelog-api (1 java source)
+2026.09.02 19:02:33 INFO  time: compiled redelog-api in 2.46s
+2026.09.02 19:06:41 INFO  compiling redelog-api (1 java source)
+2026.09.02 19:06:43 INFO  time: compiled redelog-api in 2.07s
+2026.09.02 19:06:43 INFO  compiling redelog-api (1 java source)
+2026.09.02 19:06:46 INFO  time: compiled redelog-api in 2.11s
+2026.09.02 19:10:25 INFO  compiling redelog-api (1 java source)
+2026.09.02 19:10:27 INFO  time: compiled redelog-api in 2.46s
+2026.09.02 19:10:27 INFO  compiling redelog-api (1 java source)
+2026.09.02 19:10:29 INFO  time: compiled redelog-api in 1.91s
+2026.09.02 19:16:09 INFO  compiling redelog-api (1 java source)
+2026.09.02 19:16:13 INFO  time: compiled redelog-api in 3.8s
+2026.09.02 19:16:53 INFO  compiling redelog-api (1 java source)
+2026.09.02 19:16:55 INFO  time: compiled redelog-api in 2.21s
+2026.09.02 19:22:03 INFO  compiling redelog-api (1 java source)
+2026.09.02 19:22:06 INFO  time: compiled redelog-api in 2.81s
+2026.09.02 19:22:06 INFO  compiling redelog-api (1 java source)
+2026.09.02 19:22:08 INFO  time: compiled redelog-api in 2.12s
+2026.09.02 19:22:46 INFO  compiling redelog-api (1 java source)
+2026.09.02 19:22:49 INFO  time: compiled redelog-api in 2.2s
+2026.09.02 19:26:11 INFO  compiling redelog-api (1 java source)
+2026.09.02 19:26:14 INFO  time: compiled redelog-api in 2.33s
+2026.09.02 19:26:14 INFO  compiling redelog-api (1 java source)
+2026.09.02 19:26:16 INFO  time: compiled redelog-api in 2.47s
+2026.09.02 19:26:16 INFO  compiling redelog-api (1 java source)
+2026.09.02 19:26:20 INFO  time: compiled redelog-api in 3.67s
+2026.09.02 19:26:20 INFO  compiling redelog-api (1 java source)
+2026.09.02 19:26:23 INFO  time: compiled redelog-api in 2.58s
+2026.09.02 19:26:23 INFO  compiling redelog-api (2 java sources)
+2026.09.02 19:26:25 INFO  compiling redelog-api-test (1 java source)
+2026.09.02 19:26:25 INFO  time: compiled redelog-api in 2.41s
+2026.09.02 19:26:28 INFO  time: compiled redelog-api-test in 2.49s

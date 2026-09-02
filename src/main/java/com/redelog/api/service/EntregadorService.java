@@ -4,12 +4,16 @@ import com.redelog.api.dto.EntregadorRequestDTO;
 import com.redelog.api.dto.EntregadorResponseDTO;
 import com.redelog.api.mapper.EntregadorMapper;
 import com.redelog.api.model.entities.Entregador;
+import com.redelog.api.model.enums.StatusEntrega;
+import com.redelog.api.repository.EntregaRepository;
 import com.redelog.api.repository.EntregadorRepository;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;
 import org.springframework.web.server.ResponseStatusException;
 
+
+import java.util.List;
 
 import static org.springframework.http.HttpStatus.CONFLICT;
 import static org.springframework.http.HttpStatus.NOT_FOUND;
@@ -18,11 +22,13 @@ import static org.springframework.http.HttpStatus.NOT_FOUND;
 public class EntregadorService {
 
     private final EntregadorRepository entregadorRepository;
+    private final EntregaRepository entregaRepository;
 
 
 
-    public EntregadorService(EntregadorRepository entregadorRepository){
+    public EntregadorService(EntregadorRepository entregadorRepository, EntregaRepository entregaRepository){
         this.entregadorRepository = entregadorRepository;
+        this.entregaRepository = entregaRepository;
 
     }
 
@@ -90,6 +96,20 @@ public class EntregadorService {
         Entregador entregador = entregadorRepository.findById(id)
                 .orElseThrow(() -> new ResponseStatusException(
                         NOT_FOUND, "Entregador não encontrado"));
+
+        boolean possuiEntregaAtiva = entregaRepository.existsByEntregadorIdAndStatusIn(id, List.of(
+                                StatusEntrega.ENVIADA,
+                                StatusEntrega.EM_ROTA
+                        )
+                );
+
+        if (possuiEntregaAtiva) {
+            throw new ResponseStatusException(
+                    CONFLICT,
+                    "Não é possível desativar o entregador enquanto ele possui uma entrega ativa."
+            );
+        }
+
 
         entregador.desativar();
 

@@ -3,7 +3,9 @@ package com.redelog.api.service;
 import com.redelog.api.dto.EntregaRequestDTO;
 import com.redelog.api.dto.EntregaResponseDTO;
 import com.redelog.api.dto.EnderecoRequestDTO;
+import com.redelog.api.dto.HistoricoEntregaResponseDTO;
 import com.redelog.api.mapper.EntregaMapper;
+import com.redelog.api.mapper.HistoricoEntregaMapper;
 import com.redelog.api.model.entities.*;
 import com.redelog.api.model.enums.StatusEntrega;
 import com.redelog.api.repository.*;
@@ -11,7 +13,10 @@ import com.redelog.api.repository.*;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 import org.springframework.web.server.ResponseStatusException;
+
+import java.util.List;
 
 import static org.springframework.http.HttpStatus.*;
 
@@ -75,13 +80,14 @@ public class EntregaService {
             throw new ResponseStatusException(BAD_REQUEST, "Endereço não informado");
         }
 
-        Entrega entrega = new Entrega();
-        entrega.setCliente(cliente);
-        entrega.setEnderecoEntrega(endereco);
-        entrega.setFilialOrigem(filial);
+        Entrega entrega = new Entrega(
+                null,
+                cliente,
+                endereco,
+                filial
+        );
+
         entrega.setEntregador(entregador);
-        entrega.setStatus(StatusEntrega.CRIADA);
-        entrega.setDataCriacao(java.time.LocalDateTime.now());
         entrega.gerarCodigoRastreio();
 
 
@@ -95,6 +101,13 @@ public class EntregaService {
 
         Entrega atual = entregaRepository.findById(id)
                 .orElseThrow(() -> new ResponseStatusException(NOT_FOUND, "Entrega não encontrada"));
+
+        if (atual.getStatus() != StatusEntrega.CRIADA) {
+            throw new ResponseStatusException(
+                    CONFLICT,
+                    "Não é possível alterar uma entrega após ela ser despachada."
+            );
+        }
 
         Cliente cliente = clienteRepository.findById(dto.getClienteId())
                 .orElseThrow(() -> new ResponseStatusException(NOT_FOUND, "Cliente não encontrado"));
@@ -188,6 +201,20 @@ public class EntregaService {
 
         return EntregaMapper.toDTO(entregaAtualizada);
 
+    }
+
+    @Transactional(readOnly = true)
+    public List<HistoricoEntregaResponseDTO> listarHistorico(Long id) {
+
+        Entrega entrega = entregaRepository.findById(id)
+                .orElseThrow(() -> new ResponseStatusException(
+                        NOT_FOUND,
+                        "Entrega não encontrada"
+                ));
+
+        return entrega.getHistorico().stream()
+                .map(HistoricoEntregaMapper::toDTO)
+                .toList();
     }
 
 
