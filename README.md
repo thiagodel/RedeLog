@@ -131,9 +131,7 @@ CRIADA -> ENVIADA -> EM_ROTA -> ENTREGUE
 
 ## Situação atual
 
-Antes de publicar ou integrar clientes, corrija o `ClienteController`: ele
-contém erros de compilação. O projeto também precisa de testes que cubram os
-fluxos de negócio além do teste de carregamento do contexto.
+Em Desenvolvimento
 
 ## Autores
 
