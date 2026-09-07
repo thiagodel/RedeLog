@@ -3,6 +3,30 @@ import "./Entregas.css";
 
 function Entregas() {
     const [filter, setFilter] = useState("Todos");
+    const [search, setSearch] = useState("");
+    const [showForm, setShowForm] = useState(false);
+    const [clienteCadastrado, setClienteCadastrado] = useState(true);
+    const [cliente, setCliente] = useState({
+        nome: "",
+        telefone: "",
+        email: "",
+        cep: "",
+        endereco: "",
+    });
+
+    const [enderecoEntrega, setEnderecoEntrega] = useState({
+        rua: "",
+        numero: "",
+        bairro: "",
+        cidade: "",
+        estado: "",
+        cep: "",
+        complemento: "",
+    });
+
+    const [filialOrigemId, setFilialOrigemId] = useState("");
+    const [entregadorId, setEntregadorId] = useState("");
+    const [clienteId, setClienteId] = useState("");
 
     const deliveries = [
         {
@@ -35,10 +59,16 @@ function Entregas() {
         },
     ];
 
-    const filteredDeliveries =
-        filter === "Todos"
-            ? deliveries
-            : deliveries.filter((delivery) => delivery.status === filter);
+    const filteredDeliveries = deliveries.filter((delivery) => {
+        const matchesStatus =
+            filter === "Todos" || delivery.status === filter;
+
+        const matchesSearch =
+            delivery.code.toLowerCase().includes(search.toLowerCase()) ||
+            delivery.client.toLowerCase().includes(search.toLowerCase());
+
+        return matchesStatus && matchesSearch;
+    });
 
     return (
         <div className="entregas-page">
@@ -48,9 +78,99 @@ function Entregas() {
                     <p>Acompanhe e gerencie as entregas do RedeLog.</p>
                 </div>
 
-                <button className="new-delivery-button">
+                <button
+                    className="new-delivery-button"
+                    onClick={() => setShowForm(true)}
+                >
                     + Nova entrega
                 </button>
+            </div>
+
+            {showForm && (
+                <div className="modal-overlay">
+                    <div className="delivery-form">
+                        <h2>Nova entrega</h2>
+
+                        <button
+                            type="button"
+                            className={clienteCadastrado ? "active" : ""}
+                            onClick={() => setClienteCadastrado(true)}
+                        >
+                            Cliente cadastrado
+                        </button>
+
+                        <button
+                            type="button"
+                            className={!clienteCadastrado ? "active" : ""}
+                            onClick={() => setClienteCadastrado(false)}
+                        >
+                            Novo cliente
+                        </button>
+
+                        {!clienteCadastrado && (
+                            <div className="new-client-form">
+                                <h3>Dados do cliente</h3>
+
+                                <input
+                                    type="text"
+                                    placeholder="Nome"
+                                />
+
+                                <input
+                                    type="text"
+                                    placeholder="Telefone"
+                                />
+
+                                <input
+                                    type="email"
+                                    placeholder="E-mail"
+                                />
+
+                                <input
+                                    type="text"
+                                    placeholder="CEP"
+                                />
+
+                                <input
+                                    type="text"
+                                    placeholder="Endereço"
+                                />
+                            </div>
+                        )}
+
+                        {clienteCadastrado && (
+                            <div className="registered-client-form">
+                                <h3>Selecionar cliente</h3>
+
+                                <select
+                                    value={clienteId}
+                                    onChange={(event) => setClienteId(event.target.value)}
+                                >
+                                    <option value="">Selecione um cliente</option>
+                                    <option value="1">João da Silva</option>
+                                    <option value="2">Maria Oliveira</option>
+                                    <option value="3">Carlos Souza</option>
+                                </select>
+                            </div>
+                        )}
+
+                        <button
+                            type="button"
+                            onClick={() => setShowForm(false)}
+                        >
+                            Cancelar
+                        </button>
+                    </div>
+                </div>
+            )}
+
+            <div className="search-container">
+                <input
+                    type="text"
+                    placeholder="Buscar por código ou cliente..."
+                    value={search}
+                    onChange={(event) => setSearch(event.target.value)}
+                />
             </div>
 
             <div className="delivery-filters">
@@ -82,6 +202,13 @@ function Entregas() {
                     Atrasadas
                 </button>
             </div>
+
+            <p className="delivery-count">
+                {filteredDeliveries.length}{" "}
+                {filteredDeliveries.length === 1
+                    ? "entrega encontrada"
+                    : "entregas encontradas"}
+            </p>
 
             <div className="deliveries-table-container">
                 <table>

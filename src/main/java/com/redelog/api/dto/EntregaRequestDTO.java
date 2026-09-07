@@ -12,8 +12,10 @@ import lombok.Setter;
 public class EntregaRequestDTO {
 
 
-    @NotNull
     private Long clienteId;
+
+    @Valid
+    private ClienteRequestDTO cliente;
 
     @Valid
     @NotNull
