@@ -141,6 +141,23 @@ class ApiIntegrationTests {
                 .andExpect(jsonPath("$.message").value("Entrega não está em rota"));
     }
 
+    @Test
+    void shouldCreateDeliveryAndRegisterNewCustomerInOneRequest() throws Exception {
+        long entregadorId = createEntregador();
+        long filialId = createFilial();
+
+        mockMvc.perform(post("/entregas")
+                        .contentType(MediaType.APPLICATION_JSON)
+                        .content("""
+                                {"cliente":{"nome":"Marina Costa","telefone":"11977776666","email":"marina@redelog.com","cep":"01310-000","endereco":"Avenida Paulista, 1000"},"entregadorId":%d,"filialOrigemId":%d,"enderecoEntrega":{"rua":"Avenida Paulista","numero":"1000","bairro":"Bela Vista","cidade":"São Paulo","estado":"SP","cep":"01310-000"}}
+                                """.formatted(entregadorId, filialId)))
+                .andExpect(status().isCreated())
+                .andExpect(jsonPath("$.status").value("CRIADA"))
+                .andExpect(jsonPath("$.nomeCliente").value("Marina Costa"));
+
+        org.junit.jupiter.api.Assertions.assertEquals(1, clienteRepository.count());
+    }
+
     private long createCliente(String nome, String email) throws Exception {
         MvcResult result = mockMvc.perform(post("/clientes")
                         .contentType(MediaType.APPLICATION_JSON)

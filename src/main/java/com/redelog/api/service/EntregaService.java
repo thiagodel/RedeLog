@@ -4,6 +4,7 @@ import com.redelog.api.dto.EntregaRequestDTO;
 import com.redelog.api.dto.EntregaResponseDTO;
 import com.redelog.api.dto.EnderecoRequestDTO;
 import com.redelog.api.dto.HistoricoEntregaResponseDTO;
+import com.redelog.api.mapper.ClienteMapper;
 import com.redelog.api.mapper.EntregaMapper;
 import com.redelog.api.mapper.HistoricoEntregaMapper;
 import com.redelog.api.model.entities.*;
@@ -57,10 +58,10 @@ public class EntregaService {
         entregaRepository.delete(entrega);
     }
 
+    @Transactional
     public EntregaResponseDTO salvar(EntregaRequestDTO dto) {
 
-        Cliente cliente = clienteRepository.findById(dto.getClienteId())
-                .orElseThrow(() -> new ResponseStatusException(NOT_FOUND, "Cliente não encontrado"));
+        Cliente cliente = resolverCliente(dto);
 
         Entregador entregador = entregadorRepository.findById(dto.getEntregadorId())
                 .orElseThrow(() -> new ResponseStatusException(NOT_FOUND, "Entregador não encontrado"));
@@ -97,6 +98,7 @@ public class EntregaService {
 
     }
 
+    @Transactional
     public EntregaResponseDTO atualizar(Long id, EntregaRequestDTO dto) {
 
         Entrega atual = entregaRepository.findById(id)
@@ -109,8 +111,7 @@ public class EntregaService {
             );
         }
 
-        Cliente cliente = clienteRepository.findById(dto.getClienteId())
-                .orElseThrow(() -> new ResponseStatusException(NOT_FOUND, "Cliente não encontrado"));
+        Cliente cliente = resolverCliente(dto);
 
         Entregador entregador = entregadorRepository.findById(dto.getEntregadorId())
                 .orElseThrow(() -> new ResponseStatusException(NOT_FOUND, "Entregador não encontrado"));
@@ -147,6 +148,24 @@ public class EntregaService {
         return entregaRepository.findById(id)
                 .orElseThrow(() -> new ResponseStatusException(
                         NOT_FOUND, "Entrega não encontrada"));
+    }
+
+    private Cliente resolverCliente(EntregaRequestDTO dto) {
+        boolean temClienteCadastrado = dto.getClienteId() != null;
+        boolean temNovoCliente = dto.getCliente() != null;
+
+        if (temClienteCadastrado == temNovoCliente) {
+            throw new ResponseStatusException(
+                    BAD_REQUEST,
+                    "Informe exatamente um entre clienteId e cliente");
+        }
+
+        if (temClienteCadastrado) {
+            return clienteRepository.findById(dto.getClienteId())
+                    .orElseThrow(() -> new ResponseStatusException(NOT_FOUND, "Cliente não encontrado"));
+        }
+
+        return clienteRepository.save(ClienteMapper.toEntity(dto.getCliente()));
     }
 
     private Endereco converterEndereco(EnderecoRequestDTO enderecoDto) {

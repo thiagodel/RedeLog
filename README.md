@@ -87,7 +87,9 @@ Para rodar os testes:
 
 - `GET /entregas` — lista paginada
 - `GET /entregas/{id}` — consulta por identificador
-- `POST /entregas` — cria uma entrega
+- `POST /entregas` — cria uma entrega. Informe `clienteId` para um cliente já
+  cadastrado ou `cliente` para cadastrá-lo junto com a entrega (os dois campos
+  não podem ser enviados ao mesmo tempo).
 - `PUT /entregas/{id}` — atualiza uma entrega
 - `DELETE /entregas/{id}` — remove uma entrega
 - `PATCH /entregas/{id}/despachar`
