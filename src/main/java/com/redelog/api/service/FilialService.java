@@ -2,6 +2,7 @@ package com.redelog.api.service;
 
 import com.redelog.api.dto.FilialRequestDTO;
 import com.redelog.api.dto.FilialResponseDTO;
+import com.redelog.api.mapper.EnderecoMapper;
 import com.redelog.api.mapper.FilialMapper;
 import com.redelog.api.model.entities.Filial;
 import com.redelog.api.repository.FilialRepository;
@@ -11,37 +12,37 @@ import org.springframework.http.HttpStatus;
 import org.springframework.stereotype.Service;
 import org.springframework.web.server.ResponseStatusException;
 
-import static org.springframework.http.HttpStatus.NOT_FOUND;
-
 @Service
 public class FilialService {
 
     private final FilialRepository filialRepository;
+    private final EnderecoMapper enderecoMapper;
+    private final FilialMapper filialMapper;
 
-    public FilialService(FilialRepository filialRepository) {
+    public FilialService(FilialRepository filialRepository, EnderecoMapper enderecoMapper, FilialMapper filialMapper) {
 
         this.filialRepository = filialRepository;
+        this.enderecoMapper = enderecoMapper;
+        this.filialMapper = filialMapper;
     }
 
 
     public Page<FilialResponseDTO> listarTodos(Pageable pageable) {
 
         return filialRepository.findAll(pageable)
-                .map(FilialMapper::toDTO);
+                .map(filialMapper::toDTO);
 
     }
 
     public FilialResponseDTO listarPorId(Long id) {
 
-        Filial filial = filialRepository.findById(id)
-                .orElseThrow(() -> new ResponseStatusException(NOT_FOUND, "Filial não encontrada"));
+        Filial filial = filialRepository.findByIdOrThrow(id, "Filial");
 
-        return FilialMapper.toDTO(filial);
+        return filialMapper.toDTO(filial);
     }
 
     public void deletarPorId(Long id) {
-        Filial filial = filialRepository.findById(id)
-                .orElseThrow(() -> new ResponseStatusException(NOT_FOUND, "Filial não encontrada com ID: " + id));
+        Filial filial = filialRepository.findByIdOrThrow(id, "Filial");
         filialRepository.delete(filial);
     }
 
@@ -61,17 +62,16 @@ public class FilialService {
             );
         }
 
-            Filial filial = FilialMapper.toEntity(dto);
+            Filial filial = filialMapper.toEntity(dto);
 
             filial = filialRepository.save(filial);
 
-            return FilialMapper.toDTO(filial);
+            return filialMapper.toDTO(filial);
         }
 
     public FilialResponseDTO atualizar(Long id, FilialRequestDTO dto) {
 
-        Filial filial = filialRepository.findById(id)
-                .orElseThrow(() -> new ResponseStatusException(NOT_FOUND, "Filial não encontrada!"));
+        Filial filial = filialRepository.findByIdOrThrow(id, "Filial");
 
         if (!filial.getCnpj().equals(dto.getCnpj())
                 && filialRepository.existsByCnpj(dto.getCnpj())) {
@@ -88,16 +88,12 @@ public class FilialService {
             );
         }
 
-        Filial dadosAtualizados = FilialMapper.toEntity(dto);
-
-        filial.setNome(dadosAtualizados.getNome());
-        filial.setEndereco(dadosAtualizados.getEndereco());
-        filial.setNumeroFilial(dadosAtualizados.getNumeroFilial());
-        filial.setCnpj(dadosAtualizados.getCnpj());
+        filialMapper.atualizarEntidade(filial, dto);
 
         Filial atualizada = filialRepository.save(filial);
 
-        return FilialMapper.toDTO(atualizada);
+        return filialMapper.toDTO(atualizada);
+
     }
 }
 

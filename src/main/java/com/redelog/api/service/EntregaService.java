@@ -2,15 +2,14 @@ package com.redelog.api.service;
 
 import com.redelog.api.dto.EntregaRequestDTO;
 import com.redelog.api.dto.EntregaResponseDTO;
-import com.redelog.api.dto.EnderecoRequestDTO;
 import com.redelog.api.dto.HistoricoEntregaResponseDTO;
 import com.redelog.api.mapper.ClienteMapper;
+import com.redelog.api.mapper.EnderecoMapper;
 import com.redelog.api.mapper.EntregaMapper;
 import com.redelog.api.mapper.HistoricoEntregaMapper;
 import com.redelog.api.model.entities.*;
 import com.redelog.api.model.enums.StatusEntrega;
 import com.redelog.api.repository.*;
-
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;
@@ -28,12 +27,16 @@ public class EntregaService {
     private final EntregadorRepository entregadorRepository;
     private final ClienteRepository clienteRepository;
     private final FilialRepository filialRepository;
+    private final EnderecoMapper enderecoMapper;
+    private final EntregaMapper entregaMapper;
 
-    public EntregaService(EntregaRepository entregaRepository, EntregadorRepository entregadorRepository, ClienteRepository clienteRepository, FilialRepository filialRepository) {
+    public EntregaService(EntregaRepository entregaRepository, EntregadorRepository entregadorRepository, ClienteRepository clienteRepository, FilialRepository filialRepository, EnderecoMapper enderecoMapper, EntregaMapper entregaMapper) {
         this.entregaRepository = entregaRepository;
         this.entregadorRepository = entregadorRepository;
         this.clienteRepository = clienteRepository;
         this.filialRepository = filialRepository;
+        this.enderecoMapper = enderecoMapper;
+        this.entregaMapper = entregaMapper;
     }
 
     public Page<EntregaResponseDTO> listarTodos(Pageable pageable) {
@@ -46,16 +49,19 @@ public class EntregaService {
 
     public EntregaResponseDTO listarPorId(Long id) {
 
-        Entrega entrega = entregaRepository.findById(id)
-                .orElseThrow(() -> new ResponseStatusException(NOT_FOUND, "Entrega não encontrada"));
+        Entrega entrega = entregaRepository.findByIdOrThrow(id, "Entrega");
 
         return EntregaMapper.toDTO(entrega);
     }
 
-    public void deletarPorId(Long id) {
-        Entrega entrega = entregaRepository.findById(id)
-                .orElseThrow(() -> new ResponseStatusException(NOT_FOUND, "Entrega não encontrada com ID: " + id));
-        entregaRepository.delete(entrega);
+    public EntregaResponseDTO cancelar(Long id) {
+        Entrega entrega = entregaRepository.findByIdOrThrow(id, "Entrega");
+
+        entrega.setStatus(StatusEntrega.CANCELADA);
+
+        Entrega entregaSalva = entregaRepository.save(entrega);
+
+        return entregaMapper.toDTO(entregaSalva);
     }
 
     @Transactional
@@ -63,8 +69,7 @@ public class EntregaService {
 
         Cliente cliente = resolverCliente(dto);
 
-        Entregador entregador = entregadorRepository.findById(dto.getEntregadorId())
-                .orElseThrow(() -> new ResponseStatusException(NOT_FOUND, "Entregador não encontrado"));
+        Entregador entregador = entregadorRepository.findByIdOrThrow(dto.getEntregadorId(), "Entregador");
 
         if (!entregador.estaAtivo()) {
             throw new ResponseStatusException(
@@ -72,10 +77,9 @@ public class EntregaService {
                     "Não é possível atribuir uma entrega a um entregador inativo");
         }
 
-        Filial filial = filialRepository.findById(dto.getFilialOrigemId())
-                .orElseThrow(() -> new ResponseStatusException(NOT_FOUND, "Filial não encontrada"));
+        Filial filial = filialRepository.findByIdOrThrow(dto.getFilialId(), "Filial");
 
-        Endereco endereco = converterEndereco(dto.getEnderecoEntrega());
+        Endereco endereco = enderecoMapper.toEntity(dto.getEnderecoEntrega());
 
         if (endereco == null) {
             throw new ResponseStatusException(BAD_REQUEST, "Endereço não informado");
@@ -101,8 +105,7 @@ public class EntregaService {
     @Transactional
     public EntregaResponseDTO atualizar(Long id, EntregaRequestDTO dto) {
 
-        Entrega atual = entregaRepository.findById(id)
-                .orElseThrow(() -> new ResponseStatusException(NOT_FOUND, "Entrega não encontrada"));
+        Entrega atual = entregaRepository.findByIdOrThrow(id, "Entrega");
 
         if (atual.getStatus() != StatusEntrega.CRIADA) {
             throw new ResponseStatusException(
@@ -113,8 +116,7 @@ public class EntregaService {
 
         Cliente cliente = resolverCliente(dto);
 
-        Entregador entregador = entregadorRepository.findById(dto.getEntregadorId())
-                .orElseThrow(() -> new ResponseStatusException(NOT_FOUND, "Entregador não encontrado"));
+        Entregador entregador = entregadorRepository.findByIdOrThrow(id, "Entregador");
 
         if (!entregador.estaAtivo()) {
             throw new ResponseStatusException(
@@ -122,10 +124,9 @@ public class EntregaService {
                     "Não é possível atribuir uma entrega a um entregador inativo");
         }
 
-        Filial filial = filialRepository.findById(dto.getFilialOrigemId())
-                .orElseThrow(() -> new ResponseStatusException(NOT_FOUND, "Filial não encontrada"));
+        Filial filial = filialRepository.findByIdOrThrow(id, "Fiilial");
 
-        Endereco endereco = converterEndereco(dto.getEnderecoEntrega());
+        Endereco endereco = enderecoMapper.toEntity(dto.getEnderecoEntrega());
 
         if (endereco == null) {
             throw new ResponseStatusException(BAD_REQUEST, "Endereço não informado");
@@ -145,9 +146,7 @@ public class EntregaService {
     }
 
     private Entrega buscarEntrega(Long id) {
-        return entregaRepository.findById(id)
-                .orElseThrow(() -> new ResponseStatusException(
-                        NOT_FOUND, "Entrega não encontrada"));
+        return entregaRepository.findByIdOrThrow(id, "Entrega");
     }
 
     private Cliente resolverCliente(EntregaRequestDTO dto) {
@@ -161,29 +160,12 @@ public class EntregaService {
         }
 
         if (temClienteCadastrado) {
-            return clienteRepository.findById(dto.getClienteId())
-                    .orElseThrow(() -> new ResponseStatusException(NOT_FOUND, "Cliente não encontrado"));
+            return clienteRepository.findByIdOrThrow(dto.getClienteId(), "Cliente");
         }
 
         return clienteRepository.save(ClienteMapper.toEntity(dto.getCliente()));
     }
 
-    private Endereco converterEndereco(EnderecoRequestDTO enderecoDto) {
-        if (enderecoDto == null) {
-            return null;
-        }
-
-        Endereco endereco = new Endereco();
-        endereco.setRua(enderecoDto.getRua());
-        endereco.setNumero(enderecoDto.getNumero());
-        endereco.setBairro(enderecoDto.getBairro());
-        endereco.setCidade(enderecoDto.getCidade());
-        endereco.setEstado(enderecoDto.getEstado());
-        endereco.setCep(enderecoDto.getCep());
-        endereco.setComplemento(enderecoDto.getComplemento());
-
-        return endereco;
-    }
 
     public EntregaResponseDTO despachar(Long id){
         Entrega entrega = buscarEntrega(id);

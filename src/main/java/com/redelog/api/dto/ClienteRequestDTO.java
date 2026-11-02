@@ -27,5 +27,19 @@ public class ClienteRequestDTO {
 
     private String endereco;
 
+    public void setCep(String cep) {
 
+        if (cep != null) {
+            String numeros = cep.replaceAll("\\D", "");
+
+            if (numeros.length() == 8) {
+                this.cep = numeros.substring(0, 5)
+                        + "-"
+                        + numeros.substring(5);
+                return;
+            }
+
+
+        }
+    }
 }

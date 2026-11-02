@@ -1974,3 +1974,8 @@ ADVERTÊNCIA: Unmatched cancel notification for request id 6
 2026.09.07 19:34:59 INFO  time: compiled redelog-api in 3.16s
 2026.09.07 19:34:59 INFO  compiling redelog-api (1 java source)
 2026.09.07 19:35:01 INFO  time: compiled redelog-api in 2.15s
+2026.09.07 20:00:59 INFO  Shutting down server
+2026.09.07 20:00:59 INFO  Memory monitor stopped
+2026.09.07 20:00:59 INFO  shutting down Metals
+2026.09.07 20:00:59 INFO  Shut down connection with build server.
+2026.09.07 20:00:59 INFO  Exiting server

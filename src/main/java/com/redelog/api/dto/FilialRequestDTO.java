@@ -13,15 +13,15 @@ import lombok.Setter;
 @Setter
 public class FilialRequestDTO {
 
-    @NotNull
+    @NotBlank
     private String nome;
 
     @Valid
-    @NotNull(message = "Endereço obrigatório!")
+    @NotBlank(message = "Endereço obrigatório!")
     private EnderecoRequestDTO endereco;
     private String numeroFilial;
 
-    @NotNull(message = "CNPJ Obrigatório!")
+    @NotBlank(message = "CNPJ Obrigatório!")
     @Pattern(regexp = "\\d{14}", message = "CNPJ deve ter 14 dígitos")
     private String cnpj;
 

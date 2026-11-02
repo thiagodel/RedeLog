@@ -16,7 +16,7 @@ import org.springframework.web.server.ResponseStatusException;
 import java.util.List;
 
 import static org.springframework.http.HttpStatus.CONFLICT;
-import static org.springframework.http.HttpStatus.NOT_FOUND;
+
 
 @Service
 public class EntregadorService {
@@ -39,8 +39,7 @@ public class EntregadorService {
 
     public EntregadorResponseDTO listarPorId(Long id){
 
-        Entregador entregador = entregadorRepository.findById(id)
-                .orElseThrow(() -> new ResponseStatusException(NOT_FOUND, "Entregador não encontrado"));
+        Entregador entregador = entregadorRepository.findByIdOrThrow(id, "Entregador");
 
         return EntregadorMapper.toDto(entregador);
     }
@@ -56,9 +55,7 @@ public class EntregadorService {
 
     public EntregadorResponseDTO atualizar(Long id, EntregadorRequestDTO dto) {
 
-        Entregador entregador = entregadorRepository.findById(id)
-                .orElseThrow(() -> new ResponseStatusException(
-                        NOT_FOUND, "Entregador não encontrado"));
+        Entregador entregador = entregadorRepository.findByIdOrThrow(id, "Entregador");
 
         if(!entregador.estaAtivo()){
         throw new ResponseStatusException(CONFLICT, "Não é possível atualizar um entregador inativo");
@@ -74,18 +71,8 @@ public class EntregadorService {
         return EntregadorMapper.toDto(entregadorRepository.save(entregador));
     }
 
-    public void deletarPorId(Long id){
-
-        Entregador entregador = entregadorRepository.findById(id)
-                .orElseThrow(() -> new ResponseStatusException(NOT_FOUND, "Entregador não encontrado com ID" + id));
-
-        entregadorRepository.delete(entregador);
-    }
-
     public EntregadorResponseDTO ativar(Long id) {
-        Entregador entregador = entregadorRepository.findById(id)
-                .orElseThrow(() -> new ResponseStatusException(
-                        NOT_FOUND, "Entregador não encontrado"));
+        Entregador entregador = entregadorRepository.findByIdOrThrow(id, "Entregador");
 
         entregador.ativar();
 
@@ -93,9 +80,8 @@ public class EntregadorService {
     }
 
     public EntregadorResponseDTO desativar(Long id) {
-        Entregador entregador = entregadorRepository.findById(id)
-                .orElseThrow(() -> new ResponseStatusException(
-                        NOT_FOUND, "Entregador não encontrado"));
+
+       Entregador entregador = entregadorRepository.findByIdOrThrow(id, "Entregador");
 
         boolean possuiEntregaAtiva = entregaRepository.existsByEntregadorIdAndStatusIn(id, List.of(
                                 StatusEntrega.ENVIADA,
@@ -115,7 +101,6 @@ public class EntregadorService {
 
         return EntregadorMapper.toDto(entregadorRepository.save(entregador));
     }
-
 
 
 
