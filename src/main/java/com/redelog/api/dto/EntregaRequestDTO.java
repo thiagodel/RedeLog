@@ -22,7 +22,7 @@ public class EntregaRequestDTO {
     private EnderecoRequestDTO enderecoEntrega;
 
     @NotNull
-    private Long filialOrigemId;
+    private Long filialId;
 
     @NotNull
     private Long entregadorId;

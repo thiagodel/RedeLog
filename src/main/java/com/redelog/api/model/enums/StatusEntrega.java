@@ -5,6 +5,7 @@ public enum StatusEntrega {
         ENVIADA,
         EM_ROTA,
         ENTREGUE,
-        FALHA
+        FALHA,
+        CANCELADA
     }
 

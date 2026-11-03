@@ -8,10 +8,6 @@ import com.redelog.api.repository.ClienteRepository;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;
-import org.springframework.web.server.ResponseStatusException;
-
-import static org.springframework.http.HttpStatus.NOT_FOUND;
-
 
 @Service
 
@@ -32,9 +28,7 @@ public class ClienteService {
 
     public ClienteResponseDTO buscarPorId(long id){
 
-    Cliente cliente = clienteRepository.findById(id)
-            .orElseThrow(() -> new ResponseStatusException(
-                    NOT_FOUND, "Cliente não encontrado"));
+    Cliente cliente = clienteRepository.findByIdOrThrow(id, "Cliente");
 
     return ClienteMapper.toDTO(cliente);
     }
@@ -47,9 +41,7 @@ public class ClienteService {
     }
 
     public ClienteResponseDTO atualizar(long id, ClienteRequestDTO dto) {
-        Cliente cliente = clienteRepository.findById(id)
-                .orElseThrow(() -> new ResponseStatusException(
-                        NOT_FOUND, "Cliente não encontrado"));
+        Cliente cliente = clienteRepository.findByIdOrThrow(id, "Cliente");
 
         cliente.atualizarDados(
                 dto.getNome(),
@@ -65,8 +57,7 @@ public class ClienteService {
     }
 
     public void deletarPorId(long id){
-    Cliente cliente = clienteRepository.findById(id)
-                    .orElseThrow(() -> new ResponseStatusException(NOT_FOUND,"Cliente não encontrado com ID: " + id));
+    Cliente cliente = clienteRepository.findByIdOrThrow(id, "Cliente");
 
     clienteRepository.delete(cliente);
     }

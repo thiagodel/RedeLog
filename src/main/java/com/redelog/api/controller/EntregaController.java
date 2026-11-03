@@ -58,10 +58,9 @@ public class EntregaController {
     }
 
     // Deletar por ID
-    @DeleteMapping("/{id}")
-    public ResponseEntity<Void> deletar(@PathVariable Long id) {
-        entregaService.deletarPorId(id);
-        return ResponseEntity.noContent().build();
+    @DeleteMapping("/{id}/cancelar")
+    public ResponseEntity<EntregaResponseDTO> cancelar(@PathVariable Long id) {
+        return ResponseEntity.ok(entregaService.cancelar(id));
     }
 
     @PatchMapping("/{id}/despachar")
